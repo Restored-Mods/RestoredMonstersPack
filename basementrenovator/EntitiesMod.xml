@@ -312,13 +312,13 @@
 		<entity BaseHP="60" Tags="Champion" ID="800" Image="resources/Entities/Antibirth/Gilded_Dumpling.png" Name="Gilded Dumpling" Subtype="0" Variant="6"/>
 
 	<!-- rev -->
-
+<!-- 
 	<group Name="Restored Monsters Ice Hazards" >
 	<entity Name="Ice Hazard (Dumpling)" />
 	<entity Name="Ice Hazard (Fracture)" />
 	</group>
 	<group Name="(Rev) Glacier Ice Hazards" Label="Ice Hazards">
-	<group Name="Restored Monsters Ice Hazards" />
+	<group Name="Restored Monsters Ice Hazards" /> -->
 
 </group>
 </data>
