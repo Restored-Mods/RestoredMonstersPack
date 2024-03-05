@@ -1,2 +1,2 @@
 # RestoredMonstersPack
-Restored Monsters Pack
+Restored Monsters Pack mod
