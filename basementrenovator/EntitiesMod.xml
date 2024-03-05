@@ -318,7 +318,7 @@
 	<entity Name="Ice Hazard (Fracture)" />
 	</group>
 	<group Name="(Rev) Glacier Ice Hazards" Label="Ice Hazards">
-	<group Name="Restored Monsters Ice Hazards" /> -->
+	<group Name="Restored Monsters Ice Hazards" />
 
-</group>
+</group> -->
 </data>
