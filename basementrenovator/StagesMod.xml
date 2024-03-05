@@ -1,0 +1,63 @@
+<data>
+    <stage Name="Scarred Womb">
+        <Gfx>
+            <Entity ID="29" Variant="1" SubType="801" Image="resources/Entities/Antibirth/801.0.0 - Fissure_scarred.png"/>
+            <Entity ID="200" Variant="2409" SubType="0" Image="resources/Entities/Antibirth/802.0.0 - Stillborn Scarred.png"/>
+        </Gfx>
+    </stage>
+    <stage Name="Downpour">
+        <Gfx>
+            <Entity ID="800" Variant="0" SubType="0" Image="resources/Entities/Antibirth/800.0.0 - Dumpling_downpour.png"/>
+            <Entity ID="29" Variant="1" SubType="801" Image="resources/Entities/Antibirth/801.0.0 - Fissure_downpour.png"/>
+        </Gfx>
+    </stage>
+    <stage Name="Dross">
+        <Gfx>
+            <Entity ID="800" Variant="0" SubType="0" Image="resources/Entities/Antibirth/800.0.0 - Dumpling_dross.png"/>
+            <Entity ID="29" Variant="1" SubType="801" Image="resources/Entities/Antibirth/801.0.0 - Fissure_dross.png"/>
+        </Gfx>
+    </stage>
+    <stage Name="Ashpit">
+        <Gfx>
+            <Entity ID="800" Variant="3" SubType="0" Image="resources/Entities/Antibirth/800.3.0 - Scorchling_ashpit.png"/>
+        </Gfx>
+    </stage>
+    <stage Name="Gehenna">
+        <Gfx>
+            <Entity ID="843" Variant="200" SubType="0" Image="resources/Entities/843.0.0 - Canary_gehenna.png"/>
+            <Entity ID="843" Variant="201" SubType="0" Image="resources/Entities/843.1.0 - Foreigner_gehenna.png"/>
+            <Entity ID="239" Variant="200" SubType="0" Image="resources/Entities/Antibirth/239.100.0 - Corpse Eater_gehenna.png"/>
+            <Entity ID="239" Variant="201" SubType="0" Image="resources/Entities/Antibirth/239.101.0 - Carrion Rider_gehenna.png"/>
+            <Entity ID="839" Variant="0" SubType="0" Image="resources/Entities/Antibirth/839.0.0 - Strifer (left)_gehenna.png"/>
+            <Entity ID="839" Variant="1" SubType="0" Image="resources/Entities/Antibirth/839.1.0 - Strifer (up)_gehenna.png"/>
+            <Entity ID="839" Variant="2" SubType="0" Image="resources/Entities/Antibirth/839.2.0 - Strifer (right)_gehenna.png"/>
+            <Entity ID="839" Variant="3" SubType="0" Image="resources/Entities/Antibirth/839.3.0 - Strifer (down)_gehenna.png"/>
+            <Entity ID="839" Variant="4" SubType="0" Image="resources/Entities/Antibirth/839.4.0 - Strifer (left-right)_gehenna.png"/>
+            <Entity ID="839" Variant="5" SubType="0" Image="resources/Entities/Antibirth/839.5.0 - Strifer (up-down)_gehenna.png"/>
+            <Entity ID="839" Variant="6" SubType="0" Image="resources/Entities/Antibirth/839.6.0 - Strifer (all)_gehenna.png"/>
+            <Entity ID="200" Variant="2410" SubType="0" Image="resources/Entities/Antibirth/831.0.0 - Necromancer_gehenna.png"/>
+            <Entity ID="38" Variant="2407" SubType="835" Image="resources/Entities/Antibirth/835.0.0 - Swapper_gehenna.png"/>
+
+        </Gfx>
+    </stage>
+    <stage Name="Corpse">
+        <Gfx>
+            <Entity ID="239" Variant="200" SubType="0" Image="resources/Entities/Antibirth/239.100.0 - Corpse Eater_corpse.png"/>
+            <Entity ID="239" Variant="201" SubType="0" Image="resources/Entities/Antibirth/239.101.0 - Carrion Rider_corpse.png"/>
+            <Entity ID="200" Variant="2409" SubType="0" Image="resources/Entities/Antibirth/802.0.0 - Stillborn_corpse.png"/>
+        </Gfx>
+    </stage>
+    <!-- <stage Name="Glacier">
+        <Gfx>
+            <Entity ID="800" Variant="0" SubType="0" Image="resources/Entities/rev1/800.0.0 - Dumpling_glacier.png"/>
+            <Entity ID="29" Variant="1" SubType="801" Image="resources/Entities/rev1/801.0.0 - Fissure_glacier.png"/>
+            <Entity ID="200" Variant="2503" SubType="0" Image="resources/Entities/rev1/837.0.0 - Grave Robber_glacier.png"/>
+        </Gfx>
+    </stage>
+    <stage Name="Tomb">
+        <Gfx>
+            <Entity ID="800" Variant="0" SubType="0" Image="resources/Entities/rev2/800.0.0 - Dumpling_tomb.png"/>
+            <Entity ID="800" Variant="1" SubType="0" Image="resources/Entities/rev2/800.1.0 - Skinling_tomb.png"/>
+        </Gfx>
+    </stage> -->
+</data>

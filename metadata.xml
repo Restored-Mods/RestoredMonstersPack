@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <name>Restored Monsters Pack</name>
+    <directory>restoredmonsterspack</directory>
+    <id>2855640828</id>
+    <description>Forgotten enemies have returned to the basement! Restored Monsters Pack is a culmination of all of Team Compliance’s enemy mods, featuring over 35+ enemies and 7000+ rooms!
+
+[img]Promo Image[/img]
+
+[img]Features Image[/img]
+Restored Monsters Pack Features:
+
+[*]35+ enemies, ranging from unused monsters left in Repentance to new enemies based of developer concepts
+[*]A new TNT variant
+[*]7000+ new rooms, with some from the original Antibirth mod
+[*]Reworks and polishing of some of the enemies from their previous iterations (No more Dumplings camping rocks!)
+[*](Coming soon)Compatibility with mods that add new floors, such as Revelations.
+You can read more about the enemies added by this mod on our wiki! (link wiki)
+
+[img]Notice Image[/img]    
+The following mods are included in some form within Restored Monsters Pack, and should not be used in conjuntion with it:
+    
+[*]Cut Monsters by [url=https://steamcommunity.com/profiles/76561198374458982]Team Compliance[/url]
+[*]Antibirth Monsters by [url=https://steamcommunity.com/profiles/76561198374458982]Team Compliance[/url]
+[*]Antibirth Minus by [url=https://steamcommunity.com/id/76561198081320400]Sinbiscut[/url]
+[*]Strifers by [url=https://steamcommunity.com/id/PixelPlz]PixelPlz[/url]
+[*]Corpse Eaters by [url=https://steamcommunity.com/id/PixelPlz]PixelPlz[/url]
+[*]Dumplings by [url=https://steamcommunity.com/id/24chrome]24Chrome[/url], [url=https://steamcommunity.com/id/jubbalub]Jubbalub[/url], and [url=https://steamcommunity.com/id/We_Strvn]We Strvn[/url]
+[*]Ghost Babel by [url=https://steamcommunity.com/id/76561198081320400]Sinbiscut[/url]
+
+[img]Credits Image[/img]   
+[*][u]Directors[/u] = [url=https://steamcommunity.com/id/We_Strvn]We Strvn[/url], [url=https://steamcommunity.com/profiles/76561198170829227]Gabriel[/url]
+[*][u]Coders[/u] = [url=https://steamcommunity.com/profiles/76561198239545954]watchmeojo[/url], [url=https://steamcommunity.com/id/fly_6/]fly_6[/url], [url=https://steamcommunity.com/id/goganidze/]Goganidze[/url], [url=https://steamcommunity.com/profiles/76561198353126873]RedStinger665[/url]
+[*][u]Room Designers[/u] = infinitecosmos1, [url=https://steamcommunity.com/id/We_Strvn]We Strvn[/url]
+[*][u]Artists[/u] = lecrack42, [url=https://steamcommunity.com/profiles/76561198821357749]SkeleJ64[/url], [url=https://steamcommunity.com/profiles/76561198353126873]RedStinger665[/url]
+[*][u]Playtesters[/u] = [url=https://steamcommunity.com/id/brakedude/]BrakeDude[/url], [url=https://steamcommunity.com/profiles/76561198374458982]Sillst[/url], [url=https://steamcommunity.com/id/SharkyTheShark19/]shrki_[/url]
+
+[img]https://i.imgur.com/SlXbHql.png[/img] [img]https://i.imgur.com/xd2eafr.png[/img]
+[code][u]Public Entertainment Networked Interactive Software[/u] - For the original Antibirth mod as well as the content and concepts that this mod builds off of
+[u]Peas[/u] - For Dumpling enemy line and Strifer sprites[/code]
+
+       
+[img]https://i.imgur.com/l7jgLpl.png[/img]
+
+[img]https://i.imgur.com/OZNWMCq.png[/img] [url=https://github.com/Team-Compliance/RestoredMonsters]Restored Monsters Repository[/url] [img]https://i.imgur.com/OZNWMCq.png[/img]
+[img]https://i.imgur.com/xK4Mor0.png[/img] [url=https://discord.gg/GdVnkV4Gwj]TBOI: Compliance Discord Server[/url] [img]https://i.imgur.com/xK4Mor0.png[/img]
+[img]https://i.imgur.com/GmVPmG0.png[/img] [url=https://www.youtube.com/channel/UCEdAioGltx_hOsyDW57nvSw/featured]TBOI: Compliance YouTube[/url] [img]https://i.imgur.com/GmVPmG0.png[/img]
+[img]https://i.imgur.com/jBFg02x.png[/img] [url=https://twitter.com/ComplianceMods]TBOI: Compliance Twitter[/url] [img]https://i.imgur.com/jBFg02x.png[/img]
+[img]https://i.imgur.com/MTKQKCX.png[/img]</description>
+    <version>1.1</version>
+    <visibility>Friends Only</visibility>
+    <tag id="Lua"/>
+    <tag id="Rooms"/>
+    <tag id="Enemies"/>
+    <tag id="Graphics"/>
+</metadata>
