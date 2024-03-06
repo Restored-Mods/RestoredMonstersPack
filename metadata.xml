@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-    <name>Restored Monsters Pack</name>
+    <name>RestoredMonstersPack</name>
     <directory>restoredmonsterspack</directory>
-    <id>2855640828</id>
-    <description>Forgotten enemies have returned to the basement! Restored Monsters Pack is a culmination of all of Team Compliance’s enemy mods, featuring over 35+ enemies and 7000+ rooms!
+    <id>3173917079</id>
+    <description>Forgotten enemies have returned to the basement! Restored Monsters Pack is a culmination of all of Team Compliance's enemy mods, featuring over 35+ enemies and 7000+ rooms!
 
 [img]Promo Image[/img]
 
@@ -49,8 +49,9 @@ The following mods are included in some form within Restored Monsters Pack, and 
 [img]https://i.imgur.com/MTKQKCX.png[/img]</description>
     <version>1.1</version>
     <visibility>Friends Only</visibility>
-    <tag id="Lua"/>
     <tag id="Rooms"/>
+    <tag id="Floors"/>
     <tag id="Enemies"/>
+    <tag id="Hazards"/>
     <tag id="Graphics"/>
 </metadata>
