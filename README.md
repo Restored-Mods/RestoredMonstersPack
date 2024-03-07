@@ -2,6 +2,13 @@
 
 TO DO:
 
+Features:
+- Implement enemy color variants (Wormwood, Lumps, Flagellant)
+
+BUGS (important
+- Blind Bats not working in Greed Mode
+- Revelations breaking Screamer and Ice mechanics
+
 Future Enemies
 - Receptacle (AI, Rooms)
 - Miasma (Animations, AI, Rooms)
