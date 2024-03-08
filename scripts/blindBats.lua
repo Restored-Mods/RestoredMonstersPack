@@ -50,7 +50,7 @@ local function awakenBats(var)
 		local batSprite = bat:GetSprite()
 		local batData = bat:GetData().BlindBatData
 
-		if batData ~= nil and batData.State == States.Hiding then
+		if batNpc.State ~= NpcState.STATE_APPEAR and batData ~= nil and batData.State == States.Hiding then
 			batData.State = States.Spotted
 			batSprite:Play("Wake", true)
 		end
