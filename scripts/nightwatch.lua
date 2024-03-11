@@ -203,7 +203,7 @@ local function nightwatchGridEvent(Index)
 			gentity:Destroy(true)
 
 		elseif gentity:GetType() == GridEntityType.GRID_PIT and gentity.VarData == 1 then
-			gentity:ToPit():MakeBridge()
+			gentity:ToPit():MakeBridge(nil)
 
 		elseif gentity:GetType() == GridEntityType.GRID_PRESSURE_PLATE and gentity.State ~= 3 then
 			gentity:ToPressurePlate():Reward()
