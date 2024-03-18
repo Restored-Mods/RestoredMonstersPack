@@ -6153,7 +6153,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24000" name="Sin - [TC] - Welcome to Nightwatch Space" type="16" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-02-12T22:27+00:00">
+	<room variant="24000" name="Sin - [TC] - Welcome to Nightwatch Space" type="16" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-03-18T02:59+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="-1" y="10"/>
 		<door exists="False" x="6" y="-1"/>
@@ -6563,7 +6563,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24001" name="Sin - [TC] - GET OUT." type="16" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-02-12T22:27+00:00">
+	<room variant="24001" name="Sin - [TC] - GET OUT." type="16" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-03-18T02:59+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -6727,6 +6727,9 @@
 		<spawn x="1" y="5">
 			<entity type="0" variant="20" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="10" y="5">
+			<entity type="0" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="12" y="5">
 			<entity type="842" variant="200" subtype="70" weight="1.0"/>
 		</spawn>
@@ -6770,7 +6773,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24002" name="Sin - [TC] - Not-Safehouse" type="16" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-02-12T22:27+00:00">
+	<room variant="24002" name="Sin - [TC] - Not-Safehouse" type="16" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-03-18T02:59+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -6998,7 +7001,7 @@
 			<entity type="5" variant="20" subtype="2" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24003" name="Sin - [TC] - Border Patrol" type="16" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-02-12T22:27+00:00">
+	<room variant="24003" name="Sin - [TC] - Border Patrol" type="16" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-03-18T02:59+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -7181,7 +7184,7 @@
 			<entity type="10000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24004" name="Sin - [TC] - Its a living i guess" type="16" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-02-12T22:27+00:00">
+	<room variant="24004" name="Sin - [TC] - Its a living i guess" type="16" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-03-18T02:59+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
