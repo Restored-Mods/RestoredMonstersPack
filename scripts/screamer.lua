@@ -230,16 +230,16 @@ function mod:playerFreezeEffect(player)
 
 		player:SetColor(Color(0.22, 0.22, 0.22, 1.0, 40/255, 40/255, 40/255), 1, 255, false, false)
 		player:SetMinDamageCooldown(60)
-		player:GetData().Frozen = true
+		player:GetData().ScreamerFrozen = true
 
-	elseif player:GetData().Frozen == true then
+	elseif player:GetData().ScreamerFrozen == true then
 		effects:RemoveNullEffect(NullItemID.ID_REVERSE_CHARIOT)
 		player:AddCacheFlags(CacheFlag.CACHE_FIREDELAY)
 		player:EvaluateItems()
 
 		player:ClearEntityFlags(EntityFlag.FLAG_NO_SPRITE_UPDATE | EntityFlag.FLAG_NO_DAMAGE_BLINK | EntityFlag.FLAG_NO_KNOCKBACK)
 
-		player:GetData().Frozen = false
+		player:GetData().ScreamerFrozen = false
 	end
 end
 mod:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, mod.playerFreezeEffect)
@@ -247,7 +247,7 @@ mod:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, mod.playerFreezeEffect)
 
 function mod:reduceFakeChariotStats(player, cacheFlag)
 	if cacheFlag == cacheFlag & CacheFlag.CACHE_FIREDELAY then
-		if player:GetData().Frozen == true then
+		if player:GetData().ScreamerFrozen == true then
 			player.MaxFireDelay = player.MaxFireDelay * 5 --doesnt exactly even it out but whatever close enough
 		end
 	end
