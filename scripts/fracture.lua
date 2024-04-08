@@ -19,10 +19,13 @@ function mod:fractureInit(entity)
 		local stage = level:GetStage()
 
 		-- Ashpit(Scarred Womb) skins
-		if (stage == LevelStage.STAGE4_1 or stage == LevelStage.STAGE4_2) then
+		if not StageAPI and (stage == LevelStage.STAGE4_1 or stage == LevelStage.STAGE4_2) then
 			local stype = level:GetStageType()
 			if stype == StageType.STAGETYPE_AFTERBIRTH then
 				local altSkin = "_scarred_womb"
+				if entity:IsChampion() then
+					altSkin = altSkin .. "_champion"
+				end
 
 				for i = 0, sprite:GetLayerCount() do
 					sprite:ReplaceSpritesheet(i, "gfx/monsters/repentance/801.000_fracture" .. altSkin .. ".png")
