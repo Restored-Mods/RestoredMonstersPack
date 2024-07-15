@@ -10,7 +10,7 @@ local data = {
     {c.Scab,		c.Skinling},
     {c.Mortling,		c.Scab},
     {c.TaintedDumpling,		c.Dumpling},
-    {c.FractureTC,          vc.Trite},
+    {c.FractureTC,          vc.Level2Spider},
     {vc.Ragling,          c.FractureTC},
     {vc.Blister,          c.FractureTC},
     {c.EchoBat,          vc.OneTooth},
@@ -32,6 +32,10 @@ local data = {
     {c.Foreigner,          c.Canary},
     {c.Canary,          vc.Cyclopia},
     {c.Canary,          vc.Blurb},
+    -- {c.CarrionRider,        c.CorpseEater}, Too wacky
+    {c.CorpseEater,        vc.Grub},
+    {c.SplitRageCreep,          vc.RageCreep},
+    {c.RagCreep,          vc.WallCreep},
     {vc.MazeRoamer,          c.Strifer},
     {c.Strifer,          vc.Cyclopia},
 }
