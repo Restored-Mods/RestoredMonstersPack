@@ -10,14 +10,14 @@ local data = {
     {c.Scab,		c.Mortling},
     {c.Mortling,		c.TaintedDumpling},
     {c.Scorchling,		c.Skinling},
-    {vc.Trite,          c.Fracture},
-    {c.Fracture,          vc.Ragling},
-    {c.Fracture,          vc.Blister},
+    {vc.Trite,          c.FractureTC},
+    {c.FractureTC,          vc.Ragling},
+    {c.FractureTC,          vc.Blister},
     {vc.Baby,          c.Stillborn},
     {vc.OneTooth,          c.EchoBat},
     {vc.FatBat,          c.EchoBat},
     {vc.Fanatic,          c.Necromancer},
-    {vc.Fanatic,          vc.Exorcist},
+    {vc.Fanatic,          c.Exorcist},
     {c.Swapper,          vc.AngelicBaby},
     {vc.BigBony,          c.Barfy},
     {vc.Quakey,          c.Barfy},
@@ -37,6 +37,7 @@ local data = {
     {c.Strifer,          vc.MazeRoamer},
     {vc.Cyclopia,          c.Strifer},
     {c.VesselAntibirth,          c.GildedDumpling},
+    
 }
 
 for _, dataset in pairs(data) do

@@ -42,7 +42,7 @@
         <devolve id="800.0.0" weight="1" />
     </entity>
 
-	<entity anm2path="801.000_fracture.anm2" hasFloorAlts="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" id="29" name="Fracture" numGridCollisionPoints="0" shadowSize="28" stageHP="0" tags="spider" variant="1" subtype="801" portrait="7">
+	<entity anm2path="801.000_fracture.anm2" hasFloorAlts="true" baseHP="15" boss="0" champion="1" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" id="29" name="​Fracture" numGridCollisionPoints="0" shadowSize="28" stageHP="0" tags="spider" variant="1" subtype="801" portrait="7">
     	<bestiary transform="0,0,1" anim="Hop" />
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" />
         <devolve id="29.1.0" weight="1" />
@@ -92,7 +92,7 @@
     	<bestiary transform="0,0,1" anim="WalkDown" />
         <gibs amount="12" blood="1" bone="1" eye="0" gut="0" large="1" colorblood="1" />
     <!--<devolve id="5.350.21" weight="0.1" />  Find my pages -->
-        <devolve id="816.0.0" weight="1" />        
+        <devolve id="41.1.0" weight="1" />        
     </entity>
 
 	<entity anm2path="cell.anm2" baseHP="16" boss="0" champion="0" collisionDamage="1" collisionMass="16" collisionRadius="13" friction="1" gridCollision="walls" id="200" name="Cell" numGridCollisionPoints="12" portrait="15" shadowSize="12" stageHP="0" variant="2500">

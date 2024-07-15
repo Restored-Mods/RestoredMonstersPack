@@ -231,12 +231,8 @@ return {
 	CursedDeathsHead	= GED("#CURSED_DEATHS_HEAD"),	-- 212.2.0
 	BrimstoneDeathsHead	= GED("#BRIMSTONE_DEATHS_HEAD"),-- 212.3.0
 	RedSkull			= GED("#REDSKULL"),			-- 212.4.0
-	CorpseRider		= GED("#CORPSE_EATER"),		-- 239.100.0
-	CarrionRider	= GED("#CARRION_RIDER"),	-- 239.101.0
 	SoyCreep		= GED("#SOY_CREEP"),		-- 240.1.0
-	RagCreep 		= GED("#RAG_CREEP"),		-- 240.2.0
 	TaintedSoyCreep	= GED("#TAINTED_SOY_CREEP"),-- 240.3.0
-	SplitRageCreep	= GED("#SPLIT_RAGE_CREEP"),	-- 241.1.0
 	LilPortal		= GED("#LIL_PORTAL"),		-- 306.1.0
 	Bishop			= GED("#BISHOP"),			-- 805.0.0
 	Bubbles			= GED("#BUBBLES"),			-- 806.0.0
@@ -275,7 +271,6 @@ return {
 	BigBony			= GED("#BIG_BONY"),			-- 830.0.0
 	GuttedFatty		= GED("#GUTTED_FATTY"),		-- 831.0.0
 	FesteringGuts	= GED("#FESTERING_GUTS"),	-- 831.20.0
-	Exorcist		= GED("#EXORCIST"),			-- 832.0.0
 	Fanatic			= GED("#FANATIC"),			-- 832.1.0
 	Candler			= GED("#CANDLER"),			-- 833.0.0
 	Whipper			= GED("#WHIPPER"),			-- 834.0.0
