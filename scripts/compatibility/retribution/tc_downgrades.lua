@@ -20,7 +20,7 @@ local data = {
     {c.Barfy,          vc.BigBony},
     {c.Barfy,          vc.Quakey},
     {vc.GuttedFatty,          c.Barfy},
-    {c.Screamer,          c.LooseKnight},
+    {c.Screamer,          vc.LooseKnight},
     {c.Screamer,          vc.SelflessKnight},
     {c.Cell,          vc.RedMaw},
     {c.FusedCells,          vc.Embryo},
