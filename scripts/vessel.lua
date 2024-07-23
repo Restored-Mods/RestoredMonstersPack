@@ -21,7 +21,6 @@ local States = {
 
 local vesselvar = Isaac.GetEntityVariantByName("​Vessel (Antibirth)")
 local checkvar = Isaac.GetEntityVariantByName("​Vessel (Antibirth)")
-
 function mod:vesselCheckForLegOrWhateverTheFuckDSSSays()
     for i, entity in ipairs(Isaac.GetRoomEntities()) do
         if entity.Type == 858 then
@@ -39,7 +38,6 @@ function mod:vesselCheckForLegOrWhateverTheFuckDSSSays()
     end
 end
 mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, mod.vesselCheckForLegOrWhateverTheFuckDSSSays)
-
 
 function mod:vesselInit(vessel)
 
