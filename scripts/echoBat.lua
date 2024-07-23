@@ -222,7 +222,7 @@ function mod:confusionShader(shaderName)
 
 		local targetPos = room:WorldToScreenPosition(shaderPosition)
 
-		distortion = Lerp(distortion, lerpTarget, .3)
+		distortion = Lerp(distortion, lerpTarget, .1)
 		if confusedCount > 0 then
 			lerpTarget = .4
 		else
