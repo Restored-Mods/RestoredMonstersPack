@@ -188,8 +188,8 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.vesselUpdate, EntityType.ENTITY_
 
 -- Spawn maggots when taking damage
 function mod:vesselDamage(vessel, damageAmount, damageFlags, damageSource, damageCountdownFrames)
-    if vessel.Variant ~= vesselvar then
-    return
+    if vessel.Variant ~= vesselvar or damageAmount == 0 then
+        return
     end
 
 	local vesselData = vessel:GetData().VesselData
