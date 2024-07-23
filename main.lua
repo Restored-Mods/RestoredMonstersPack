@@ -510,3 +510,21 @@ mod.DumbhackReplace = {
 	[EntityType.ENTITY_RAGE_CREEP] = {1, Isaac.GetEntityVariantByName("​Split Rage Creep")},
 	[EntityType.ENTITY_WALL_CREEP] = {2, Isaac.GetEntityVariantByName("​Rag Creep")},
 }
+
+mod.Nonmale = {
+	{ID = {Isaac.GetEntityTypeByName("Splashy Long Legs"), Isaac.GetEntityVariantByName("Splashy Long Legs")}, Affliction = "Woman"}, --Splashy Long Legs
+	{ID = {Isaac.GetEntityTypeByName("Sticky Long Legs"), Isaac.GetEntityVariantByName("Sticky Long Legs"), 1}, Affliction = "Woman"}, --Sticky Long Legs
+	{ID = {Isaac.GetEntityTypeByName("Scab"), Isaac.GetEntityVariantByName("Scab")}, Affliction = "Woman"}, --Scab
+	{ID = {Isaac.GetEntityTypeByName("Mortling"), Isaac.GetEntityVariantByName("Mortling")}, Affliction = "Woman"}, --Mortling
+	{ID = {Isaac.GetEntityTypeByName("​Fracture"), Isaac.GetEntityVariantByName("​Fracture"), 801}, Affliction = "Woman"}, --Fracture
+	{ID = {Isaac.GetEntityTypeByName("Echo Bat"), Isaac.GetEntityVariantByName("Echo Bat")}, Affliction = "Woman"}, --Echo Bat
+	{ID = {Isaac.GetEntityTypeByName("​Corpse Eater"), Isaac.GetEntityVariantByName("​Corpse Eater")}, Affliction = "Woman"}, --Corpse Eater
+	{ID = {Isaac.GetEntityTypeByName("​Foreigner"), Isaac.GetEntityVariantByName("​Foreigner")}, Affliction = "Woman"}, --Foreigner
+	{ID = {Isaac.GetEntityTypeByName("Screamer"), Isaac.GetEntityVariantByName("Screamer")}, Affliction = "Woman"}, --Screamer
+	--{ID = {Isaac.GetEntityTypeByName("Cell"), Isaac.GetEntityVariantByName("Cell")}, Affliction = "Woman"}, --Cell BC WESTRVN SAID SO ):
+	{ID = {Isaac.GetEntityTypeByName("Fused Cells"), Isaac.GetEntityVariantByName("Fused Cells")}, Affliction = "Woman"}, --Fused Cell
+	--{ID = {Isaac.GetEntityTypeByName("Tissue"), Isaac.GetEntityVariantByName("Tissue")}, Affliction = "Woman"}, --Tissue ALSO BC WESTRVN SAID SO ):
+	{ID = {Isaac.GetEntityTypeByName("Grave Robber"), Isaac.GetEntityVariantByName("Grave Robber")}, Affliction = "Woman"}, --Grave Robber
+	{ID = {Isaac.GetEntityTypeByName("​Strifer"), Isaac.GetEntityVariantByName("Strifer")}, Affliction = "Woman"}, --Strifer
+	{ID = {Isaac.GetEntityTypeByName("Vessel (Anitbirth)"), Isaac.GetEntityVariantByName("Vessel (Antibirth)")}, Affliction = "Woman"}, --Vessel (rework)
+}

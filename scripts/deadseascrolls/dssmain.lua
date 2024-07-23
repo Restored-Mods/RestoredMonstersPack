@@ -1,8 +1,8 @@
-local mod = CutMonsterPack
+local mod = RestoredMonsterPack
 local game = Game()
 local json = require("json")
 
-local DSSModName = "CutMonsterPack Mod DSS Menu"
+local DSSModName = "RestoredMonsterPack Mod DSS Menu"
 
 local DSSCoreVersion = 7
 
@@ -13,16 +13,16 @@ function MenuProvider.SaveSaveData()
 end
 
 function MenuProvider.GetPaletteSetting()
-	return CutMonsterPack.savedata.MenuPalette
+	return RestoredMonsterPack.savedata.MenuPalette
 end
 
 function MenuProvider.SavePaletteSetting(var)
-	CutMonsterPack.savedata.MenuPalette = var
+	RestoredMonsterPack.savedata.MenuPalette = var
 end
 
 function MenuProvider.GetHudOffsetSetting()
 	if not REPENTANCE then
-		return CutMonsterPack.savedata.HudOffset
+		return RestoredMonsterPack.savedata.HudOffset
 	else
 		return Options.HUDOffset * 10
 	end
@@ -30,70 +30,77 @@ end
 
 function MenuProvider.SaveHudOffsetSetting(var)
 	if not REPENTANCE then
-		CutMonsterPack.savedata.HudOffset = var
+		RestoredMonsterPack.savedata.HudOffset = var
 	end
 end
 
 function MenuProvider.GetGamepadToggleSetting()
-	return CutMonsterPack.savedata.GamepadToggle
+	return RestoredMonsterPack.savedata.GamepadToggle
 end
 
 function MenuProvider.SaveGamepadToggleSetting(var)
-	CutMonsterPack.savedata.GamepadToggle = var
+	RestoredMonsterPack.savedata.GamepadToggle = var
 end
 
 function MenuProvider.GetMenuKeybindSetting()
-	return CutMonsterPack.savedata.MenuKeybind
+	return RestoredMonsterPack.savedata.MenuKeybind
 end
 
 function MenuProvider.SaveMenuKeybindSetting(var)
-	CutMonsterPack.savedata.MenuKeybind = var
+	RestoredMonsterPack.savedata.MenuKeybind = var
 end
 
 function MenuProvider.GetMenuHintSetting()
-	return CutMonsterPack.savedata.MenuHint
+	return RestoredMonsterPack.savedata.MenuHint
 end
 
 function MenuProvider.SaveMenuHintSetting(var)
-	CutMonsterPack.savedata.MenuHint = var
+	RestoredMonsterPack.savedata.MenuHint = var
 end
 
 function MenuProvider.GetMenuBuzzerSetting()
-	return CutMonsterPack.savedata.MenuBuzzer
+	return RestoredMonsterPack.savedata.MenuBuzzer
 end
 
 function MenuProvider.SaveMenuBuzzerSetting(var)
-	CutMonsterPack.savedata.MenuBuzzer = var
+	RestoredMonsterPack.savedata.MenuBuzzer = var
 end
 
 function MenuProvider.GetMenusNotified()
-	return CutMonsterPack.savedata.MenusNotified
+	return RestoredMonsterPack.savedata.MenusNotified
 end
 
 function MenuProvider.SaveMenusNotified(var)
-	CutMonsterPack.savedata.MenusNotified = var
+	RestoredMonsterPack.savedata.MenusNotified = var
 end
 
 function MenuProvider.GetMenusPoppedUp()
-	return CutMonsterPack.savedata.MenusPoppedUp
+	return RestoredMonsterPack.savedata.MenusPoppedUp
 end
 
 function MenuProvider.SaveMenusPoppedUp(var)
-	CutMonsterPack.savedata.MenusPoppedUp = var
+	RestoredMonsterPack.savedata.MenusPoppedUp = var
 end
-local DSSInitializerFunction = include("scripts.iam.deadseascrolls.dssmenucore")
+local DSSInitializerFunction = include("scripts.deadseascrolls.dssmenucore")
 local dssmod = DSSInitializerFunction(DSSModName, DSSCoreVersion, MenuProvider)
 
 
 local restoreddirectory = {
     main = {
-        title = 'restored monster pack',
+        title = 'restored monsters',
 
         buttons = {
             {str = 'resume game', action = 'resume'},
             {str = 'settings', dest = 'settings',tooltip = {strset = {'---','play around', 'with what', 'you like and', 'do not like', '---'}}},
             dssmod.changelogsButton,
-            {str = '', fsize=2, nosel = true},
+            {str = '', nosel = true},
+            {str = 'restored monster pack:',fsize=2, nosel = true},
+            {str = 'bringing back your', fsize=2,nosel = true},
+            {str = 'favorite foes since 2023', fsize=2,nosel = true},
+            {str = '', fsize=2,nosel = true},
+            {str = 'play us with', fsize=2,nosel = true},
+            {str = 'fiend folio, the future', fsize=2,nosel = true},
+            {str = 'revelations, and more!', fsize=2,nosel = true},
         },
         tooltip = dssmod.menuOpenToolTip,
     },
@@ -101,40 +108,40 @@ local restoreddirectory = {
     settings =  {
             title = 'settings',
                 buttons = {
-                    {str = 'enemies', fsize=2, nosel = true},
-                    {str = '', fsize=2, nosel = true},
-                    {str = 'vessels', fsize=2, nosel = true},
+                    {str = 'enemies', nosel = true},
+                    {str = '----------', fsize=2, nosel = true},
+                    {str = 'vessels', nosel = true},
                     {
                         str = 'vessel type',
+                        fsize=2,
                         choices = {'normal', 'legacy'},
                         variable = "vesselType",
                         setting = 1,
                         load = function()
-                            if CutMonsterPack.vesselType then
-                                return 1
-                            else
-                                return 2
-                            end
+                            return mod.vesselType or 1
                         end,
-                        tooltip = {strset = {'replaces vessels', 'with their', 'legacy version','','enabled by', 'default'}}
+                        store = function(var)
+                            mod.vesselType = var
+                        end,
+                        tooltip = {strset = {'replaces', 'vessels with', 'their legacy', 'version','','disabled by', 'default'}}
         
                     },
                     {str = '', fsize=2, nosel = true},
-                    {str = 'blind bat', fsize=2, nosel = true},
+                    {str = 'echo bat', nosel = true},
                     {
-                        str = 'scream amount',
+                        str = 'scream effect',
+                        fsize=2,
                         increment = 1, max = 5,
                         variable = "blindBatScreamInc",
                         slider = true,
                         setting = 3,
                         load = function()
-                            if CutMonsterPack.blindBatScreamInc then
-                                return 1
-                            else
-                                return 2
-                            end
+                            return mod.blindBatScreamInc or 3
                         end,
-                        tooltip = {strset = {'changes how', 'strong the', 'blind bat','scream is','','at 3 by', 'default'}}
+                        store = function(var)
+                            mod.blindBatScreamInc = var
+                        end,
+                        tooltip = {strset = {'changes how', 'strong the', 'blind bat','effect is','','at 3 by', 'default'}}
         
                     },
                 }

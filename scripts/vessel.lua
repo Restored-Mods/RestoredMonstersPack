@@ -19,10 +19,30 @@ local States = {
   Attacking = 2
 }
 
-local vesselvar = Isaac.GetEntityVariantByName("​Vessel (Antibirth)") 
+local vesselvar = Isaac.GetEntityVariantByName("​Vessel (Antibirth)")
+local checkvar = Isaac.GetEntityVariantByName("​Vessel (Antibirth)")
+
+function mod:vesselCheckForLegOrWhateverTheFuckDSSSays()
+    for i, entity in ipairs(Isaac.GetRoomEntities()) do
+        if entity.Type == 858 then
+            if mod.vesselType == 2 then
+                checkvar = 1
+            else
+                checkvar = 200
+            end
+            if entity.Variant ~= checkvar then
+                print("dammit")
+                Isaac.Spawn(EntityType.ENTITY_VESSEL, checkvar, 0, entity.Position, entity.Velocity, entity)
+                entity:Remove()
+            end
+        end
+    end
+end
+mod:AddCallback(ModCallbacks.MC_POST_NEW_ROOM, mod.vesselCheckForLegOrWhateverTheFuckDSSSays)
 
 
 function mod:vesselInit(vessel)
+
     if vessel.Variant ~= vesselvar then
     return
     end
