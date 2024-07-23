@@ -119,15 +119,15 @@ local restoreddirectory = {
                         setting = 1,
                         load = function()
                             if mod.vesselType then
-                                return 2
-                            else
                                 return 1
+                            else
+                                return 2
                             end
                         end,
                         store = function(var)
                             mod.vesselType = var
                         end,
-                        tooltip = {strset = {'replaces', 'vessels with', 'their legacy', 'version','','enabled by', 'default'}}
+                        tooltip = {strset = {'replaces', 'vessels with', 'their legacy', 'version','','disabled by', 'default'}}
         
                     },
                     {str = '', fsize=2, nosel = true},
