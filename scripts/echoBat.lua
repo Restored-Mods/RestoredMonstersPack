@@ -96,7 +96,7 @@ function mod:echoBatUpdate(entity)
 		elseif sprite:IsEventTriggered("Shoot") then
 			local params = ProjectileParams()
 			params.Variant = ProjectileVariant.PROJECTILE_ECHO
-			params.FallingAccelModifier = -0.15
+			params.FallingAccelModifier = -0.1
 
 			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed, 0, params)
 		end
@@ -114,7 +114,7 @@ mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.echoBatUpdate, EntityType.ENTITY
 -- Projectile
 function mod:echoRingInit(projectile)
 	projectile:GetSprite():Play("Move", true)
-	projectile:AddProjectileFlags(ProjectileFlags.GHOST)
+	projectile:AddProjectileFlags(ProjectileFlags.GHOST | ProjectileFlags.BOUNCE)
 	projectile.Mass = 0
 end
 mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_INIT, mod.echoRingInit, ProjectileVariant.PROJECTILE_ECHO)
@@ -123,8 +123,9 @@ function mod:echoRingHit(target, damageAmount, damageFlags, damageSource, damage
 	if damageSource.Type == EntityType.ENTITY_PROJECTILE and damageSource.Variant == ProjectileVariant.PROJECTILE_ECHO then
 		if target.Type == EntityType.ENTITY_PLAYER then
 			if not target:HasEntityFlags(EntityFlag.FLAG_CONFUSION) and not target:ToPlayer():HasCollectible(CollectibleType.COLLECTIBLE_EVIL_CHARM) then
-				target:AddConfusion(EntityRef(damageSource.Entity), 90, 0.8, Color(1,1,1, 1))
-				target:SetColor(Color(0.5, 0.5, 0.5, 1.0, 40/255, 40/255, 40/255), 90, 1, false, false)
+				-- target:AddConfusion(EntityRef(damageSource.Entity), 90, 0.8, Color(1,1,1, 1))
+				target:AddEntityFlags(EntityFlag.FLAG_CONFUSION)
+				target:GetData().EchoConfusionCountdown = 90
 			end
 		else
 			target:AddConfusion(EntityRef(damageSource.Entity), 90, 0.8, Color(0.5, 0.5, 0.5, 1.0, 40/255, 40/255, 40/255))
@@ -147,19 +148,32 @@ function mod:confusionEffect(player, inputHook, buttonAction)
 
 
 		isPolling = true
-		if Input.IsActionTriggered(buttonAction, player.ControllerIndex) then --direction is randomized each time you press any button
-			data.randomFireDirection = player:GetShootingJoystick():Rotated(player:GetDropRNG():RandomInt(8) * 45):Normalized()
+		if Input.IsActionPressed(buttonAction, player.ControllerIndex) then
+			data.FireDirection = - player:GetShootingJoystick():Normalized()
+			data.MoveDirection = - player:GetMovementJoystick():Normalized() or player:GetRecentMovementVector():Normalized()
+		else
+			data.FireDirection = Vector.Zero
+			data.MoveDirection = Vector.Zero
 		end
-		local directionVector = data.randomFireDirection or player:GetShootingJoystick()
+
+		-- if Input.IsActionTriggered(buttonAction, player.ControllerIndex) then --direction is randomized each time you press any button
+		-- 	data.randomFireDirection = player:GetShootingJoystick():Rotated(player:GetDropRNG():RandomInt(8) * 45):Normalized()
+		-- end
+		local moveDirectionVector = data.MoveDirection --data.randomFireDirection
+		local fireDirectionVector = data.FireDirection
 
 		isPolling = false
 
 
 		local directionTable = {
-			[ButtonAction.ACTION_SHOOTDOWN] = directionVector:Dot(Vector(0, 1)),
-			[ButtonAction.ACTION_SHOOTLEFT] = directionVector:Dot(Vector(-1, 0)),
-			[ButtonAction.ACTION_SHOOTRIGHT] = directionVector:Dot(Vector(1, 0)),
-			[ButtonAction.ACTION_SHOOTUP] = directionVector:Dot(Vector(0, -1))
+			[ButtonAction.ACTION_DOWN] = moveDirectionVector:Dot(Vector(0, 1)),
+			[ButtonAction.ACTION_LEFT] = moveDirectionVector:Dot(Vector(-1, 0)),
+			[ButtonAction.ACTION_RIGHT] = moveDirectionVector:Dot(Vector(1, 0)),
+			[ButtonAction.ACTION_UP] = moveDirectionVector:Dot(Vector(0, -1)),
+			[ButtonAction.ACTION_SHOOTDOWN] = fireDirectionVector:Dot(Vector(0, 1)),
+			[ButtonAction.ACTION_SHOOTLEFT] = fireDirectionVector:Dot(Vector(-1, 0)),
+			[ButtonAction.ACTION_SHOOTRIGHT] = fireDirectionVector:Dot(Vector(1, 0)),
+			[ButtonAction.ACTION_SHOOTUP] = fireDirectionVector:Dot(Vector(0, -1))
 		}
 
 		local buttonVector = directionTable[buttonAction]
@@ -227,3 +241,32 @@ function mod:confusionShader(shaderName)
   	end
 end
 mod:AddCallback(ModCallbacks.MC_GET_SHADER_PARAMS, mod.confusionShader)
+
+
+
+function mod:confusionCountdown(player)
+	local data = player:GetData()
+	if data.EchoConfusionCountdown then
+		if data.EchoConfusionCountdown > 0 then
+			player:SetColor(Color(0.5, 0.5, 0.5, 1.0, 40/255, 40/255, 40/255), 1, 1, false, false)
+			data.EchoConfusionCountdown = data.EchoConfusionCountdown - 1
+		elseif data.EchoConfusionCountdown == 0 then
+			player:ClearEntityFlags(EntityFlag.FLAG_CONFUSION)
+			player:SetMinDamageCooldown(30)
+			data.EchoConfusionCountdown = nil
+		end
+		print(data.EchoConfusionCountdown)
+	end
+end
+mod:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, mod.confusionCountdown)
+
+function mod:endConfusionEarly(target, damageAmount, damageFlags, damageSource, damageCountdownFrames)
+	if target.Type == EntityType.ENTITY_PLAYER then
+		local data = target:GetData()
+		if target:HasEntityFlags(EntityFlag.FLAG_CONFUSION) then
+			target:ClearEntityFlags(EntityFlag.FLAG_CONFUSION)
+			data.EchoConfusionCountdown = 0
+		end
+	end
+end
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.endConfusionEarly)
