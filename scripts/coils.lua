@@ -11,6 +11,7 @@ local function addLaser(npc_target, coil_source)
 	local laser_ent_pair = {laser=EntityLaser.ShootAngle(2, laser_source_pos, ((npc_target.Position - laser_source_pos):GetAngleDegrees()), 0, Vector(0, -30), coil_source), npc=npc_target}
 	local _, endPos = Game():GetRoom():CheckLine(laser_source_pos, laser_ent_pair.npc.Position, 3)
 
+    laser_ent_pair.laser.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYERONLY
 	laser_ent_pair.laser:SetMaxDistance(laser_source_pos:Distance(endPos))
 	laser_ent_pair.laser.CollisionDamage = 0
 	laser_ent_pair.laser:SetColor(Color(0,0,0,1,0.89,0.92,0.81), 0, 1, false, false)

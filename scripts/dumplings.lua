@@ -246,6 +246,7 @@ mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.dumplingInit, EntityType.ENTI
 function mod:dumplingDMG(entity, amount, dmg_flags, source)
 	local npc = entity:ToNPC()
 	local rng = entity:GetDropRNG()
+	if amount == 0 then return end
 	if npc.Variant == EntityVariant.TAINTED_DUMPLING and npc:GetData()["HurtAttackCooldown"] > 0 then -- tainted damage cooldown
         npc:GetData()["HurtAttackCooldown"] = npc:GetData()["HurtAttackCooldown"] - 1
 	elseif npc.Variant == EntityVariant.SCORCHLING and dmg_flags == DamageFlag.DAMAGE_FIRE then
