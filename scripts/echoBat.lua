@@ -10,6 +10,8 @@ local Settings = {
 	ShotSpeed = 9.25 -- The speed of the echo rings
 }
 
+mod.blindBatScreamInc = mod.blindBatScreamInc or 3 --dont ask
+
 local function Lerp(first, second, percent)
 	return (first + (second - first) * percent)
 end
