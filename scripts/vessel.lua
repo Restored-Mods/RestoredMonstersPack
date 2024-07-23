@@ -30,7 +30,6 @@ function mod:vesselInit(vessel)
         checkvar = 200
     end
     if vessel.Variant ~= checkvar then
-        print("entity variant is not " .. checkvar)
         Isaac.Spawn(EntityType.ENTITY_VESSEL, checkvar, 0, vessel.Position, vessel.Velocity, vessel)
         vessel:Remove()
     end
