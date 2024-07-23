@@ -108,40 +108,44 @@ local restoreddirectory = {
     settings =  {
             title = 'settings',
                 buttons = {
-                    {str = 'enemies', fsize=2, nosel = true},
-                    {str = '', fsize=2, nosel = true},
-                    {str = 'vessels', fsize=2, nosel = true},
+                    {str = 'enemies', nosel = true},
+                    {str = '----------', fsize=2, nosel = true},
+                    {str = 'vessels', nosel = true},
                     {
                         str = 'vessel type',
+                        fsize=2,
                         choices = {'normal', 'legacy'},
                         variable = "vesselType",
                         setting = 1,
                         load = function()
-                            if CutMonsterPack.vesselType then
-                                return 1
-                            else
+                            if mod.vesselType then
                                 return 2
+                            else
+                                return 1
                             end
                         end,
-                        tooltip = {strset = {'replaces vessels', 'with their', 'legacy version','','enabled by', 'default'}}
+                        store = function(var)
+                            mod.vesselType = var
+                        end,
+                        tooltip = {strset = {'replaces', 'vessels with', 'their legacy', 'version','','enabled by', 'default'}}
         
                     },
                     {str = '', fsize=2, nosel = true},
-                    {str = 'blind bat', fsize=2, nosel = true},
+                    {str = 'echo bat', nosel = true},
                     {
-                        str = 'scream amount',
+                        str = 'scream effect',
+                        fsize=2,
                         increment = 1, max = 5,
                         variable = "blindBatScreamInc",
                         slider = true,
                         setting = 3,
                         load = function()
-                            if CutMonsterPack.blindBatScreamInc then
-                                return 1
-                            else
-                                return 2
-                            end
+                            return mod.blindBatScreamInc or 3
                         end,
-                        tooltip = {strset = {'changes how', 'strong the', 'blind bat','scream is','','at 3 by', 'default'}}
+                        store = function(var)
+                            mod.blindBatScreamInc = var
+                        end,
+                        tooltip = {strset = {'changes how', 'strong the', 'blind bat','effect is','','at 3 by', 'default'}}
         
                     },
                 }

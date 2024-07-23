@@ -19,10 +19,22 @@ local States = {
   Attacking = 2
 }
 
-local vesselvar = Isaac.GetEntityVariantByName("​Vessel (Antibirth)") 
+local vesselvar = Isaac.GetEntityVariantByName("​Vessel (Antibirth)")
+local checkvar = Isaac.GetEntityVariantByName("​Vessel (Antibirth)")
 
 
 function mod:vesselInit(vessel)
+    if mod.vesselType == 2 then
+        checkvar = 1
+    else
+        checkvar = 200
+    end
+    if vessel.Variant ~= checkvar then
+        print("entity variant is not " .. checkvar)
+        Isaac.Spawn(EntityType.ENTITY_VESSEL, checkvar, 0, vessel.Position, vessel.Velocity, vessel)
+        vessel:Remove()
+    end
+
     if vessel.Variant ~= vesselvar then
     return
     end
