@@ -224,7 +224,7 @@ function mod:confusionShader(shaderName)
 
 		distortion = Lerp(distortion, lerpTarget, .3)
 		if confusedCount > 0 then
-			lerpTarget = 1
+			lerpTarget = .4
 		else
 			lerpTarget = 0
 		end
@@ -255,7 +255,7 @@ function mod:confusionCountdown(player)
 			player:SetMinDamageCooldown(30)
 			data.EchoConfusionCountdown = nil
 		end
-		print(data.EchoConfusionCountdown)
+		-- print(data.EchoConfusionCountdown)
 	end
 end
 mod:AddCallback(ModCallbacks.MC_POST_PEFFECT_UPDATE, mod.confusionCountdown)
