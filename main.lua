@@ -103,6 +103,13 @@ EffectVariant.NIGHTWATCH_SPOTLIGHT = 842
 EffectVariant.SCREAMER_AURA = 867
 
 
+--[[--------------------------------------------------------
+    DSS and savedata should (likely) be loaded first
+--]]--------------------------------------------------------
+
+include("scripts.deadseascrolls.savedata")
+include("scripts.deadseascrolls.dssmain")
+include("scripts.deadseascrolls.changelogs")
 
 --[[--------------------------------------------------------
     External monster files to require
@@ -133,7 +140,7 @@ include("scripts.palevessel")
 
 --[[--------------------------------------------------------
     misc
---]]---
+--]]--------------------------------------------------------
 
 include("scripts.revelCompat")
 include("scripts.compatibility.retribution.baptismal_preloader")
