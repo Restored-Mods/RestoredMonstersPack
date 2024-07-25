@@ -110,6 +110,7 @@ EffectVariant.SCREAMER_AURA = 867
 include("scripts.deadseascrolls.savedata")
 include("scripts.deadseascrolls.dssmain")
 include("scripts.deadseascrolls.changelogs")
+include("scripts.deadseascrolls.imgui")
 
 --[[--------------------------------------------------------
     External monster files to require
