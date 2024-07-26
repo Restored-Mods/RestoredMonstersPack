@@ -41,13 +41,12 @@ local function getPaths(room_index)
 				if roomConfigSpawn:PickEntry(j) ~= nil then
 					local roomConfigEntry = roomConfigSpawn:PickEntry(j)
 
-					if roomConfigEntry.Type == EntityType.ENTITY_ENVIRONMENT and roomConfigEntry.Variant > 689 and roomConfigEntry.Variant < 696 then
-						local pathData = {roomConfigEntry.Variant - 690, Vector(roomConfigSpawn.X, roomConfigSpawn.Y), math.floor(roomConfigEntry.Subtype / 16)}
+					if roomConfigEntry.Type == EntityType.ENTITY_ENVIRONMENT and roomConfigEntry.Variant > 59 and roomConfigEntry.Variant < 66 then
+						local pathData = {roomConfigEntry.Variant - 60, Vector(roomConfigSpawn.X, roomConfigSpawn.Y), math.floor(roomConfigEntry.Subtype / 16)}
 						local alreadyHas = false
 						local group = roomConfigEntry.Subtype - (math.floor(roomConfigEntry.Subtype / 16) * 16)
-
 						if nightwatchPaths[room_index][group] ~= nil then
-							if roomConfigEntry.Variant ~= 695 then
+							if roomConfigEntry.Variant ~= 65 then
 								for k,s in pairs(nightwatchPaths[room_index][group]) do
 									if s[2].X == pathData[2].X and s[2].Y == pathData[2].Y then
 										alreadyHas = true
@@ -259,7 +258,6 @@ end
 
 function mod:nightwatchInit(entity)
 	local data = entity:GetData()
-
 	entity.EntityCollisionClass = EntityCollisionClass.ENTCOLL_PLAYEROBJECTS
 	entity.GridCollisionClass = EntityGridCollisionClass.GRIDCOLL_GROUND
 	entity:AddEntityFlags(EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK | EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_STATUS_EFFECTS | EntityFlag.FLAG_APPEAR | EntityFlag.FLAG_NO_TARGET | EntityFlag.FLAG_NO_PLAYER_CONTROL)

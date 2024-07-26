@@ -204,7 +204,7 @@
         <devolve id="240.0.0" weight="1" />
         <preload-snd id="317"/>
     </entity>
-    <entity anm2path="842.000_nightwatch.anm2" baseHP="25" boss="0" champion="0" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1" gridCollision="floor" id="842" name="​Nightwatch" numGridCollisionPoints="12" portrait="35" shadowSize="20" shutdoors="false" stageHP="5" tags="ghost" variant="200">
+    <entity anm2path="842.000_nightwatch.anm2" baseHP="25" boss="0" champion="0" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1" gridCollision="floor" id="842" name="​Nightwatch" numGridCollisionPoints="12" portrait="35" shadowSize="20" shutdoors="false" stageHP="5" tags="ghost" variant="0">
         <bestiary anim="WalkDown" transform="0,0,1"/>
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
         <devolve id="260.10.0" weight="1" />
