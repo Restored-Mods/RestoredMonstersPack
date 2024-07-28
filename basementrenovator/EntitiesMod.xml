@@ -71,41 +71,41 @@
 				</group>
 
 				<group Name="Nightwatches (Regular)" Label="- Regular -">
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.0 - Nightwatch (Bounce Left).png" Name="Nightwatch (Bounce Left)" Subtype="0" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.1 - Nightwatch (Bounce Up).png" Name="Nightwatch (Bounce Up)" Subtype="1" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.2 - Nightwatch (Bounce Right).png" Name="Nightwatch (Bounce Right)" Subtype="2" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.3 - Nightwatch (Bounce Down).png" Name="Nightwatch (Bounce Down)" Subtype="3" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.0 - Nightwatch (Bounce Left).png" Name="Nightwatch (Bounce Left)" Subtype="0" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.1 - Nightwatch (Bounce Up).png" Name="Nightwatch (Bounce Up)" Subtype="1" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.2 - Nightwatch (Bounce Right).png" Name="Nightwatch (Bounce Right)" Subtype="2" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.3 - Nightwatch (Bounce Down).png" Name="Nightwatch (Bounce Down)" Subtype="3" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
 
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.30 - Nightwatch (Rotate Clockwise Left).png" Name="Nightwatch (Rotate Clockwise Left)" Subtype="30" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.31 - Nightwatch (Rotate Clockwise Up).png" Name="Nightwatch (Rotate Clockwise Up)" Subtype="31" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.32 - Nightwatch (Rotate Clockwise Right).png" Name="Nightwatch (Rotate Clockwise Right)" Subtype="32" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.33 - Nightwatch (Rotate Clockwise Down).png" Name="Nightwatch (Rotate Clockwise Down)" Subtype="33" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.30 - Nightwatch (Rotate Clockwise Left).png" Name="Nightwatch (Rotate Clockwise Left)" Subtype="30" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.31 - Nightwatch (Rotate Clockwise Up).png" Name="Nightwatch (Rotate Clockwise Up)" Subtype="31" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.32 - Nightwatch (Rotate Clockwise Right).png" Name="Nightwatch (Rotate Clockwise Right)" Subtype="32" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.33 - Nightwatch (Rotate Clockwise Down).png" Name="Nightwatch (Rotate Clockwise Down)" Subtype="33" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
 
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.40 - Nightwatch (Rotate CounterClockwise Left).png" Name="Nightwatch (Rotate CounterClockwise Left)" Subtype="40" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.41 - Nightwatch (Rotate CounterClockwise Up).png" Name="Nightwatch (Rotate CounterClockwise Up)" Subtype="41" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.42 - Nightwatch (Rotate CounterClockwise Right).png" Name="Nightwatch (Rotate CounterClockwise Right)" Subtype="42" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.43 - Nightwatch (Rotate CounterClockwise Down).png" Name="Nightwatch (Rotate CounterClockwise Down)" Subtype="43" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.40 - Nightwatch (Rotate CounterClockwise Left).png" Name="Nightwatch (Rotate CounterClockwise Left)" Subtype="40" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.41 - Nightwatch (Rotate CounterClockwise Up).png" Name="Nightwatch (Rotate CounterClockwise Up)" Subtype="41" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.42 - Nightwatch (Rotate CounterClockwise Right).png" Name="Nightwatch (Rotate CounterClockwise Right)" Subtype="42" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.43 - Nightwatch (Rotate CounterClockwise Down).png" Name="Nightwatch (Rotate CounterClockwise Down)" Subtype="43" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
 
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.50 - Nightwatch (Stationary Left).png" Name="Nightwatch (Stationary Left)" Subtype="50" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.51 - Nightwatch (Stationary Up).png" Name="Nightwatch (Stationary Up)" Subtype="51" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.52 - Nightwatch (Stationary Right).png" Name="Nightwatch (Stationary Right)" Subtype="52" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.53 - Nightwatch (Stationary Down).png" Name="Nightwatch (Stationary Down)" Subtype="53" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.50 - Nightwatch (Stationary Left).png" Name="Nightwatch (Stationary Left)" Subtype="50" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.51 - Nightwatch (Stationary Up).png" Name="Nightwatch (Stationary Up)" Subtype="51" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.52 - Nightwatch (Stationary Right).png" Name="Nightwatch (Stationary Right)" Subtype="52" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.53 - Nightwatch (Stationary Down).png" Name="Nightwatch (Stationary Down)" Subtype="53" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
 
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.70 - Nightwatch (Flip Left).png" Name="Nightwatch (Flip Left)" Subtype="70" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.71 - Nightwatch (Flip Up).png" Name="Nightwatch (Flip Up)" Subtype="71" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.72 - Nightwatch (Flip Right).png" Name="Nightwatch (Flip Right)" Subtype="72" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
-					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.73 - Nightwatch (Flip Down).png" Name="Nightwatch (Flip Down)" Subtype="73" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.70 - Nightwatch (Flip Left).png" Name="Nightwatch (Flip Left)" Subtype="70" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.71 - Nightwatch (Flip Up).png" Name="Nightwatch (Flip Up)" Subtype="71" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.72 - Nightwatch (Flip Right).png" Name="Nightwatch (Flip Right)" Subtype="72" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
+					<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.73 - Nightwatch (Flip Down).png" Name="Nightwatch (Flip Down)" Subtype="73" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack"/>
 				</group>
 
 				<group Name="Nightwatch Paths" Label="- Custom Paths -">
 					<group Label="(Middle-click to edit group)">
-						<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.60 - Nightwatch (Path Left).png" Name="Nightwatch (Path Left)" Subtype="60" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
+						<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.60 - Nightwatch (Path Left).png" Name="Nightwatch (Path Left)" Subtype="60" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
 							<bitfield Key="Variant"> <spinner Name="Group ID" Length="4"/> </bitfield> </entity>
-						<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.61 - Nightwatch (Path Up).png" Name="Nightwatch (Path Up)" Subtype="61" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
+						<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.61 - Nightwatch (Path Up).png" Name="Nightwatch (Path Up)" Subtype="61" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
 							<bitfield Key="Variant"> <spinner Name="Group ID" Length="4"/> </bitfield> </entity>
-						<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.62 - Nightwatch (Path Right).png" Name="Nightwatch (Path Right)" Subtype="62" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
+						<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.62 - Nightwatch (Path Right).png" Name="Nightwatch (Path Right)" Subtype="62" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
 							<bitfield Key="Variant"> <spinner Name="Group ID" Length="4"/> </bitfield> </entity>
-						<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.63 - Nightwatch (Path Down).png" Name="Nightwatch (Path Down)" Subtype="63" Variant="200" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
+						<entity BaseHP="25" ID="842" Image="resources/Entities/Antibirth/842.0.63 - Nightwatch (Path Down).png" Name="Nightwatch (Path Down)" Subtype="63" Variant="1" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
 							<bitfield Key="Variant"> <spinner Name="Group ID" Length="4"/> </bitfield> </entity>
 
 						<group Label="(Paths with different groups will">
