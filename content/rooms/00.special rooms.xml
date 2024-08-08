@@ -2855,8 +2855,8 @@
 		<spawn x="10" y="3">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="6" y="5">
-			<entity type="801" variant="0" subtype="0" weight="1.0"/>
+		<spawn x="6" y="4">
+			<entity type="29" variant="1" subtype="801" weight="1.0"/>
 		</spawn>
 		<spawn x="6" y="6">
 			<entity type="100" variant="1" subtype="0" weight="1.0"/>
