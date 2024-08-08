@@ -350,7 +350,7 @@ function mod:nightwatchUpdate(entity)
 	if nightwatchRemoveEvent[room_index] ~= nil then
 		for _,e in pairs(Isaac:GetRoomEntities()) do
 			for i,v in pairs(nightwatchRemoveEvent[room_index]) do
-				if e.Position.X == v.X and e.Position.Y == v.Y and (e.Type > 9 or e.Type == EntityType.ENTITY_PICKUP)
+				if e.Position.X == v.X and (e.Position.Y == v.Y or math.abs(e.Position.Y - v.Y) < 15 ) and (e.Type > 9 or e.Type == EntityType.ENTITY_PICKUP)
 				and e.Type < EntityType.ENTITY_EFFECT and e.Type ~= EntityType.ENTITY_TRIGGER_OUTPUT and e.Type ~= EntityType.ENTITY_ENVIRONMENT then
 					e:GetData().nwRemove = true
 					table.remove(nightwatchRemoveEvent[room_index], i)
