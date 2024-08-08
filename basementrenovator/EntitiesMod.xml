@@ -116,17 +116,17 @@
 										<tag>InEmptyRooms</tag>
 									</entity>
 								</defaults>
-								<entity ID="970" Image="resources/Entities/Antibirth/970.690.0 - Nightwatch Path - Left.png" Name="Nightwatch Path - Left" Subtype="0" Variant="60" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
+								<entity ID="970" Image="resources/Entities/Antibirth/970.690.0 - Nightwatch Path - Left.png" Name="Nightwatch Path - Left" Subtype="1" Variant="60" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
 									<bitfield Key="Subtype"> <spinner Name="Group ID" Length="4"/> </bitfield> </entity>
-								<entity ID="970" Image="resources/Entities/Antibirth/970.691.0 - Nightwatch Path - Up.png" Name="Nightwatch Path - Up" Subtype="0" Variant="61" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
+								<entity ID="970" Image="resources/Entities/Antibirth/970.691.0 - Nightwatch Path - Up.png" Name="Nightwatch Path - Up" Subtype="1" Variant="61" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
 									<bitfield Key="Subtype"> <spinner Name="Group ID" Length="4"/> </bitfield> </entity>
-								<entity ID="970" Image="resources/Entities/Antibirth/970.692.0 - Nightwatch Path - Right.png" Name="Nightwatch Path - Right" Subtype="0" Variant="62" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
+								<entity ID="970" Image="resources/Entities/Antibirth/970.692.0 - Nightwatch Path - Right.png" Name="Nightwatch Path - Right" Subtype="1" Variant="62" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
 									<bitfield Key="Subtype"> <spinner Name="Group ID" Length="4"/> </bitfield> </entity>
-								<entity ID="970" Image="resources/Entities/Antibirth/970.693.0 - Nightwatch Path - Down.png" Name="Nightwatch Path - Down" Subtype="0" Variant="63" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
+								<entity ID="970" Image="resources/Entities/Antibirth/970.693.0 - Nightwatch Path - Down.png" Name="Nightwatch Path - Down" Subtype="1" Variant="63" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
 									<bitfield Key="Subtype"> <spinner Name="Group ID" Length="4"/> </bitfield> </entity>
-								<entity ID="970" Image="resources/Entities/Antibirth/970.694.0 - Nightwatch Path - Stop.png" Name="Nightwatch Path - Stop" Subtype="0" Variant="64" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
+								<entity ID="970" Image="resources/Entities/Antibirth/970.694.0 - Nightwatch Path - Stop.png" Name="Nightwatch Path - Stop" Subtype="1" Variant="64" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
 									<bitfield Key="Subtype"> <spinner Name="Group ID" Length="4"/> </bitfield> </entity>
-								<entity ID="970" Image="resources/Entities/Antibirth/970.695.0 - Nightwatch Path - Change Group.png" Name="Nightwatch Path - Change Group" Subtype="0" Variant="65" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
+								<entity ID="970" Image="resources/Entities/Antibirth/970.695.0 - Nightwatch Path - Change Group.png" Name="Nightwatch Path - Change Group" Subtype="1" Variant="65" Metadata="1" Group="Nightwatch" Kind="Restored Monsters Pack">
 									<bitfield Key="Subtype"> <spinner Name="From" Length="4"/> <spinner Name="To" Length="4"/> </bitfield> </entity>
 							</group>
 						</group>
