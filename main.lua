@@ -147,6 +147,7 @@ include("scripts.revelCompat")
 include("scripts.compatibility.retribution.baptismal_preloader")
 include("scripts.compatibility.retribution.tc_downgrades")
 include("scripts.compatibility.retribution.tc_upgrades")
+include("scripts.compatibility.boiler")
 
 --[[--------------------------------------------------------
     Blacklists
