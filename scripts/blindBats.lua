@@ -4,11 +4,13 @@ local game = Game()
 local Settings = {
 	NumFollowerBats = 3, -- How many follower bats should spawn alongside the leader bat
 	ActivationRange = 110, -- Range that players or monsters must be to trigger the bat
+	TrackingRange = 210, -- Range that the bat must be from it to keep track of the player
 	AttackTime = {60, 120}, -- The amount of frames between each bat charge
 	AttackRange = 80, -- Range players must be in to trigger the bat charging
 	ChaseSpeed = 4, -- Velocity of bat following its target
 	ChargeSpeed = 7, -- How fast the bat charges
 	ChargeTime = 18,  -- How long the bat charges for
+	ActivatedChargeTime = 1, -- How long the bat charges for after it first is activated
 	DirectionChangeTimes = {10, 30}, -- Amount of frames until the bat changes angle directions
 	AngleOffset = {15, 35}, -- The angle offset the bat flies with.
 	InitialAlertTime = 30, -- The time it takes for the leader bat to alert the follower bats.
@@ -126,8 +128,11 @@ function mod:blindBatUpdate(bat)
 		elseif sprite:IsEventTriggered("Land") then
 			bat.EntityCollisionClass = EntityCollisionClass.ENTCOLL_ALL
 			sprite:Play("Fly", true)
-			batData.State = States.Chasing
 			sprite.Offset = Vector(0,-14)
+
+			batData.AttackCountdown = Settings.ActivatedChargeTime
+			batData.ChargeDirection = (target.Position - batPos):Normalized()
+			batData.State = States.Charging
 		end
 
 
@@ -137,8 +142,11 @@ function mod:blindBatUpdate(bat)
 			batData.MoveVector = Vector(-batData.MoveVector.X, -batData.MoveVector.Y)
 		end
 
-		if bat:HasEntityFlags(EntityFlag.FLAG_CONFUSION) then
+		if bat:HasEntityFlags(EntityFlag.FLAG_CONFUSION) or game:GetNearestPlayer(bat.Position).Position:Distance(batPos) > Settings.TrackingRange then
 			bat.Pathfinder:MoveRandomly(false)
+			if bat.Velocity:Length() > Settings.ChaseSpeed then
+				bat.Velocity = bat.Velocity:Resized(Settings.ChaseSpeed)
+			end
 		else
 			bat.Velocity = (bat.Velocity + (batData.MoveVector - bat.Velocity) * 0.25)
 		end

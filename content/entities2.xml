@@ -205,7 +205,7 @@
     	<devolve id="23.3.0" weight="1" />
     </entity>
     <!-- Blind Bat -->
-    <entity anm2path="803.000_blindbat.anm2" name="​Blind Bat" id="803" variant="200" baseHP="18" stageHP="0" boss="0" champion="0" portrait="32" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="32" shadowSize="18" gridCollision="walls">
+    <entity anm2path="803.000_blindbat.anm2" name="​Blind Bat" id="803" variant="200" baseHP="10" stageHP="0" boss="0" champion="0" portrait="32" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="32" shadowSize="18" gridCollision="walls">
         <bestiary anim="Wake" transform="0,0,1"/>
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/> 
     	<devolve id="222.0.0" weight="1" />
