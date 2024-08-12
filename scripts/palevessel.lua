@@ -141,15 +141,15 @@ function mod:palevesselUpdate(vessel)
 				end
 			end
 		end
-		if angle <= 135 and angle >= 45 then
-			sprite:SetAnimation("WalkDown", false)
-		elseif angle >= -45 and angle < 45 then
-			sprite:SetAnimation("WalkRight", false)
-		elseif angle >= -135 and angle < -45 then
-			sprite:SetAnimation("WalkUp", false)
-		elseif angle < -135 or angle > 135 then
-			sprite:SetAnimation("WalkLeft", false)
-		end
+		if angle <= 135 and angle >= 45 or angle == 0 then
+            sprite:SetAnimation("WalkDown", false)
+        elseif angle >= -45 and angle < 45 then
+            sprite:SetAnimation("WalkRight", false)
+        elseif angle >= -135 and angle < -45 then
+            sprite:SetAnimation("WalkUp", false)
+        elseif angle < -135 or angle > 135 then
+            sprite:SetAnimation("WalkLeft", false)
+        end 
 
 		vesselData.AttackCountdown = vesselData.AttackCountdown - 1
 		if vesselData.AttackCountdown < 0 then
