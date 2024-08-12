@@ -26,9 +26,9 @@
 <entity BaseHP="48" ID="239" Image="resources/Entities/Antibirth/239.101.0 - Carrion Rider.png"    Name="Carrion Rider (TC)" Variant="201" Subtype="0" Metadata="1" Group="Monsters" Kind="Restored Monsters Pack"/>
 <entity BaseHP="15" Tags="Champion" ID="29" Image="resources/Entities/Antibirth/801.0.0 - Fissure.png" Name="Fracture (TC)" Subtype="801" Variant="1" Metadata="1" Group="Monsters" Kind="Restored Monsters Pack"/>
 <entity BaseHP="10" ID="200" Image="resources/Entities/Antibirth/802.0.0 - Stillborn.png"          Name="Stillborn (TC)" Subtype="0" Variant="2409" Group="Monsters" Kind="Restored Monsters Pack"/>
-<entity BaseHP="10" ID="803" Image="resources/Entities/Antibirth/803.0.0 - Blind Bat.png" Name="Blind Bat (TC)" Subtype="0" Variant="200" Group="Monsters" Kind="Restored Monsters Pack">
+<entity BaseHP="10" ID="803" Image="resources/Entities/Antibirth/803.0.0 - Blind Bat.png" Name="Blind Bat (TC)" Subtype="3" Variant="200" Group="Monsters" Kind="Restored Monsters Pack">
 		<bitfield Key="Subtype">
-			<spinner Length="5" Minimum="1" Maximum="5" Name="Secondary Bats" ValueOffset="3">
+			<spinner Length="5" Minimum="1" Maximum="5" Name="Secondary Bats">
                 <tooltip>The amount of bats that are initially hidden and appear after the first bat is alerted</tooltip>
             </spinner>
 	</bitfield>
