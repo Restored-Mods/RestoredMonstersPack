@@ -5,7 +5,7 @@
 <entity BaseHP="16" ID="200" Image="resources/Entities/cell.png" Name="Cell" Subtype="0" Variant="2500" Group="Monsters" Kind="Restored Monsters Pack"/>
 <entity BaseHP="32" ID="200" Image="resources/Entities/fused cells.png" Name="Fused Cells" Subtype="0" Variant="2501" Group="Monsters" Kind="Restored Monsters Pack"/>
 <entity BaseHP="64" ID="200" Image="resources/Entities/tissue.png" Name="Tissue" Subtype="0" Variant="2502" Group="Monsters" Kind="Restored Monsters Pack"/>
-<entity BaseHP="40" Tags="Champion" ID="200" Image="resources/Entities/837.0.0 - Grave Robber.png" Name="Grave Robber" Subtype="0" Variant="2503">
+<entity BaseHP="15" Tags="Champion" ID="200" Image="resources/Entities/837.0.0 - Grave Robber.png" Name="Grave Robber" Subtype="0" Variant="2503">
 		<bitfield Key="Subtype">
 			<dropdown Name="When to escape after stealing item" Length="1" Offset="0">
 				<choice>Escape Instantly</choice>
@@ -26,7 +26,13 @@
 <entity BaseHP="48" ID="239" Image="resources/Entities/Antibirth/239.101.0 - Carrion Rider.png"    Name="Carrion Rider (TC)" Variant="201" Subtype="0" Metadata="1" Group="Monsters" Kind="Restored Monsters Pack"/>
 <entity BaseHP="15" Tags="Champion" ID="29" Image="resources/Entities/Antibirth/801.0.0 - Fissure.png" Name="Fracture (TC)" Subtype="801" Variant="1" Metadata="1" Group="Monsters" Kind="Restored Monsters Pack"/>
 <entity BaseHP="10" ID="200" Image="resources/Entities/Antibirth/802.0.0 - Stillborn.png"          Name="Stillborn (TC)" Subtype="0" Variant="2409" Group="Monsters" Kind="Restored Monsters Pack"/>
-<entity BaseHP="18" ID="803" Image="resources/Entities/Antibirth/803.0.0 - Blind Bat.png" Name="Blind Bat (TC)" Subtype="0" Variant="200" Group="Monsters" Kind="Restored Monsters Pack"/>
+<entity BaseHP="10" ID="803" Image="resources/Entities/Antibirth/803.0.0 - Blind Bat.png" Name="Blind Bat (TC)" Subtype="0" Variant="200" Group="Monsters" Kind="Restored Monsters Pack">
+		<bitfield Key="Subtype">
+			<spinner Length="5" Minimum="1" Maximum="5" Name="Secondary Bats" ValueOffset="3">
+                <tooltip>The amount of bats that are initially hidden and appear after the first bat is alerterd</tooltip>
+            </spinner>
+	</bitfield>
+</entity>
 <entity BaseHP="16" Tags="Champion" ID="241" Image="resources/Entities/Antibirth/241.1.0 - Split Rage Creep.png" Name="Split Rage Creep (TC)" Subtype="0" Variant="200" PlaceVisual="WallSnap" Group="Monsters" Kind="Restored Monsters Pack"/>
 <entity BaseHP="25" Tags="Champion" ID="832" Image="resources/Entities/Antibirth/832.0.0 - Exorcist.png" Name="Exorcist (TC)" Subtype="0" Variant="200" Group="Monsters" Kind="Restored Monsters Pack"/>
 <entity BaseHP="17" ID="240" Image="resources/Entities/Antibirth/240.2.0 - Rag Creep.png"  Name="Rag Creep (TC)" Subtype="0" Variant="200" PlaceVisual="WallSnap" Group="Monsters" Kind="Restored Monsters Pack"/>

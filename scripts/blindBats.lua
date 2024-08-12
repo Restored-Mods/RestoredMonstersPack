@@ -33,11 +33,11 @@ local function alarmBats(var)
 	for _, bat in pairs(Isaac.FindByType(EntityType.ENTITY_BLIND_BAT, var, -1, false, false)) do
 		local data = bat:GetData().BlindBatData
 		if (data ~= nil and data.State == States.Hiding) then
-			if bat.SubType == 0 then
+			if bat.SubType ~= 10 then --main bat
 				data.State = States.Spotted
 				bat:GetSprite():Play("Wake", true)
 
-			elseif bat.SubType ~= 0 then -- == 1 then
+			elseif bat.SubType == 10 then --secondary bats
 				table.insert(batQueue, bat)
 			end
 		end
@@ -47,12 +47,12 @@ local function alarmBats(var)
 end
 
 local function awakenBats(var)
-	for _, bat in pairs(Isaac.FindByType(EntityType.ENTITY_BLIND_BAT, var or 200 , 0, false, false)) do
+	for _, bat in pairs(Isaac.FindByType(EntityType.ENTITY_BLIND_BAT, var or 200 , -1, false, false)) do
 		local batNpc = bat:ToNPC()
 		local batSprite = bat:GetSprite()
 		local batData = bat:GetData().BlindBatData
 
-		if batNpc.State ~= NpcState.STATE_APPEAR and batData ~= nil and batData.State == States.Hiding then
+		if batNpc.State ~= NpcState.STATE_APPEAR and batData ~= nil and batData.State == States.Hiding and bat.Subtype ~= 10 then
 			batData.State = States.Spotted
 			batSprite:Play("Wake", true)
 		end
@@ -84,13 +84,20 @@ function mod:blindBatInit(bat)
 		MoveVector = Vector.Zero
 	}
 
-	if bat.SubType == 0 then
+	if bat.SubType ~= 10 then --main bat
 		sprite:Play("Idle", true)
-		for i = 1, Settings.NumFollowerBats do
-			Isaac.Spawn(EntityType.ENTITY_BLIND_BAT, bat.Variant, 1, bat.Position + RandomVector():Resized(math.random(1, 50)), bat.Velocity, bat)
+		if bat.SubType ~= 0 then
+			Settings.NumFollowerBats = bat.SubType
+		else
+			Settings.NumFollowerBats = 3
 		end
 
-	elseif bat.SubType ~= 0 then -- == 1 then
+		for i = 1, Settings.NumFollowerBats do
+			local sbat = Isaac.Spawn(EntityType.ENTITY_BLIND_BAT, bat.Variant, 10, bat.Position + RandomVector():Resized(math.random(1, 50)), bat.Velocity, bat)
+			sbat:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+		end
+
+	elseif bat.SubType == 10 then --secondary bats
 		bat:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
 	end
 end
@@ -104,16 +111,22 @@ function mod:blindBatUpdate(bat)
 
 
 	if batData.State == States.Hiding and bat.FrameCount > 1 then
-		if bat.SubType == 0	 then
+		if bat.SubType ~= 10 then --main bat
 			if game:GetNearestPlayer(bat.Position).Position:Distance(batPos) <= Settings.ActivationRange then
 				batData.State = States.Spotted
 				sprite:Play("Wake", true)
 			end
 
-		elseif bat.SubType ~= 0 then --  == 1 then
+		elseif bat.SubType == 10 then --secondary bats
 			sprite:Play("IdleInvisible", true)
 
-			if #Isaac.FindByType(EntityType.ENTITY_BLIND_BAT, bat.Variant , 0, false, false) <= 0 then
+			-- local noMainBats = true --theres probably a more efficient way to do this
+			-- for  _, ibat in ipairs(Isaac.FindByType(EntityType.ENTITY_BLIND_BAT, bat.Variant, -1, false, false)) do
+			-- 	if ibat.SubType ~= 10 then
+			-- 		noMainBats = false
+			-- 	end
+			-- end
+			if Isaac.CountEntities(nil, EntityType.ENTITY_BLIND_BAT, bat.Variant, -1) <= 0 then --if no main bats exist
 				bat:PlaySound(SoundEffect.SOUND_SHAKEY_KID_ROAR, 1, 0, false, 1.2)
 				sprite:Play("FlyDown", true)
 				batData.State = States.Spotted
