@@ -29,7 +29,7 @@
 <entity BaseHP="10" ID="803" Image="resources/Entities/Antibirth/803.0.0 - Blind Bat.png" Name="Blind Bat (TC)" Subtype="0" Variant="200" Group="Monsters" Kind="Restored Monsters Pack">
 		<bitfield Key="Subtype">
 			<spinner Length="5" Minimum="1" Maximum="5" Name="Secondary Bats" ValueOffset="3">
-                <tooltip>The amount of bats that are initially hidden and appear after the first bat is alerterd</tooltip>
+                <tooltip>The amount of bats that are initially hidden and appear after the first bat is alerted</tooltip>
             </spinner>
 	</bitfield>
 </entity>
