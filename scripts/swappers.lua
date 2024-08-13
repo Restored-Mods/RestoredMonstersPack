@@ -84,6 +84,8 @@ function mod:swapperHit(target, damageAmount, damageFlags, damageSource, damageC
 
 				target.Position = swapToPos
 				damageSource.Entity.Position = swapFromPos
+
+				target:ToPlayer():SetMinDamageCooldown(20)
 			end
 			damageSource.Entity:GetData().canTP = false
 		end

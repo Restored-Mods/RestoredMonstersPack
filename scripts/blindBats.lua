@@ -47,12 +47,12 @@ local function alarmBats(var)
 end
 
 local function awakenBats(var)
-	for _, bat in pairs(Isaac.FindByType(EntityType.ENTITY_BLIND_BAT, var or 200 , -1, false, false)) do
+	for _, bat in ipairs(Isaac.FindByType(EntityType.ENTITY_BLIND_BAT, var or 200 , -1, false, false)) do
 		local batNpc = bat:ToNPC()
 		local batSprite = bat:GetSprite()
 		local batData = bat:GetData().BlindBatData
 
-		if batNpc.State ~= NpcState.STATE_APPEAR and batData ~= nil and batData.State == States.Hiding and bat.Subtype ~= 10 then
+		if batNpc.State ~= NpcState.STATE_APPEAR and batData ~= nil and batData.State == States.Hiding and bat.SubType ~= 10 then
 			batData.State = States.Spotted
 			batSprite:Play("Wake", true)
 		end

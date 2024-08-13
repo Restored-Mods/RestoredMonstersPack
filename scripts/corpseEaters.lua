@@ -60,6 +60,7 @@ function mod:CorpseEaterInit(entity)
 		data.ChompCooldown = Settings.ChompCooldown
 		data.BloodLength = 0
 		entity.ProjectileCooldown = Settings.BonyCooldown
+		entity:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
 
 
 		-- Set spritesheet
