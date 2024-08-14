@@ -40,7 +40,16 @@ function mod:MixTables(input, table)
     end
 end
 
-mod:MixTables(FiendFolio.Nonmale, RestoredMonsterPack.Nonmale)
+function mod.MixFiendFolioStuff()
+	mod:MixTables(FiendFolio.Nonmale, RestoredMonsterPack.Nonmale)
+	mod.fiendfolioTablesMixed = true
+end
+
+mod:AddCallback(ModCallbacks.MC_POST_UPDATE, function()
+	if not mod.fiendfolioTablesMixed then
+		mod.MixFiendFolioStuff()
+	end
+end)
 
 end
 
