@@ -4,7 +4,7 @@ local game = Game()
 local Settings = {
 	NumFollowerBats = 3, -- How many follower bats should spawn alongside the leader bat
 	ActivationRange = 110, -- Range that players or monsters must be to trigger the bat
-	TrackingRange = 210, -- Range that the bat must be from it to keep track of the player
+	TrackingRange = 200, -- Range that the bat must be from it to keep track of the player
 	AttackTime = {60, 120}, -- The amount of frames between each bat charge
 	AttackRange = 80, -- Range players must be in to trigger the bat charging
 	ChaseSpeed = 4, -- Velocity of bat following its target
@@ -12,7 +12,7 @@ local Settings = {
 	ChargeTime = 18,  -- How long the bat charges for
 	ActivatedChargeTime = 1, -- How long the bat charges for after it first is activated
 	DirectionChangeTimes = {10, 30}, -- Amount of frames until the bat changes angle directions
-	AngleOffset = {15, 35}, -- The angle offset the bat flies with.
+	AngleOffset = {15, 60}, -- The angle offset the bat flies with.
 	InitialAlertTime = 30, -- The time it takes for the leader bat to alert the follower bats.
 	AlertTime = {0, 18} -- The time in between each follower bat being alerted.
 }
@@ -27,7 +27,9 @@ local States = {
 local nextAlertTime = Settings.InitialAlertTime
 local batQueue = {}
 
-
+local function VecLerp(vec1, vec2, percent)
+	return vec1 * (1 - percent) + vec2 * percent
+end
 
 local function alarmBats(var)
 	for _, bat in pairs(Isaac.FindByType(EntityType.ENTITY_BLIND_BAT, var, -1, false, false)) do
@@ -150,7 +152,7 @@ function mod:blindBatUpdate(bat)
 
 
 	elseif batData.State == States.Chasing then
-		batData.MoveVector = ((target.Position - batPos):Normalized() * Settings.ChaseSpeed):Rotated(batData.AngleOffset)
+		batData.MoveVector = VecLerp(((target.Position - batPos):Normalized() * Settings.ChaseSpeed):Rotated(batData.AngleOffset), batData.MoveVector, .2)
 		if bat:HasEntityFlags(EntityFlag.FLAG_FEAR) then
 			batData.MoveVector = Vector(-batData.MoveVector.X, -batData.MoveVector.Y)
 		end
