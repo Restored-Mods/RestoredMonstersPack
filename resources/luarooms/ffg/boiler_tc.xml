@@ -2049,7 +2049,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
-			<entity type="349" variant="2" subtype="0" weight="1.0"/>
+			<entity type="349" variant="2" subtype="2" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
 			<entity type="800" variant="0" subtype="0" weight="1.0"/>
@@ -2103,7 +2103,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="2" y="3">
-			<entity type="349" variant="2" subtype="0" weight="1.0"/>
+			<entity type="349" variant="2" subtype="2" weight="1.0"/>
 		</spawn>
 		<spawn x="4" y="3">
 			<entity type="800" variant="0" subtype="0" weight="1.0"/>
