@@ -106,10 +106,11 @@ function mod:grobberUpdate(entity)
 					and v.Variant ~= PickupVariant.PICKUP_COLLECTIBLE then -- There are some things that could be blacklisted but don't really have a reason to because they (most likey) won't ever appear along with grave robbers
 						local valid = true
 
-						if FiendFolio and v.Variant >= 710 and v.Variant <= 713 then
-							if not v:GetSprite():IsPlaying("Idle") then
-								valid = false
-							end
+						if mod.CustomChests[tostring(v.Variant)] and mod.CustomChests[tostring(v.Variant)].cond then
+              valid = mod.CustomChests[tostring(v.Variant)].valid(v)
+            elseif mod.CustomChests[tostring(v.Variant) .. "." .. tostring(v.SubType)] 
+            and mod.CustomChests[tostring(v.Variant) .. "." .. tostring(v.SubType)].cond then
+              valid = mod.CustomChests[tostring(v.Variant) .. "." .. tostring(v.SubType)].valid(v)
 						end
 
 						if valid == true then
@@ -345,15 +346,109 @@ function mod:grobberUpdate(entity)
 end
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.grobberUpdate, EntityType.ENTITY_CUTMONSTERS)
 
+local function FFValid(v)
+		return v:GetSprite():IsPlaying("Idle")
+end
 
+local function FFChest(entity)
+  local data = entity:GetData()
+	local sprite = entity:GetSprite()
+  if sprite:IsPlaying("Idle") then
+				data.grobber:GetData().pickup = nil
+        
+					--FiendFolio:FFChestOpening(entity, data.grobber) -- Only works with player entities...
+					sprite:Play("Open", true)
+					entity.SubType = FiendFolio.shopChestStates.Opening
+					entity:GetData().Opened = true
+					data.grobber:GetData().waitTime = 15	
+  end
+end
+
+local function FFDireChest(entity)
+  local data = entity:GetData()
+  local sprite = entity:GetSprite()
+  if sprite:IsPlaying("Idle") then
+				data.grobber:GetData().pickup = nil
+  
+  FiendFolio:FFDireChestOpening(entity, data.grobber)
+	data.grobber:GetData().waitTime = 60
+  end
+end
+
+local function FFGlassChest(entity)
+  local data = entity:GetData()
+  local sprite = entity:GetSprite()
+    if sprite:IsPlaying("Idle") then
+				data.grobber:GetData().pickup = nil
+
+					sprite:Play("Open", true)
+					entity.SubType = FiendFolio.shopChestStates.Opening
+					entity:GetData().Opened = true
+          FiendFolio:openGlassChest(entity)
+					data.grobber:GetData().waitTime = 15	
+  end
+end
+
+local function RRValid(v)
+  return v.SubType ~= 1
+end
+
+local DummyPlayer = {
+  TakeDamage = function (...) end,
+  GetPlayerType = function (...) return 1 end,
+  HasCollectible = function (...) return false end,
+  HasTrinket = function (...) return false end,
+  AddWisps = function (...) end,
+  Position = Vector(0,0)}
+
+local function RCOpen(entity, func) 
+local data = entity:GetData()
+  if mod.CustomChests[tostring(entity.Variant)].valid(entity) then
+    data.grobber:GetData().pickup = nil
+    func(entity, DummyPlayer)
+    data.grobber:GetData().waitTime = 15	
+  end
+end
+
+mod.CustomChests = {
+  ["710"] = {cond = FiendFolio, func = FFChest, valid = FFValid},
+  ["711"] = {cond = FiendFolio, func = FFChest, valid = FFValid},
+  ["712"] = {cond = FiendFolio, func = FFDireChest, valid = FFValid},
+  ["713"] = {cond = FiendFolio, func = FFGlassChest, valid = FFValid},
+  [tostring(CARDBOARD_CHEST)] = {cond = RareChests, 
+    func = function (entity) RCOpen(entity, RareChests.openCardboardChest) end,
+    valid = RRValid},
+  [tostring(FILE_CABINET)] = {cond = RareChests, 
+    func = function (entity) RCOpen(entity, RareChests.openFileCabinet) end,
+    valid = RRValid},
+  [tostring(SLOT_CHEST)] = {cond = RareChests, 
+    func = function (entity) RCOpen(entity, RareChests.openSlotChest) end,
+    valid = function (v) return v.SubType ~= 8 end},
+  [tostring(TOMB_CHEST)] = {cond = RareChests, 
+    func = function (entity) RCOpen(entity, RareChests.openTombChest) end,
+    valid = RRValid},
+  [tostring(DEVIL_CHEST)] = {cond = RareChests, 
+    func = function (entity) RCOpen(entity, RareChests.openDevilChest) end,
+    valid = RRValid},
+  [tostring(CURSED_CHEST)] = {cond = RareChests, 
+    func = function (entity) RCOpen(entity, RareChests.openCursedChest) end,
+    valid = RRValid},
+  [tostring(BLOOD_CHEST)] = {cond = RareChests, 
+    func = function (entity) RCOpen(entity, RareChests.openBloodChest) end,
+    valid = function (v) return v.SubType ~= 4 end},
+  [tostring(PENITENT_CHEST)] = {cond = RareChests, 
+    func = function (entity) RCOpen(entity, RareChests.openPenitentChest) end,
+    valid = function (v) return v.SubType ~= 8 end},
+  }
 
 -- Stolen pickups
 function mod:grobberPickup(entity)
 	local data = entity:GetData()
 	local sprite = entity:GetSprite()
 
+  local key
 	if data.grobber then
-		-- Open chests
+    -- Open chests
 		if entity.Variant - (entity.Variant % 10) == 50 or entity.Variant == PickupVariant.PICKUP_LOCKEDCHEST or entity.Variant == PickupVariant.PICKUP_REDCHEST then
 			entity:TryOpenChest(nil)
 			data.grobber:GetData().pickup = nil
@@ -369,29 +464,10 @@ function mod:grobberPickup(entity)
 					Isaac.Spawn(EntityType.ENTITY_POLTY, 0, 0, entity.Position, Vector.Zero, entity):ToNPC().State = NpcState.STATE_MOVE
 				end
 			end
-
-		-- Fiend Folio chests
-		elseif FiendFolio and entity.Variant >= 710 and entity.Variant <= 713 then
-			if sprite:IsPlaying("Idle") then
-				data.grobber:GetData().pickup = nil
-
-				if entity.Variant == 710 or entity.Variant == 711 or entity.Variant == 713 then
-					--FiendFolio:FFChestOpening(entity, data.grobber) -- Only works with player entities...
-					sprite:Play("Open", true)
-					entity.SubType = FiendFolio.shopChestStates.Opening
-					entity:GetData().Opened = true
-
-					if entity.Variant == 713 then
-						FiendFolio:openGlassChest(entity)
-					end
-					data.grobber:GetData().waitTime = 15
-
-				elseif entity.Variant == 712 then
-					FiendFolio:FFDireChestOpening(entity, data.grobber)
-					data.grobber:GetData().waitTime = 60
-				end
-			end
-
+    elseif mod.CustomChests[tostring(entity.Variant)] then
+      key = tostring(entity.Variant)
+    elseif mod.CustomChests[tostring(entity.Variant) .. "." .. tostring(entity.SubType)] then
+      key = tostring(entity.Variant) .. "." .. tostring(entity.SubType)
 		-- Pick up item
 		else
 			if not sprite:IsPlaying("Collect") then
@@ -419,6 +495,14 @@ function mod:grobberPickup(entity)
 				end
 			end
 		end
+    
+    -- Custom chests / pickups
+    if key then
+      if mod.CustomChests[key].cond then
+        mod.CustomChests[key].func(entity, Isaac.GetPlayer(0))
+      end
+    end
+    
 		data.grobber = nil
 	end
 
