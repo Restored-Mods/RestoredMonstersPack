@@ -272,3 +272,108 @@ function mod:endConfusionEarly(target, damageAmount, damageFlags, damageSource, 
 	end
 end
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.endConfusionEarly)
+
+-- FFG compatibility
+if FFGRACE then
+mod:AddCallback("POST_SPORE_INFECTION", function(_, npc, explosion)
+    if npc.Variant == CutMonsterVariants.ECHO_BAT then
+        if npc.SubType == 0 then
+            return {EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.CHUBBY_BUNNY, 0}
+        end
+    end
+end, EntityType.ENTITY_CUTMONSTERS)
+end
+
+function mod:chubbyBunnyInit(entity)
+	if entity.Variant == CutMonsterVariants.CHUBBY_BUNNY then
+		local data = entity:GetData()
+		local rng = entity:GetDropRNG()
+  
+		data.cooldown = math.random(Settings.AttackTime[1], Settings.AttackTime[2])
+		data.chargeDirection = Vector.Zero
+		data.angleCountdown = math.random(Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2])
+		data.angleOffset = math.random(Settings.AngleOffset[1], Settings.AngleOffset[2])
+		data.angleDirection = "up"
+	end
+end
+mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.chubbyBunnyInit, EntityType.ENTITY_CUTMONSTERS)
+
+function mod:chubbyBunnyUpdate(entity)
+	if entity.Variant == CutMonsterVariants.CHUBBY_BUNNY then
+		local sprite = entity:GetSprite()
+		local data = entity:GetData()
+		local target = entity:GetPlayerTarget()
+		local rng = entity:GetDropRNG()
+  
+    if data.SporeTransformed and not data.Trans then
+      sprite:Play("Transform",true)
+        data.Trans = true
+    end
+    if sprite:IsPlaying("Transform") then
+      entity.Velocity = Vector.Zero
+      if sprite:IsFinished("Transform") then
+        sprite:Play("Idle", true)
+      end
+      return
+    end
+  
+		-- Movement
+		data.vector = ((target.Position - entity.Position):Normalized() * Settings.ChaseSpeed):Rotated(data.angleOffset)
+		if entity:HasEntityFlags(EntityFlag.FLAG_FEAR) or entity:HasEntityFlags(EntityFlag.FLAG_SHRINK) then
+			data.vector = Vector(-data.vector.X, -data.vector.Y)
+		end
+
+		if entity:HasEntityFlags(EntityFlag.FLAG_CONFUSION) then
+			entity.Pathfinder:MoveRandomly(false)
+		else
+			entity.Velocity = (entity.Velocity + (data.vector - entity.Velocity) * 0.25)
+		end
+
+		-- Change direction
+		if data.angleCountdown <= 0 then
+			if data.angleDirection == "up" then
+				data.angleDirection = "down"
+			else
+				data.angleDirection = "up"
+			end
+			data.angleOffset = getAngleOffset(data.angleDirection)
+			data.angleCountdown = math.random(Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2])
+		end
+
+		if data.cooldown > 0 then
+			data.cooldown = data.cooldown - 1
+		end
+		if data.angleCountdown > 0 then
+			data.angleCountdown = data.angleCountdown - 1
+		end
+
+
+		if not sprite:IsPlaying("Attack") and not sprite:IsPlaying("Idle") and not sprite:IsPlaying("Transform") then
+			sprite:Play("Idle", true)
+		end
+
+
+		-- Attacking
+		if data.cooldown <= 0 and target.Position:Distance(entity.Position) <= Settings.AttackRange and not sprite:IsPlaying("Attack")
+		and not (entity:HasEntityFlags(EntityFlag.FLAG_FEAR) or entity:HasEntityFlags(EntityFlag.FLAG_SHRINK) or entity:HasEntityFlags(EntityFlag.FLAG_CONFUSION)) then
+			sprite:Play("Attack", true)
+		end
+
+		if sprite:IsEventTriggered("Sound") then
+			entity:PlaySound(SoundEffect.SOUND_SHAKEY_KID_ROAR, 1.5, 0, false, 1.5)
+
+		elseif sprite:IsEventTriggered("Shoot") then
+			local params = ProjectileParams()
+			params.Variant = ProjectileVariant.PROJECTILE_ECHO
+			params.FallingAccelModifier = -0.1
+
+			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed, 0, params)
+		end
+
+		if sprite:IsFinished("Attack") then
+			data.cooldown = math.random(Settings.AttackTime[1], Settings.AttackTime[2])
+			sprite:Play("Idle", true)
+		end
+	end
+end
+mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.chubbyBunnyUpdate, EntityType.ENTITY_CUTMONSTERS)

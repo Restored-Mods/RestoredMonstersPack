@@ -69,6 +69,12 @@
 		<gibs amount="6" blood="1" bone="0" eye="0" gut="1" large="0" />
         <devolve id="234.0.0" weight="1" />
     </entity>
+    
+    <entity anm2path="chubby_bunny.anm2" name="Chubby Bunny" id="200" variant="24071" baseHP="20" stageHP="0" reroll="true" boss="0" champion="1" portrait="9" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="18" gridCollision="walls" >
+        <bestiary anim="Idle" transform="0,-16,1"/>
+		<gibs amount="6" blood="1" bone="0" eye="0" gut="1" large="0" />
+        <devolve id="200.2407.0" weight="1" />
+    </entity>
     <!-- Necromancer -->
 	<entity anm2path="831.000_necromancer.anm2" name="Necromancer" id="200" variant="2410" baseHP="25" stageHP="0" boss="0" champion="1" hasFloorAlts="true" tags="homing_soul" portrait="10" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1"   numGridCollisionPoints="12" shadowSize="14">
         <bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
