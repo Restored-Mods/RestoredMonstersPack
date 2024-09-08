@@ -1,7 +1,7 @@
 ---@diagnostic disable
 return function(mode)
-    local entities = {{Name="Echo Projectile",Anm2="009.104_echo projectile.anm2",CollisionMass=8,CollisionRadius=10,ShadowSize=15,NumGridCollisionPoints=60,Type=9,Variant=104,},
-    {Name="Lantern Projectile",Anm2="009.106_lantern projectile.anm2",CollisionMass=8,CollisionRadius=5,ShadowSize=10,NumGridCollisionPoints=60,Type=9,Variant=106,},
+    local entities = {{Name="Echo Projectile",Anm2="projectiles/echo_projectile.anm2",CollisionMass=8,CollisionRadius=10,ShadowSize=15,NumGridCollisionPoints=60,Type=9,Variant=104,},
+    {Name="Lantern Projectile",Anm2="projectiles/lantern_projectile.anm2",CollisionMass=8,CollisionRadius=5,ShadowSize=10,NumGridCollisionPoints=60,Type=9,Variant=106,},
     {Name="Staple Projectile",Anm2="staple_projectile.anm2",HP=10,CollisionMass=8,CollisionRadius=10,ShadowSize=15,NumGridCollisionPoints=8,Type=9,Variant=108,},
     {Name="Dumpling",Anm2="800.000_dumpling.anm2",HP=7,StageHP=2,Champion=true,CollisionDamage=1,CollisionMass=3,CollisionRadius=13,Friction="0.95",ShadowSize=12,NumGridCollisionPoints=12,Type=800,Variant=0,GridCollision="walls",HasFloorAlts="true",Portrait=0,Reroll="true",},
     {Name="Skinling",Anm2="800.001_skinling.anm2",HP=8,StageHP=2,Champion=true,CollisionDamage=1,CollisionMass=3,CollisionRadius=13,Friction="0.95",ShadowSize=12,NumGridCollisionPoints=12,Type=800,Variant=1,GridCollision="walls",HasFloorAlts="true",Portrait=1,Reroll="true",},
