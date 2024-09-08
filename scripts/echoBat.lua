@@ -285,7 +285,7 @@ end, EntityType.ENTITY_CUTMONSTERS)
 end
 
 function mod:chubbyBunnyInit(entity)
-	if entity.Variant == CutMonsterVariants.CHUBBY_BUNNY then
+	if entity.Variant == CutMonsterVariants.ECHO_BAT and entity.SubType == CutMonsterVariants.CHUBBY_BUNNY then
 		local data = entity:GetData()
 		local rng = entity:GetDropRNG()
   
@@ -299,7 +299,7 @@ end
 mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.chubbyBunnyInit, EntityType.ENTITY_CUTMONSTERS)
 
 function mod:chubbyBunnyUpdate(entity)
-	if entity.Variant == CutMonsterVariants.CHUBBY_BUNNY then
+	if entity.Variant == CutMonsterVariants.ECHO_BAT and entity.SubType == CutMonsterVariants.CHUBBY_BUNNY then
 		local sprite = entity:GetSprite()
 		local data = entity:GetData()
 		local target = entity:GetPlayerTarget()

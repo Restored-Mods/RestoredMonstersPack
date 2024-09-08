@@ -30,7 +30,7 @@ function mod:vesselCheckForLegOrWhateverTheFuckDSSSays()
                 checkvar = 1
             end
             if entity.Variant ~= checkvar then
-                print("dammit")
+                -- print("dammit")
                 Isaac.Spawn(EntityType.ENTITY_VESSEL, checkvar, 0, entity.Position, entity.Velocity, entity)
                 entity:Remove()
             end

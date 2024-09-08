@@ -26,6 +26,8 @@ RestoredMonsterPack.Nonmale = {
 	{ID = mod:SpecialEnt("Strifer"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Vessel (Antibirth)"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Gilded Dumpling"), Affliction = "Gay"}, --bc pandora said they're gay as actual fuck
+	-- {ID = mod:SpecialEnt("Sporeling"), Affliction = "Ace"}, uncomment this when its are added to entities2.lua
+	-- {ID = mod:SpecialEnt("Chubby Bunny"), Affliction = "Trans"},  uncomment this when its are added to entities2.lua
 }
 
 function mod:MixTables(input, table)

@@ -63,7 +63,7 @@ CutMonsterVariants = {
 
 	COIL = 2406,
 	ECHO_BAT = 2407,
-  CHUBBY_BUNNY = 24071,
+  	CHUBBY_BUNNY = 1, --subtype
 	SCREAMER = 2408,
 	STILLBORN = 2409,
 	NECROMANCER = 2410,
@@ -84,6 +84,7 @@ EntityVariant = {
 	MORTLING = 4, -- for EntityType.ENTITY_DUMPLING
 	TAINTED_DUMPLING = 5, -- for EntityType.ENTITY_DUMPLING
 	GILDED_DUMPLING = 6, -- for EntityType.ENTITY_DUMPLING
+	SPORELING = 7, -- for EntityType.ENTITY_DUMPLING
 	FRACTURE = 801, -- for EntityType.ENTITY_HOPPER (subType)
 	SWAPPER = 835, -- for EntityType.ENTITY_BABY
 	BARFY = 850, -- for EntityType.ENTITY_FATTY

@@ -112,6 +112,8 @@ local function fart(npc)
 	    for var=0,3 do
             Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.COIN_PARTICLE, 0, npc.Position, Vector(rng:RandomInt(6)-3,rng:RandomInt(6)-3), npc)
         end
+	elseif FFGRACE and npc.Variant == EntityVariant.SPORELING then
+		FFGRACE:MakeSporeExplosion(npc.Position, npc.SpawnerEntity)
 	end
 
 	game:ButterBeanFart(npc.Position, 85, npc, visible, false)
@@ -147,7 +149,7 @@ function mod:dumplingUpdate(npc)
 			add_velocity_and_flip(npc, Vector.FromAngle(player_angle + 180) * Vector(rng:RandomInt(3)+3, rng:RandomInt(3)+3))
 			sprite:Play("Move")
 
-		elseif (npc.Variant == EntityVariant.DUMPLING or npc.Variant == EntityVariant.SKINLING or npc.Variant == EntityVariant.SCORCHLING or npc.Variant == EntityVariant.GILDED_DUMPLING) and rng:RandomInt(20) == 1 and not feared then -- move toward player slow 
+		elseif (npc.Variant == EntityVariant.DUMPLING or npc.Variant == EntityVariant.SKINLING or npc.Variant == EntityVariant.SCORCHLING or npc.Variant == EntityVariant.GILDED_DUMPLING or EntityVariant.SPORELING) and rng:RandomInt(20) == 1 and not feared then -- move toward player slow
 			npc.State = NpcState.STATE_MOVE
 			add_velocity_and_flip(npc, Vector.FromAngle(player_angle + (rng:RandomInt(160) - 80)) * Vector(rng:RandomInt(3)+3, rng:RandomInt(3)+3))
 			sprite:Play("Move")

@@ -51,6 +51,12 @@
         <gibs amount="8" blood="1" bone="0" eye="2" gut="2" large="1" worm="2" />
         <devolve id="800.0.0" weight="1" />
     </entity>
+    <!-- Sporeling -->
+	<entity anm2path="800.007_sporeling.anm2" name="Sporeling" id="800" variant="7" baseHP="7" stageHP="2" reroll="true" boss="0" champion="1" hasFloorAlts="false" portrait="3" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="0.95"   numGridCollisionPoints="12" shadowSize="12"  gridCollision="walls">
+		<bestiary transform="0,0,1" anim="Idle" />
+        <gibs amount="6" blood="1" bone="0" eye="1" gut="1" large="0" />
+        <devolve id="800.0.0" weight="1" />
+    </entity>
     <!-- Fracture (Name uses a nil character to not conflict with Fiend Folio) -->
 	<entity anm2path="801.000_fracture.anm2" name="​Fracture" id="29" variant="1" subtype="801" baseHP="15" stageHP="0" reroll="true" boss="0" champion="1" hasFloorAlts="true" tags="spider" portrait="7" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="0" shadowSize="28">
     	<bestiary transform="0,0,1" anim="Hop" />
@@ -70,7 +76,7 @@
         <devolve id="234.0.0" weight="1" />
     </entity>
     <!-- Chubby Bunny -->
-    <entity anm2path="chubby_bunny.anm2" name="Chubby Bunny" id="200" variant="24071" baseHP="20" stageHP="0" reroll="true" boss="0" champion="1" portrait="9" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="18" gridCollision="walls" >
+    <entity anm2path="chubby_bunny.anm2" name="Chubby Bunny" id="200" variant="2407" subtype="1" baseHP="20" stageHP="0" reroll="true" boss="0" champion="1" portrait="9" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="18" gridCollision="walls" >
         <bestiary anim="Idle" transform="0,-16,1"/>
 		<gibs amount="6" blood="1" bone="0" eye="0" gut="1" large="0" />
         <devolve id="200.2407.0" weight="1" />

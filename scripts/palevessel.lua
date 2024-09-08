@@ -325,7 +325,7 @@ mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, mod.palevesselDeath, EntityType.
 function mod:palevesselDamage(vessel, damageAmount, damageFlags, damageSource, damageCountdownFrames)
 	local vesselData = vessel:GetData().VesselData
 	local targetPos = damageSource.Entity
-	if vessel.Variant ~= 1 or vessel.SubType >= 1 then
+	if vessel.Variant ~= 1 or vessel.SubType >= 1 or damageAmount == 0 then
 		return
 	end
 
