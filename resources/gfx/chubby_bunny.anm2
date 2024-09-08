@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="Reixen" CreatedOn="03.09.2024 19:07:58" Version="23" Fps="30"/>
+	<Info CreatedBy="Reixen" CreatedOn="9/8/2024 1:34:47 AM" Version="26" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="monsters\grotto\lighting_eye.png" Id="0"/>
@@ -16,6 +16,8 @@
 		<Events>
 			<Event Name="Shoot" Id="0"/>
 			<Event Name="Sound" Id="1"/>
+			<Event Name="Shoot2" Id="2"/>
+			<Event Name="Cough" Id="3"/>
 		</Events>
 	</Content>
 	<Animations DefaultAnimation="Idle">
@@ -148,10 +150,10 @@
 				</NullAnimation>
 			</NullAnimations>
 			<Triggers>
-				<Trigger EventId="1" AtFrame="36"/>
-				<Trigger EventId="0" AtFrame="39"/>
-				<Trigger EventId="0" AtFrame="42"/>
-				<Trigger EventId="0" AtFrame="45"/>
+				<Trigger EventId="1" AtFrame="35"/>
+				<Trigger EventId="0" AtFrame="36"/>
+				<Trigger EventId="2" AtFrame="41"/>
+				<Trigger EventId="3" AtFrame="46"/>
 			</Triggers>
 		</Animation>
 		<Animation Name="Transform" FrameNum="26" Loop="false">

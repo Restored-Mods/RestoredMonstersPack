@@ -43,7 +43,7 @@ end
 mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.echoBatInit, EntityType.ENTITY_CUTMONSTERS)
 
 function mod:echoBatUpdate(entity)
-	if entity.Variant == CutMonsterVariants.ECHO_BAT then
+	if entity.Variant == CutMonsterVariants.ECHO_BAT and entity.SubType ~= CutMonsterVariants.CHUBBY_BUNNY then
 		local sprite = entity:GetSprite()
 		local data = entity:GetData()
 		local target = entity:GetPlayerTarget()
@@ -278,7 +278,7 @@ if FFGRACE then
 mod:AddCallback("POST_SPORE_INFECTION", function(_, npc, explosion)
     if npc.Variant == CutMonsterVariants.ECHO_BAT then
         if npc.SubType == 0 then
-            return {EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.CHUBBY_BUNNY, 0}
+            return {EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.ECHO_BAT, CutMonsterVariants.CHUBBY_BUNNY}
         end
     end
 end, EntityType.ENTITY_CUTMONSTERS)
@@ -359,15 +359,21 @@ function mod:chubbyBunnyUpdate(entity)
 			sprite:Play("Attack", true)
 		end
 
+		local params = ProjectileParams()
+		params.Variant = ProjectileVariant.PROJECTILE_TEAR
+		params.Color = Color(1,0.6,0,1,0.4,0.2)
+		params.FallingAccelModifier = -0.1
+
 		if sprite:IsEventTriggered("Sound") then
 			entity:PlaySound(SoundEffect.SOUND_SHAKEY_KID_ROAR, 1.5, 0, false, 1.5)
 
 		elseif sprite:IsEventTriggered("Shoot") then
-			local params = ProjectileParams()
-			params.Variant = ProjectileVariant.PROJECTILE_ECHO
-			params.FallingAccelModifier = -0.1
-
-			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed, 0, params)
+			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed * 1.25, 0, params)
+		elseif sprite:IsEventTriggered("Shoot2") then
+			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed * 1.1, 0, params)
+		elseif sprite:IsEventTriggered("Cough") then
+			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed / 1.2, 0, params)
+			entity:PlaySound(SoundEffect.SOUND_WHEEZY_COUGH, 1.5, 0, false, 1.2)
 		end
 
 		if sprite:IsFinished("Attack") then
@@ -377,3 +383,32 @@ function mod:chubbyBunnyUpdate(entity)
 	end
 end
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.chubbyBunnyUpdate, EntityType.ENTITY_CUTMONSTERS)
+
+
+local function projectileKill(projectile)
+	if projectile.SpawnerEntity and projectile.SpawnerType == EntityType.ENTITY_CUTMONSTERS and projectile.SpawnerVariant == CutMonsterVariants.ECHO_BAT
+	and projectile.SpawnerEntity.SubType == CutMonsterVariants.CHUBBY_BUNNY and FFGRACE then
+
+		projectile:Kill()
+		FFGRACE:MakeSporeExplosion(projectile.Position, projectile.SpawnerEntity, .7)
+
+		for _, proj in pairs(Isaac.FindByType(EntityType.ENTITY_PROJECTILE, ProjectileVariant.PROJECTILE_TEAR)) do
+			if proj.SpawnerEntity and GetPtrHash(proj.SpawnerEntity) == GetPtrHash(projectile.SpawnerEntity) then
+				proj:Kill()
+				FFGRACE:MakeSporeExplosion(proj.Position, proj.SpawnerEntity, .5, true)
+			end
+		end
+	end
+end
+
+function mod:chubbyBunnyProjectileUpdate(projectile)
+	if projectile:CollidesWithGrid() then
+		projectileKill(projectile)
+	end
+end
+mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, mod.chubbyBunnyProjectileUpdate)
+
+function mod:chubbyBunnyProjectileCollision(projectile)
+	projectileKill(projectile)
+end
+mod:AddCallback(ModCallbacks.MC_PRE_PROJECTILE_COLLISION, mod.chubbyBunnyProjectileCollision, EntityType.ENTITY_PROJECTILE)
