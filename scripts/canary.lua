@@ -40,15 +40,15 @@ function mod:canaryInit(entity)
 
 		local sprite = entity:GetSprite()
 		if entity.Variant == canaryvar then
-			sprite:ReplaceSpritesheet(0, "gfx/monsters/repentance/bodies_mines_gehenna" .. champ .. ".png")
-			sprite:ReplaceSpritesheet(1, "gfx/monsters/repentance/843.000_canary_gehenna" .. champ .. ".png")
-			sprite:ReplaceSpritesheet(4, "gfx/lighting_eye_red.png")
+			sprite:ReplaceSpritesheet(0, "gfx/monsters/restored/canary/bodies_mines_gehenna" .. champ .. ".png")
+			sprite:ReplaceSpritesheet(1, "gfx/monsters/restored/canary/canary_gehenna" .. champ .. ".png")
+			sprite:ReplaceSpritesheet(4, "gfx/effects/lighting_eye_red.png")
 
 		elseif entity.Variant == foreigar then
-			sprite:ReplaceSpritesheet(0, "gfx/monsters/repentance/820.000_danny_body_gehenna" .. champ .. ".png")
-			sprite:ReplaceSpritesheet(1, "gfx/monsters/repentance/843.001_foreigner_gehenna" .. champ .. ".png")
-			sprite:ReplaceSpritesheet(2, "gfx/monsters/repentance/843.001_foreigner_gehenna" .. champ .. ".png")
-			sprite:ReplaceSpritesheet(3, "gfx/monsters/repentance/843.001_foreigner_lighting_gehenna.png")
+			sprite:ReplaceSpritesheet(0, "gfx/monsters/restored/canary/danny_body_gehenna" .. champ .. ".png")
+			sprite:ReplaceSpritesheet(1, "gfx/monsters/restored/canary/foreigner_gehenna" .. champ .. ".png")
+			sprite:ReplaceSpritesheet(2, "gfx/monsters/restored/canary/foreigner_gehenna" .. champ .. ".png")
+			sprite:ReplaceSpritesheet(3, "gfx/monsters/restored/canary/foreigner_lighting_gehenna.png")
 		end
 		sprite:LoadGraphics()
 	end

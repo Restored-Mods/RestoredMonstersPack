@@ -187,13 +187,13 @@
 	</entity>
 <!-- Antibirth enemy Variants for Bestiary -->
     <!-- Canary -->
-    <entity anm2path="843.000_canary.anm2" name="​Canary" id="843" variant="200" baseHP="16" stageHP="2" boss="0" champion="1" portrait="27" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14">
+    <entity anm2path="monsters\restored\canary\canary.anm2" name="​Canary" id="843" variant="200" baseHP="16" stageHP="2" boss="0" champion="1" portrait="27" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14">
         <bestiary anim="AttackDown" transform="0,0,1"/>
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0"/>
         <devolve id="10.1.0" weight="1" />  
     </entity>
     <!-- ​Foreigner -->
-    <entity anm2path="843.001_foreigner.anm2" name="​Foreigner" id="843" variant="201" baseHP="18" stageHP="2" boss="0" champion="1" portrait="28" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14">
+    <entity anm2path="monsters\restored\canary\foreigner.anm2" name="​Foreigner" id="843" variant="201" baseHP="18" stageHP="2" boss="0" champion="1" portrait="28" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14">
         <bestiary anim="WalkDown" transform="0,0,1"/>
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0"/>
         <devolve id="843.200.0" weight="1" />  
