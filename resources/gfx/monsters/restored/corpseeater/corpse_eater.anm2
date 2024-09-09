@@ -1,9 +1,9 @@
 <AnimatedActor>
-	<Info CreatedBy="trtv" CreatedOn="2/11/2024 2:58:57 PM" Version="7" Fps="30"/>
+	<Info CreatedBy="trtv" CreatedOn="9/9/2024 6:03:54 PM" Version="8" Fps="30"/>
 	<Content>
 		<Spritesheets>
-			<Spritesheet Path="Monsters/repentance/239.100_corpse_eater.png" Id="0"/>
-			<Spritesheet Path="Monsters/repentance/239.100_corpse_eater_body.png" Id="1"/>
+			<Spritesheet Path="corpse_eater.png" Id="0"/>
+			<Spritesheet Path="corpse_eater_body.png" Id="1"/>
 		</Spritesheets>
 		<Layers>
 			<Layer Name="head" Id="0" SpritesheetId="0"/>
