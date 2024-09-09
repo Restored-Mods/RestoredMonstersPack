@@ -70,7 +70,7 @@
         <devolve id="38.0.0" weight="1" />
     </entity>
     <!-- Echo Bat -->
-	<entity anm2path="monsters\restored\echobat\echo bat.anm2" name="Echo Bat" id="200" variant="2407" baseHP="20" stageHP="0" reroll="true" boss="0" champion="1" portrait="9" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12"  shadowSize="18" gridCollision="walls" >
+	<entity anm2path="monsters\restored\echobat\echo_bat.anm2" name="Echo Bat" id="200" variant="2407" baseHP="20" stageHP="0" reroll="true" boss="0" champion="1" portrait="9" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12"  shadowSize="18" gridCollision="walls" >
         <bestiary anim="Idle" transform="0,-16,1"/>
 		<gibs amount="6" blood="1" bone="0" eye="0" gut="1" large="0" />
         <devolve id="234.0.0" weight="1" />
@@ -187,13 +187,13 @@
 	</entity>
 <!-- Antibirth enemy Variants for Bestiary -->
     <!-- Canary -->
-    <entity anm2path="monsters\restored\canary\canary.anm2" name="​Canary" id="843" variant="200" baseHP="16" stageHP="2" boss="0" champion="1" portrait="27" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14">
+    <entity anm2path="843.000_canary.anm2" name="​Canary" id="843" variant="200" baseHP="16" stageHP="2" boss="0" champion="1" portrait="27" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14">
         <bestiary anim="AttackDown" transform="0,0,1"/>
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0"/>
         <devolve id="10.1.0" weight="1" />  
     </entity>
     <!-- ​Foreigner -->
-    <entity anm2path="monsters\restored\canary\foreigner.anm2" name="​Foreigner" id="843" variant="201" baseHP="18" stageHP="2" boss="0" champion="1" portrait="28" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14">
+    <entity anm2path="843.001_foreigner.anm2" name="​Foreigner" id="843" variant="201" baseHP="18" stageHP="2" boss="0" champion="1" portrait="28" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14">
         <bestiary anim="WalkDown" transform="0,0,1"/>
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0"/>
         <devolve id="843.200.0" weight="1" />  
@@ -205,13 +205,13 @@
     	<devolve id="227.0.0" weight="1" />
 	</entity>
     <!-- Corpse Eater -->
-    <entity anm2path="239.100_corpse eater.anm2" name="​Corpse Eater" id="239" variant="200" baseHP="48" stageHP="2.5" boss="0" champion="0" portrait="30" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="21">
+    <entity anm2path="monsters\restored\corpseeater\corpse_eater.anm2" name="​Corpse Eater" id="239" variant="200" baseHP="48" stageHP="2.5" boss="0" champion="0" portrait="30" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="21">
         <bestiary anim="Bestiary" transform="0,0,1"/>
         <gibs amount="10" blood="1" bone="0" eye="0" gut="1" large="0"/>
     	<devolve id="23.0.0" weight="1" />
     </entity>
     <!-- Carrion Rider -->
-    <entity anm2path="239.101_carrion rider.anm2" name="​Carrion Rider" id="239" variant="201" baseHP="48" stageHP="2.5" boss="0" champion="0" portrait="31" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="21">
+    <entity anm2path="monsters\restored\corpseeater\carrion_rider.anm2" name="​Carrion Rider" id="239" variant="201" baseHP="48" stageHP="2.5" boss="0" champion="0" portrait="31" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="21">
         <bestiary anim="Bestiary" transform="0,0,1"/>
         <gibs amount="10" blood="1" bone="0" eye="0" gut="1" large="0"/>
     	<devolve id="23.3.0" weight="1" />
