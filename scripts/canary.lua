@@ -245,8 +245,10 @@ function mod:canaryUpdate(entity)
 					SFXManager():Play(SoundEffect.SOUND_REDLIGHTNING_ZAP_STRONG, 1.2, 0, false, 0.7)
 
 					-- Fire brimstone visuals
+
 					data.brim:GetData().hot = true
 					local laserSprite = data.brim:GetSprite()
+          laserSprite:Load("gfx/effects/thick_red_laser.anm2",true)
 					laserSprite:Play("HotBrim", true)
 					laserSprite:ReplaceSpritesheet(0, "gfx/effects/hotbrimstone.png")
 					laserSprite:ReplaceSpritesheet(1, "gfx/effects/hotbrimstone.png")

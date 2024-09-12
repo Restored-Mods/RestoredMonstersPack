@@ -160,7 +160,7 @@
 
 <!-- Effects -->
 	<!-- Screamer Ring -->
-    <entity anm2path="effects\screamer_ring.anm2" name="Screamer Ring" id="1000" variant="164" subtype="867" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="1" shadowSize="0"/>
+    <entity anm2path="monsters\restored\screamer\screamer_ring.anm2" name="Screamer Ring" id="1000" variant="164" subtype="867" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="1" shadowSize="0"/>
     <!-- Nightwatch Spotlight -->
 	<entity anm2path="monsters\restored\nightwatch\nightwatch_spotlight.anm2"   name="Nightwatch Spotlight" id="1000" variant="842" subtype="0" collisionDamage="0" collisionMass="0" collisionRadius="0" friction="1" numGridCollisionPoints="0" shadowSize="0"/>
     <!-- Screamer Aura -->
