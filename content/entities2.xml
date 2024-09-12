@@ -52,7 +52,7 @@
         <devolve id="800.0.0" weight="1" />
     </entity>
     <!-- Sporeling -->
-	<entity anm2path="monsters\grotto\sporeling\sporeling.anm2" name="Sporeling" id="800" variant="7" baseHP="7" stageHP="2" reroll="true" boss="0" champion="1" hasFloorAlts="false" portrait="3" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="0.95"   numGridCollisionPoints="12" shadowSize="12"  gridCollision="walls">
+	<entity anm2path="monsters\grotto\sporeling\sporeling.anm2" name="Sporeling" id="800" variant="7" baseHP="8" stageHP="2" reroll="true" boss="0" champion="1" hasFloorAlts="false" portrait="3" collisionDamage="1" collisionMass="3" collisionRadius="13" friction="0.95"   numGridCollisionPoints="12" shadowSize="12"  gridCollision="walls">
 		<bestiary transform="0,0,1" anim="Idle" />
         <gibs amount="6" blood="1" bone="0" eye="1" gut="1" large="0" />
         <devolve id="800.0.0" weight="1" />
