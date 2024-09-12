@@ -33,8 +33,8 @@ function mod:palevesselInit(vessel)
 	if vessel.SubType == 0 then
 
 	elseif vessel.SubType == 1 then
-		sprite:ReplaceSpritesheet(0, "gfx/monsters/pale_vessel2.png")
-		sprite:ReplaceSpritesheet(1, "gfx/monsters/pale_vessel2.png")
+		sprite:ReplaceSpritesheet(0, "gfx/monsters/restored/vessel/receptacle.png")
+		sprite:ReplaceSpritesheet(1, "gfx/monsters/restored/vessel/receptacle.png")
 		sprite:LoadGraphics()
 	end
 	sprite:Play("WalkDown", true)

@@ -40,15 +40,15 @@ function mod:canaryInit(entity)
 
 		local sprite = entity:GetSprite()
 		if entity.Variant == canaryvar then
-			sprite:ReplaceSpritesheet(0, "gfx/monsters/repentance/bodies_mines_gehenna" .. champ .. ".png")
-			sprite:ReplaceSpritesheet(1, "gfx/monsters/repentance/843.000_canary_gehenna" .. champ .. ".png")
-			sprite:ReplaceSpritesheet(4, "gfx/lighting_eye_red.png")
+			sprite:ReplaceSpritesheet(0, "gfx/monsters/restored/canary/bodies_mines_gehenna" .. champ .. ".png")
+			sprite:ReplaceSpritesheet(1, "gfx/monsters/restored/canary/canary_gehenna" .. champ .. ".png")
+			sprite:ReplaceSpritesheet(4, "gfx/effects/lighting_eye_red.png")
 
 		elseif entity.Variant == foreigar then
-			sprite:ReplaceSpritesheet(0, "gfx/monsters/repentance/820.000_danny_body_gehenna" .. champ .. ".png")
-			sprite:ReplaceSpritesheet(1, "gfx/monsters/repentance/843.001_foreigner_gehenna" .. champ .. ".png")
-			sprite:ReplaceSpritesheet(2, "gfx/monsters/repentance/843.001_foreigner_gehenna" .. champ .. ".png")
-			sprite:ReplaceSpritesheet(3, "gfx/monsters/repentance/843.001_foreigner_lighting_gehenna.png")
+			sprite:ReplaceSpritesheet(0, "gfx/monsters/restored/canary/danny_body_gehenna" .. champ .. ".png")
+			sprite:ReplaceSpritesheet(1, "gfx/monsters/restored/canary/foreigner_gehenna" .. champ .. ".png")
+			sprite:ReplaceSpritesheet(2, "gfx/monsters/restored/canary/foreigner_gehenna" .. champ .. ".png")
+			sprite:ReplaceSpritesheet(3, "gfx/monsters/restored/canary/foreigner_lighting_gehenna.png")
 		end
 		sprite:LoadGraphics()
 	end
@@ -245,8 +245,10 @@ function mod:canaryUpdate(entity)
 					SFXManager():Play(SoundEffect.SOUND_REDLIGHTNING_ZAP_STRONG, 1.2, 0, false, 0.7)
 
 					-- Fire brimstone visuals
+
 					data.brim:GetData().hot = true
 					local laserSprite = data.brim:GetSprite()
+          laserSprite:Load("gfx/effects/thick_red_laser.anm2",true)
 					laserSprite:Play("HotBrim", true)
 					laserSprite:ReplaceSpritesheet(0, "gfx/effects/hotbrimstone.png")
 					laserSprite:ReplaceSpritesheet(1, "gfx/effects/hotbrimstone.png")

@@ -31,7 +31,7 @@ mod:AddPriorityCallback(ModCallbacks.MC_POST_GAME_STARTED, CallbackPriority.IMPO
 			[1] = {
 				[EntityVariant.FRACTURE] = {
 					SPRITESHEET = {
-						[0] = "801.000_fracture_glacier",
+						[0] = "fracture_glacier",
 					}
 				}
 			}
@@ -39,10 +39,10 @@ mod:AddPriorityCallback(ModCallbacks.MC_POST_GAME_STARTED, CallbackPriority.IMPO
         [EntityType.ENTITY_CUTMONSTERS] = {
             [CutMonsterVariants.GRAVEROBBER] = {
                 SPRITESHEET = {
-                    [0] = "837.000_graverobber_body_glacier",
-                    [1] = "837.000_graverobber_body_glacier",
-                    [2] = "837.000_graverobber_glacier",
-                    [3] = "837.000_graverobber_glacier",
+                    [0] = "graverobber_body_glacier",
+                    [1] = "graverobber_body_glacier",
+                    [2] = "graverobber_glacier",
+                    [3] = "graverobber_glacier",
                 }
             }
         },
