@@ -40,7 +40,7 @@
 
         </Gfx>
     </stage>
-    <!-- <stage Name="Corpse">
+    <stage Name="Corpse">
         <Gfx>
             <Entity ID="239" Variant="200" SubType="0" Image="resources/Corpse Eater Corpse.png"/>
             <Entity ID="239" Variant="201" SubType="0" Image="resources/Carrion Rider Corpse.png"/>
@@ -60,10 +60,10 @@
             <Entity ID="800" Variant="1" SubType="0" Image="resources/rev2/Skinling Tomb.png"/>
             <Entity ID="803" Variant="200" Subtype="3" Image="resources/rev2/Blind Bat Tomb.png"/>
         </Gfx>
-    </stage>  -->
-    <stage Name="Boiler">
+    </stage>
+    <!-- <stage Name="Boiler">
         <Gfx>
             <Entity ID="800" Variant="0" SubType="0" Image="resources/ffg/Dumpling Boiler.png"/>
         </Gfx>
-    </stage> 
+    </stage>  -->
 </data>
