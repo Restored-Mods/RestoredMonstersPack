@@ -2,7 +2,7 @@ local mod = RestoredMonsterPack
 local game = Game()
 
 local Settings = {
-	AttackTime = {60, 120}, -- The amount of frames between each bat charge
+	AttackTime = {30, 60}, -- The amount of frames between each bat charge
 	AttackRange = 280, -- Range players must be in to trigger the bat charging
 	ChaseSpeed = 3.5, -- Velocity of bat following its target
 	DirectionChangeTimes = {10, 30}, -- Amount of frames until the bat changes angle directions
@@ -17,13 +17,13 @@ local function Lerp(first, second, percent)
 end
 
 
-local function getAngleOffset(direction)
+local function getAngleOffset(rng, direction)
 	local multiplier = 1
 	if (direction == "down") then
 		multiplier = -1
 	end
 
-	return math.random(Settings.AngleOffset[1], Settings.AngleOffset[2]) * multiplier
+	return mod:RandomIntBetween(rng, Settings.AngleOffset[1], Settings.AngleOffset[2]) * multiplier
 end
 
 
@@ -33,10 +33,10 @@ function mod:echoBatInit(entity)
 		local data = entity:GetData()
 		local rng = entity:GetDropRNG()
 
-		data.cooldown = math.random(Settings.AttackTime[1], Settings.AttackTime[2])
+		data.cooldown = mod:RandomIntBetween(rng, Settings.AttackTime[1], Settings.AttackTime[2])
 		data.chargeDirection = Vector.Zero
-		data.angleCountdown = math.random(Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2])
-		data.angleOffset = math.random(Settings.AngleOffset[1], Settings.AngleOffset[2])
+		data.angleCountdown = mod:RandomIntBetween(rng, Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2])
+		data.angleOffset = mod:RandomIntBetween(rng, Settings.AngleOffset[1], Settings.AngleOffset[2])
 		data.angleDirection = "up"
 	end
 end
@@ -69,8 +69,8 @@ function mod:echoBatUpdate(entity)
 			else
 				data.angleDirection = "up"
 			end
-			data.angleOffset = getAngleOffset(data.angleDirection)
-			data.angleCountdown = math.random(Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2])
+			data.angleOffset = getAngleOffset(rng, data.angleDirection)
+			data.angleCountdown = mod:RandomIntBetween(rng, Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2])
 		end
 
 		if data.cooldown > 0 then
@@ -80,6 +80,11 @@ function mod:echoBatUpdate(entity)
 			data.angleCountdown = data.angleCountdown - 1
 		end
 
+
+		if sprite:IsFinished("Attack") then
+			data.cooldown = mod:RandomIntBetween(rng, Settings.AttackTime[1], Settings.AttackTime[2])
+			sprite:Play("Idle", true)
+		end
 
 		if not sprite:IsPlaying("Attack") and not sprite:IsPlaying("Idle") then
 			sprite:Play("Idle", true)
@@ -101,11 +106,6 @@ function mod:echoBatUpdate(entity)
 			params.FallingAccelModifier = -0.1
 
 			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed, 0, params)
-		end
-
-		if sprite:IsFinished("Attack") then
-			data.cooldown = math.random(Settings.AttackTime[1], Settings.AttackTime[2])
-			sprite:Play("Idle", true)
 		end
 	end
 end
@@ -284,20 +284,6 @@ mod:AddCallback("POST_SPORE_INFECTION", function(_, npc, explosion)
 end, EntityType.ENTITY_CUTMONSTERS)
 end
 
-function mod:chubbyBunnyInit(entity)
-	if entity.Variant == CutMonsterVariants.ECHO_BAT and entity.SubType == CutMonsterVariants.CHUBBY_BUNNY then
-		local data = entity:GetData()
-		local rng = entity:GetDropRNG()
-  
-		data.cooldown = math.random(Settings.AttackTime[1], Settings.AttackTime[2])
-		data.chargeDirection = Vector.Zero
-		data.angleCountdown = math.random(Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2])
-		data.angleOffset = math.random(Settings.AngleOffset[1], Settings.AngleOffset[2])
-		data.angleDirection = "up"
-	end
-end
-mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.chubbyBunnyInit, EntityType.ENTITY_CUTMONSTERS)
-
 function mod:chubbyBunnyUpdate(entity)
 	if entity.Variant == CutMonsterVariants.ECHO_BAT and entity.SubType == CutMonsterVariants.CHUBBY_BUNNY then
 		local sprite = entity:GetSprite()
@@ -336,8 +322,8 @@ function mod:chubbyBunnyUpdate(entity)
 			else
 				data.angleDirection = "up"
 			end
-			data.angleOffset = getAngleOffset(data.angleDirection)
-			data.angleCountdown = math.random(Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2])
+			data.angleOffset = getAngleOffset(rng, data.angleDirection)
+			data.angleCountdown = mod:RandomIntBetween(rng, Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2])
 		end
 
 		if data.cooldown > 0 then
@@ -347,6 +333,11 @@ function mod:chubbyBunnyUpdate(entity)
 			data.angleCountdown = data.angleCountdown - 1
 		end
 
+
+		if sprite:IsFinished("Attack") then
+			data.cooldown = mod:RandomIntBetween(rng, Settings.AttackTime[1], Settings.AttackTime[2])
+			sprite:Play("Idle", true)
+		end
 
 		if not sprite:IsPlaying("Attack") and not sprite:IsPlaying("Idle") and not sprite:IsPlaying("Transform") then
 			sprite:Play("Idle", true)
@@ -374,11 +365,6 @@ function mod:chubbyBunnyUpdate(entity)
 		elseif sprite:IsEventTriggered("Cough") then
 			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed / 1.2, 0, params)
 			entity:PlaySound(SoundEffect.SOUND_WHEEZY_COUGH, 1.5, 0, false, 1.2)
-		end
-
-		if sprite:IsFinished("Attack") then
-			data.cooldown = math.random(Settings.AttackTime[1], Settings.AttackTime[2])
-			sprite:Play("Idle", true)
 		end
 	end
 end

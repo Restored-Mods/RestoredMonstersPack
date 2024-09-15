@@ -106,6 +106,15 @@ EffectVariant.SCREAMER_AURA = 867
 
 
 --[[--------------------------------------------------------
+    Util functions
+--]]--------------------------------------------------------
+
+function mod:RandomIntBetween(rng, value1, value2)
+	return rng:RandomInt(value2 - value1) + value1
+end
+
+
+--[[--------------------------------------------------------
     DSS and savedata should (likely) be loaded first
 --]]--------------------------------------------------------
 
