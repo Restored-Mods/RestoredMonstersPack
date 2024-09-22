@@ -23,6 +23,41 @@ local function MixTables(ta, tb, recurse) --from Revelations
     end
 end
 
+mod.Rooms = {
+  {Name = "Glacier", Rooms = require("resources.luarooms.revelations.glacier_tc")},
+  {Name = "GlacierSpecial", Rooms = require("resources.luarooms.revelations.glacier_special_tc")},
+  {Name = "GlacierChallenge", Rooms = require("resources.luarooms.revelations.glacier_challenge_tc")},
+}
+
+mod.BossRooms = {
+  {Name = "Stalagmight", Rooms = require("resources.luarooms.revelations.glacier_boss_tc")},
+  {Name = "Prong", Rooms = require("resources.luarooms.revelations.glacier_boss_tc")},
+  {Name = "Freezer Burn", Rooms = require("resources.luarooms.revelations.glacier_boss_tc")},
+  {Name = "Wendy", Rooms = require("resources.luarooms.revelations.glacier_boss_tc")},
+  {Name = "Williwaw", Rooms = require("resources.luarooms.revelations.glacier_boss_tc")},
+  
+  {Name = "Chuck", Rooms = require("resources.luarooms.revelations.glacier_chuck_tc")},
+  
+  {Name = "Punker", Rooms = require("resources.luarooms.revelations.punker_tc")},
+  {Name = "Raging Long Legs", Rooms = require("resources.luarooms.revelations.raging_long_legs_tc")}, 
+}
+
+function mod.RoomInit()
+	if REVEL then 
+    -- Add non-boss rooms
+  for _,roomlist in ipairs(mod.Rooms) do
+  REVEL.RoomLists[roomlist.Name]:AddRooms({Name = "[TC] " .. roomlist.Name, Rooms = roomlist.Rooms})
+    -- Add boss rooms
+  end
+  for _,bossrooms in ipairs(mod.BossRooms) do
+    StageAPI.GetBossData(bossrooms.Name).Rooms:AddRooms(bossrooms.Rooms)
+  end
+
+mod:RemoveCallback(ModCallbacks.MC_POST_GAME_STARTED,mod.RoomInit)
+end
+end
+mod:AddPriorityCallback(ModCallbacks.MC_POST_GAME_STARTED, CallbackPriority.LATE ,mod.RoomInit)
+
 mod:AddPriorityCallback(ModCallbacks.MC_POST_GAME_STARTED, CallbackPriority.IMPORTANT, function ()
 	if not REVEL then return end
 	MixTables(REVEL.EntityReplacements["Glacier"].Replacements, {
