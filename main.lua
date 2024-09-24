@@ -14,7 +14,7 @@ AMLblacklistEntry(blacklist, Type, Variant, SubType, operation)
 	setting the Type or Variant to -1 will include all variants or subtypes
 
 Checking for blacklist entries:
-inAMLblacklist(blacklist, checkType, checkVariant, checkSubType)
+mod:inAMLblacklist(blacklist, checkType, checkVariant, checkSubType)
 	there are 3 possible blacklists: "Coil", "Necromancer" and "Corpse Eater"
 	returns true if the specified entity is in the blacklist, returns false otherwise
 	setting the Type or Variant to -1 will include all variants or subtypes
@@ -24,7 +24,7 @@ inAMLblacklist(blacklist, checkType, checkVariant, checkSubType)
 	HOW TO USE CORPSE EATER EFFECT FUNCTIONS:
 
 Adding / Removing entry:
-EatenEffectEntry(Type, Variant, SubType, operation, effect)
+mod:EatenEffectEntry(Type, Variant, SubType, operation, effect)
 	there are 5 possible effects: "small" (reduced effects, no projectiles), "bone", "poop", "stone", "dank" (unique projectiles)
 	if an entity doesn't have an effect entry it will default to regular blood projectiles with occasional bone ones
 	the possible operations are "add" and "remove"
@@ -32,7 +32,7 @@ EatenEffectEntry(Type, Variant, SubType, operation, effect)
 	setting the Type or Variant to -1 will include all variants or subtypes
 
 Checking for effect entries:
-GetEatenEffect(checkType, checkVariant, checkSubType)
+mod:GetEatenEffect(checkType, checkVariant, checkSubType)
 	returns the entities effect group as a string if it has an entry, returns false otherwise
 	setting the Type or Variant to -1 will include all variants or subtypes
 --/////////////////////////////////////////]]--
@@ -218,7 +218,7 @@ local corpse_eater_blacklist = {
 }
 
 -- Add / remove blacklist entry
-function AMLblacklistEntry(blacklist, Type, Variant, SubType, operation)
+function mod:AMLblacklistentry(blacklist, Type, Variant, SubType, operation)
 	-- Error checking
 	if blacklist ~= "Coil" and blacklist ~= "Necromancer" and blacklist ~= "Corpse Eater" then
 		print("[CMP] Error adding / removing blacklist entry:\n   Incorrect blacklist: " .. blacklist)
@@ -265,7 +265,7 @@ function AMLblacklistEntry(blacklist, Type, Variant, SubType, operation)
 end
 
 -- Check if the entity is in the blacklist or not
-function inAMLblacklist(blacklist, checkType, checkVariant, checkSubType)
+function mod:inAMLblacklist(blacklist, checkType, checkVariant, checkSubType)
 	if blacklist ~= "Coil" and blacklist ~= "Necromancer" and blacklist ~= "Corpse Eater" then
 		print("[CMP] Error checking blacklist:\n   Incorrect blacklist: " .. blacklist)
 		return
@@ -287,8 +287,6 @@ function inAMLblacklist(blacklist, checkType, checkVariant, checkSubType)
 	end
 	return false
 end
-
-
 
 --[[--------------------------------------------------------
     Corpse eater death effects for enemies
@@ -377,7 +375,7 @@ local corpse_eater_effects = {
 }
 
 -- Add / remove Corpse Eater effects
-function EatenEffectEntry(Type, Variant, SubType, operation, effect)
+function mod:EatenEffectEntry(Type, Variant, SubType, operation, effect)
 	-- Error checking
 	if effect ~= "small" and effect ~= "bone" and effect ~= "stone" and effect ~= "poop" and effect ~= "dank" then
 		print("[CMP] Error adding / removing Corpse eater effect entry:\n   Unknown effect: " .. effect)
@@ -428,7 +426,7 @@ function EatenEffectEntry(Type, Variant, SubType, operation, effect)
 end
 
 -- Get Corpse eater effect
-function GetEatenEffect(checkType, checkVariant, checkSubType)
+function mod:GetEatenEffect(checkType, checkVariant, checkSubType)
 	for effect,effectlist in pairs(corpse_eater_effects) do
 		for i,entry in pairs(effectlist) do
 			if checkType == entry[1] and (entry[2] == -1 or checkVariant == entry[2]) and (entry[3] == -1 or checkSubType == entry[3]) then
@@ -439,7 +437,15 @@ function GetEatenEffect(checkType, checkVariant, checkSubType)
 	return false
 end
 
-
+--if an entity is a listed entry in a table
+function mod:EntityInList(entity, list)
+	for _, entry in pairs(list) do
+		if entity.Type == entry[1] and (entry[2] == -1 or entity.Variant == entry[2]) and (entry[3] == -1 or entity.SubType == entry[3]) then
+			return true
+		end
+	end
+	return false
+end
 
 --[[--------------------------------------------------------
     Replace entities that use an old ID or a different one in Basement Renovator
@@ -487,7 +493,7 @@ mod:AddCallback(ModCallbacks.MC_PRE_ENTITY_SPAWN, mod.replaceByDummy)
 
 mod.DummyReplace = {
 	[EntityType.ENTITY_VESSEL] = {[0] = Isaac.GetEntityVariantByName("​Vessel (Antibirth)")}, --200},
-	[EntityType.ENTITY_CANARY] = {[0] = Isaac.GetEntityVariantByName("​Canary"), --200, 
+	[EntityType.ENTITY_CANARY] = {[0] = Isaac.GetEntityVariantByName("​Canary"), --200,
 									[1] = Isaac.GetEntityVariantByName("​Foreigner")}, --201},
 	[EntityType.ENTITY_EXORCIST] = {[0] = Isaac.GetEntityVariantByName("​Exorcist")}, --200},
 	[EntityType.ENTITY_BLIND_BAT] = {[0] = Isaac.GetEntityVariantByName("​Blind Bat")}, --200},
@@ -504,7 +510,7 @@ function mod:MostDumbThing(ent)
 	local dumb = mod.DumbhackReplace[ent.Type]
 	if dumb then
 		local ovar,vvar = dumb[1], dumb[2]
-		
+
 		if not ign and ent.Variant == vvar and ent.FrameCount > 1 then
 			ign = true
 			local spr = ent:GetSprite()
@@ -528,20 +534,23 @@ mod.DumbhackReplace = {
 	[EntityType.ENTITY_WALL_CREEP] = {2, Isaac.GetEntityVariantByName("​Rag Creep")},
 }
 
-mod.Nonmale = {
-	{ID = {Isaac.GetEntityTypeByName("Splashy Long Legs"), Isaac.GetEntityVariantByName("Splashy Long Legs")}, Affliction = "Woman"}, --Splashy Long Legs
-	{ID = {Isaac.GetEntityTypeByName("Sticky Long Legs"), Isaac.GetEntityVariantByName("Sticky Long Legs"), 1}, Affliction = "Woman"}, --Sticky Long Legs
-	{ID = {Isaac.GetEntityTypeByName("Scab"), Isaac.GetEntityVariantByName("Scab")}, Affliction = "Woman"}, --Scab
-	{ID = {Isaac.GetEntityTypeByName("Mortling"), Isaac.GetEntityVariantByName("Mortling")}, Affliction = "Woman"}, --Mortling
-	{ID = {Isaac.GetEntityTypeByName("​Fracture"), Isaac.GetEntityVariantByName("​Fracture"), 801}, Affliction = "Woman"}, --Fracture
-	{ID = {Isaac.GetEntityTypeByName("Echo Bat"), Isaac.GetEntityVariantByName("Echo Bat")}, Affliction = "Woman"}, --Echo Bat
-	{ID = {Isaac.GetEntityTypeByName("​Corpse Eater"), Isaac.GetEntityVariantByName("​Corpse Eater")}, Affliction = "Woman"}, --Corpse Eater
-	{ID = {Isaac.GetEntityTypeByName("​Foreigner"), Isaac.GetEntityVariantByName("​Foreigner")}, Affliction = "Woman"}, --Foreigner
-	{ID = {Isaac.GetEntityTypeByName("Screamer"), Isaac.GetEntityVariantByName("Screamer")}, Affliction = "Woman"}, --Screamer
-	--{ID = {Isaac.GetEntityTypeByName("Cell"), Isaac.GetEntityVariantByName("Cell")}, Affliction = "Woman"}, --Cell BC WESTRVN SAID SO ):
-	{ID = {Isaac.GetEntityTypeByName("Fused Cells"), Isaac.GetEntityVariantByName("Fused Cells")}, Affliction = "Woman"}, --Fused Cell
-	--{ID = {Isaac.GetEntityTypeByName("Tissue"), Isaac.GetEntityVariantByName("Tissue")}, Affliction = "Woman"}, --Tissue ALSO BC WESTRVN SAID SO ):
-	{ID = {Isaac.GetEntityTypeByName("Grave Robber"), Isaac.GetEntityVariantByName("Grave Robber")}, Affliction = "Woman"}, --Grave Robber
-	{ID = {Isaac.GetEntityTypeByName("​Strifer"), Isaac.GetEntityVariantByName("Strifer")}, Affliction = "Woman"}, --Strifer
-	{ID = {Isaac.GetEntityTypeByName("Vessel (Anitbirth)"), Isaac.GetEntityVariantByName("Vessel (Antibirth)")}, Affliction = "Woman"}, --Vessel (rework)
-}
+--if an enemy is transformable by spores in grotto, used for sporelings
+if FFGRACE then
+	mod.sporeTransformable = {
+		{EntityType.ENTITY_ONE_TOOTH, -1, -1},
+		{EntityType.ENTITY_FAT_BAT, -1, -1},
+		{EntityType.ENTITY_BOOMFLY, 3, -1}, --dragon fly
+
+		{EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.ECHO_BAT, 0},
+		{EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.BLIND_BAT, -1},
+
+		{FFGRACE.ENT.POPCAP_CLUSTER.id, FFGRACE.ENT.POPCAP_CLUSTER.variant, -1},
+		{FFGRACE.ENT.MUD_FLY.id, FFGRACE.ENT.MUD_FLY.variant, -1},
+		{FFGRACE.ENT.ROBERT.id, FFGRACE.ENT.ROBERT.variant, -1},
+		{FFGRACE.ENT.BUMBLEBAT.id, FFGRACE.ENT.BUMBLEBAT.variant, -1},
+
+		{160, 320, -1}, --ff milk tooth, im not adding specific code to check if ff is installed just use the enums
+		{666, 40, -1}, --ff foamy
+
+	}
+end

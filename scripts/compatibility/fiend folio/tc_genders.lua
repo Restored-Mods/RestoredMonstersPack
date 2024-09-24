@@ -12,6 +12,7 @@ RestoredMonsterPack.Nonmale = {
 	{ID = mod:SpecialEnt("Sticky Long Legs"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Tainted Dumpling"), Affliction = "Woman"}, --fuck it
 	{ID = mod:SpecialEnt("Scab"), Affliction = "Woman"},
+	{ID = mod:SpecialEnt("Mortling"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Fracture"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Echo Bat"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Foreigner"), Affliction = "Woman"},

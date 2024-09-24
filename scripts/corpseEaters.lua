@@ -78,7 +78,7 @@ function mod:CorpseEaterInit(entity)
 			sprite:ReplaceSpritesheet(3, "gfx/monsters/restored/corpseeater/corpse_eater_rider" .. data.altSkin .. ".png")
       sprite:LoadGraphics()
 		end
-   
+
 		entity.Variant = entity.Variant == EntityVariant.VANILLA_CORPSE_EATER and EntityVariant.CORPSE_EATER
 			or entity.Variant == EntityVariant.VANILLA_CARRION_RIDER and EntityVariant.CARRION_RIDER
 			or entity.Variant
@@ -96,7 +96,7 @@ function mod:CorpseEaterUpdate(entity)
 		-- Get new target
 		local function getTarget()
 			for i, enemy in pairs(Isaac.FindInRadius(entity.Position, Settings.DetectionRange, EntityPartition.ENEMY)) do
-				if enemy:IsVulnerableEnemy() and entity.Pathfinder:HasPathToPos(enemy.Position, true) and inAMLblacklist("Corpse Eater", enemy.Type, enemy.Variant, enemy.SubType) == false then
+				if enemy:IsVulnerableEnemy() and entity.Pathfinder:HasPathToPos(enemy.Position, true) and mod:inAMLblacklist("Corpse Eater", enemy.Type, enemy.Variant, enemy.SubType) == false then
 					entity.Target = enemy
 					data.GiveUpTime = Settings.GiveUpTime
 				end
@@ -270,7 +270,7 @@ function mod:CorpseEaterCollision(entity, target, cum)
 			data.ChompCooldown = Settings.ChompCooldown
 
 			-- Effects
-			local effect = GetEatenEffect(target.Type, target.Variant, target.SubType)
+			local effect = mod:GetEatenEffect(target.Type, target.Variant, target.SubType)
 			if effect == false or effect == "dank" then -- No specified effect / dank
 				Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.POOF02, 4, target.Position, Vector.Zero, nil):GetSprite().Color = target.SplatColor
 				entity:PlaySound(SoundEffect.SOUND_MEATY_DEATHS, 0.75, 0, false, 1)
