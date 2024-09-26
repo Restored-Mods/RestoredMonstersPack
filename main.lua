@@ -158,7 +158,7 @@ include("scripts.revelCompat")
 include("scripts.compatibility.retribution.baptismal_preloader")
 include("scripts.compatibility.retribution.tc_downgrades")
 include("scripts.compatibility.retribution.tc_upgrades")
-include("scripts.compatibility.boiler")
+include("scripts.compatibility.fallfromgrace")
 if StageAPI then
 	include("scripts.compatibility.fiend folio.tc_genders")
 	StageAPI.AddEntities2Function(require("scripts.entities2"))
