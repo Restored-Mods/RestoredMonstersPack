@@ -509,10 +509,10 @@ function mod:replaceByDummy(Type, Variant, SubType, _, _, _, Seed)
 			return {Type, mod.DummyReplace[Type][Variant], SubType, Seed}
 		end
 	end
+
 	if mod.CompatibilityReplace[Type.." "..Variant.." "..SubType] or mod.CompatibilityReplace[Type.." "..Variant] then
-		return {mod.CompatibilityReplace[Type.." "..Variant.." "..SubType][1] or mod.CompatibilityReplace[Type.." "..Variant][1],
-		mod.CompatibilityReplace[Type.." "..Variant.." "..SubType][2] or mod.CompatibilityReplace[Type.." "..Variant][2] or 0,
-		mod.CompatibilityReplace[Type.." "..Variant.." "..SubType][3] or 0, Seed}
+		local t = mod.CompatibilityReplace[Type.." "..Variant.." "..SubType] or mod.CompatibilityReplace[Type.." "..Variant]
+		return {t[1], t[2], t[3], Seed}
 	end
 end
 mod:AddCallback(ModCallbacks.MC_PRE_ENTITY_SPAWN, mod.replaceByDummy)

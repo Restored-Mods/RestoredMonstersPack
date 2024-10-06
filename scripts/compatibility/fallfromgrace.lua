@@ -62,16 +62,9 @@ if FFGRACE then
       [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.RED_TNT] = "Blacklisted",
     }
   else
-    mod.FFGReplace = {
-      [{EntityType.ENTITY_DUMPLING.." "..EntityVariant.SPORELING}] = {EntityType.ENTITY_DUMPLING, EntityVariant.SKINLING, 0},
-      [{EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.ECHO_BAT.." "..CutMonsterVariants.CHUBBY_BUNNY}] = {EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.ECHO_BAT, 0},
-      -- [{EntityType.BLIND_BAT.." "..CutMonsterVariants.BEARD_BAT}] = {EntityType.BLIND_BAT, 0, 0},
+    mod.CompatibilityReplace = {
+      [EntityType.ENTITY_DUMPLING.." "..EntityVariant.SPORELING] = {EntityType.ENTITY_DUMPLING, EntityVariant.SKINLING, -1},
+      [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.ECHO_BAT.." "..CutMonsterVariants.CHUBBY_BUNNY] = {EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.ECHO_BAT, -1},
+      -- [EntityType.BLIND_BAT.." "..CutMonsterVariants.BEARD_BAT] = {EntityType.BLIND_BAT, -1, -1},
     }
-
-    mod:AddCallback(ModCallbacks.MC_POST_UPDATE, function()
-      if not mod.FFGCombatibilityReplaced then
-        mod:MixTables(mod.CompatibilityReplace, mod.FFGReplace)
-        mod.FFGCombatibilityReplaced = true
-      end
-    end)
   end
