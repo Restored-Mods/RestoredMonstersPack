@@ -72,7 +72,8 @@ CutMonsterVariants = {
 	FUSEDCELLS = Isaac.GetEntityVariantByName("Fused Cells"),
 	TISSUE = Isaac.GetEntityVariantByName("Tissue"),
 	GRAVEROBBER = 2503,
-	SPLASHY = Isaac.GetEntityVariantByName("Splashy Long Legs")
+	SPLASHY = Isaac.GetEntityVariantByName("Splashy Long Legs"),
+	STICKY = 1, --subtype
 }
 
 -- Variants of already existing entities
@@ -93,6 +94,7 @@ EntityVariant = {
 	CORPSE_EATER = Isaac.GetEntityVariantByName("​Corpse Eater"),
 	CARRION_RIDER = Isaac.GetEntityVariantByName("​Carrion Rider"),
 	STRIFER = Isaac.GetEntityVariantByName("​Strifer"), -- dummy strifer
+	FIRE_GRIMACE = Isaac.GetEntityVariantByName("Fire Grimace") -- for EntityType.ENTITY_BRIMSTONE_HEAD
 }
 
 -- Projectile variants
@@ -153,6 +155,8 @@ include("scripts.palevessel")
 --[[--------------------------------------------------------
     misc
 --]]--------------------------------------------------------
+
+mod.CompatibilityReplace = {} --this gets filled in
 
 include("scripts.revelCompat")
 include("scripts.compatibility.retribution.baptismal_preloader")
@@ -447,6 +451,19 @@ function mod:EntityInList(entity, list)
 	return false
 end
 
+function mod:MixTables(input, table)
+    if input and table then
+        for k, v in pairs(table) do
+            if type(input[k]) == "table" and type(v) == "table" then
+                mod:MixTables(input[k], v)
+            else
+                input[k] = v
+            end
+        end
+    end
+end
+
+
 --[[--------------------------------------------------------
     Replace entities that use an old ID or a different one in Basement Renovator
 --]]--------------------------------------------------------
@@ -469,7 +486,7 @@ function mod:replaceID(Type, Variant, SubType, GridIndex, Seed)
 		return {EntityType.ENTITY_DUMPLING, EntityVariant.GILDED_DUMPLING, SubType}
 
 	--[[ FRACTURE ]]--
-	elseif Type == 801 and Variant == 0 and SubType == 0 then
+	elseif Type == EntityVariant.FRACTURE and Variant == 0 and SubType == 0 then
 		return {EntityType.ENTITY_HOPPER, 1, EntityVariant.FRACTURE}
 
 	--[[ RED TNT ]]--
@@ -479,6 +496,10 @@ function mod:replaceID(Type, Variant, SubType, GridIndex, Seed)
 	if EntityType.ENTITY_STRIFER == Type then
 		return {Type, EntityVariant.STRIFER, Variant}
 	end
+
+	-- if not FFGRACE and Type == EntityType.ENTITY_BLIND_BAT and Variant == EntityVariants.BEARD_BAT then
+	-- 	return {Type, 0, SubType}
+	-- end
 end
 mod:AddCallback(ModCallbacks.MC_PRE_ROOM_ENTITY_SPAWN, mod.replaceID)
 
@@ -487,6 +508,11 @@ function mod:replaceByDummy(Type, Variant, SubType, _, _, _, Seed)
 		if mod.DummyReplace[Type][Variant] then
 			return {Type, mod.DummyReplace[Type][Variant], SubType, Seed}
 		end
+	end
+	if mod.CompatibilityReplace[Type.." "..Variant.." "..SubType] or mod.CompatibilityReplace[Type.." "..Variant] then
+		return {mod.CompatibilityReplace[Type.." "..Variant.." "..SubType][1] or mod.CompatibilityReplace[Type.." "..Variant][1],
+		mod.CompatibilityReplace[Type.." "..Variant.." "..SubType][2] or mod.CompatibilityReplace[Type.." "..Variant][2] or 0,
+		mod.CompatibilityReplace[Type.." "..Variant.." "..SubType][3] or 0, Seed}
 	end
 end
 mod:AddCallback(ModCallbacks.MC_PRE_ENTITY_SPAWN, mod.replaceByDummy)
@@ -533,24 +559,3 @@ mod.DumbhackReplace = {
 	[EntityType.ENTITY_RAGE_CREEP] = {1, Isaac.GetEntityVariantByName("​Split Rage Creep")},
 	[EntityType.ENTITY_WALL_CREEP] = {2, Isaac.GetEntityVariantByName("​Rag Creep")},
 }
-
---if an enemy is transformable by spores in grotto, used for sporelings
-if FFGRACE then
-	mod.sporeTransformable = {
-		{EntityType.ENTITY_ONE_TOOTH, -1, -1},
-		{EntityType.ENTITY_FAT_BAT, -1, -1},
-		{EntityType.ENTITY_BOOMFLY, 3, -1}, --dragon fly
-
-		{EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.ECHO_BAT, 0},
-		{EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.BLIND_BAT, -1},
-
-		{FFGRACE.ENT.POPCAP_CLUSTER.id, FFGRACE.ENT.POPCAP_CLUSTER.variant, -1},
-		{FFGRACE.ENT.MUD_FLY.id, FFGRACE.ENT.MUD_FLY.variant, -1},
-		{FFGRACE.ENT.ROBERT.id, FFGRACE.ENT.ROBERT.variant, -1},
-		{FFGRACE.ENT.BUMBLEBAT.id, FFGRACE.ENT.BUMBLEBAT.variant, -1},
-
-		{160, 320, -1}, --ff milk tooth, im not adding specific code to check if ff is installed just use the enums
-		{666, 40, -1}, --ff foamy
-
-	}
-end
