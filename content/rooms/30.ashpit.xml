@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <rooms>
-	<room variant="24000" name="Sin - [TC] - Hot Times at Ridgemont High" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24000" name="Sin - [RM] - Hot Times at Ridgemont High" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -57,7 +57,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24001" name="Sin - [TC] - Sizzle Zizzle" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24001" name="Sin - [RM] - Sizzle Zizzle" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -108,7 +108,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24002" name="Sin - [TC] - Burn Victim" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24002" name="Sin - [RM] - Burn Victim" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -206,7 +206,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24003" name="Sin - [TC] - Fleshfire" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24003" name="Sin - [RM] - Fleshfire" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -510,7 +510,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24004" name="Sin - [TC] - oh god, go away" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24004" name="Sin - [RM] - oh god, go away" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -576,7 +576,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24005" name="Sin - [TC] - Bone Burn" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24005" name="Sin - [RM] - Bone Burn" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -633,7 +633,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24006" name="Sin - [TC] - Arkanoid Boner" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24006" name="Sin - [RM] - Arkanoid Boner" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -720,7 +720,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24007" name="Sin - [TC] - Heart Attack Grill" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24007" name="Sin - [RM] - Heart Attack Grill" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -842,7 +842,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24008" name="Sin - [TC] - Gutfire" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24008" name="Sin - [RM] - Gutfire" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -893,7 +893,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24009" name="Sin - [TC] - Hot Temper" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24009" name="Sin - [RM] - Hot Temper" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -956,7 +956,7 @@
 			<entity type="203" variant="2500" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24010" name="Sin - [TC] - Dusty Flames" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24010" name="Sin - [RM] - Dusty Flames" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1013,7 +1013,7 @@
 			<entity type="4500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24011" name="Sin - [TC] - Swaying Cinders" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24011" name="Sin - [RM] - Swaying Cinders" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1085,7 +1085,7 @@
 			<entity type="203" variant="2500" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24012" name="Sin - [TC] - Nothing left to burn" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24012" name="Sin - [RM] - Nothing left to burn" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -1172,7 +1172,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24013" name="Sin - [TC] - Dry Bones" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24013" name="Sin - [RM] - Dry Bones" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1295,7 +1295,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24014" name="Sin - [TC] - Feeling Bonely" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="0.5" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24014" name="Sin - [RM] - Feeling Bonely" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="0.5" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1379,7 +1379,7 @@
 			<entity type="887" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24015" name="Sin - [TC] - Feeling Bonely 2" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="0.5" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24015" name="Sin - [RM] - Feeling Bonely 2" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="0.5" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1463,7 +1463,7 @@
 			<entity type="887" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24016" name="We Strvn - [TC] - Whistler of the desert" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24016" name="We Strvn - [RM] - Whistler of the desert" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1520,7 +1520,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24017" name="We Strvn - [TC] - Godless" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24017" name="We Strvn - [RM] - Godless" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1550,7 +1550,7 @@
 			<entity type="887" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24018" name="We Strvn - [TC] - Choked Lands" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24018" name="We Strvn - [RM] - Choked Lands" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -1872,7 +1872,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24019" name="We Strvn - [TC] - Compensating for the lack of strifers" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24019" name="We Strvn - [RM] - Compensating for the lack of strifers" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -1953,7 +1953,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24020" name="We Strvn - [TC] - isolated" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24020" name="We Strvn - [RM] - isolated" type="1" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2052,7 +2052,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24021" name="We Strvn - [TC] - Forbidden love" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24021" name="We Strvn - [RM] - Forbidden love" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2127,7 +2127,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24022" name="jubbalub - [TC] - Crackle + Scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24022" name="jubbalub - [RM] - Crackle + Scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2175,7 +2175,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24023" name="jubbalub - [TC] - Bone fly + scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24023" name="jubbalub - [RM] - Bone fly + scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2229,7 +2229,7 @@
 			<entity type="25" variant="4" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24024" name="jubbalub - [TC] - Hard host + scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24024" name="jubbalub - [RM] - Hard host + scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -2313,7 +2313,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24025" name="jubbalub - [TC] - Dusty scorchlings" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24025" name="jubbalub - [RM] - Dusty scorchlings" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2430,7 +2430,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24026" name="jubbalub - [TC] - Scorchlings spikes" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24026" name="jubbalub - [RM] - Scorchlings spikes" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2535,7 +2535,7 @@
 			<entity type="1931" variant="6" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24027" name="jubbalub - [TC] - Big bony, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24027" name="jubbalub - [RM] - Big bony, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -2586,7 +2586,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24028" name="jubbalub - [TC] - Pasty, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24028" name="jubbalub - [RM] - Pasty, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2634,7 +2634,7 @@
 			<entity type="1930" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24029" name="jubbalub - [TC] - Three scorchlings" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24029" name="jubbalub - [RM] - Three scorchlings" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2709,7 +2709,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24030" name="jubbalub - [TC] - Destroy." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24030" name="jubbalub - [RM] - Destroy." type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2772,7 +2772,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24031" name="jubbalub - [TC] - I hate these enemies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="15" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24031" name="jubbalub - [RM] - I hate these enemies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="15" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -2811,7 +2811,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24032" name="jubbalub - [TC] - Circle of Crackle" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24032" name="jubbalub - [RM] - Circle of Crackle" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3003,7 +3003,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24033" name="jubbalub - [TC] - Blue fire minecart, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24033" name="jubbalub - [RM] - Blue fire minecart, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3133,7 +3133,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24034" name="jubbalub - [TC] - Coal spider, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24034" name="jubbalub - [RM] - Coal spider, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3184,7 +3184,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24035" name="jubbalub - [TC] - The life of the party" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24035" name="jubbalub - [RM] - The life of the party" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3220,7 +3220,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24036" name="jubbalub - [TC] - Flesh maiden, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24036" name="jubbalub - [RM] - Flesh maiden, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3262,7 +3262,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24037" name="jubbalub - [TC] - Scorchling arena" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24037" name="jubbalub - [RM] - Scorchling arena" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3379,7 +3379,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24038" name="jubbalub - [TC] - Blaster, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="0.25" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24038" name="jubbalub - [RM] - Blaster, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="0.25" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3406,7 +3406,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24039" name="jubbalub - [TC] - Scorchling, redskull" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24039" name="jubbalub - [RM] - Scorchling, redskull" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3451,7 +3451,7 @@
 			<entity type="212" variant="4" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24040" name="jubbalub - [TC] - Group therapy session" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24040" name="jubbalub - [RM] - Group therapy session" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3505,7 +3505,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24041" name="jubbalub - [TC] - Dust, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24041" name="jubbalub - [RM] - Dust, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3547,7 +3547,7 @@
 			<entity type="882" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24042" name="jubbalub - [TC] - Grimace, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24042" name="jubbalub - [RM] - Grimace, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3628,7 +3628,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24043" name="jubbalub - [TC] - Anti-bullying patrol" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24043" name="jubbalub - [RM] - Anti-bullying patrol" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3700,7 +3700,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24044" name="jubbalub - [TC] - Scorchlings Pit" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24044" name="jubbalub - [RM] - Scorchlings Pit" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -3835,7 +3835,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24045" name="jubbalub - [TC] - Three scorchlings on the bottom" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24045" name="jubbalub - [RM] - Three scorchlings on the bottom" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -3925,7 +3925,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24046" name="jubbalub - [TC] - Scorchling and spikes" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24046" name="jubbalub - [RM] - Scorchling and spikes" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -4059,7 +4059,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24047" name="jubbalub - [TC] - big bony, scorchling" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24047" name="jubbalub - [RM] - big bony, scorchling" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -4238,7 +4238,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24048" name="jubbalub - [TC] - gurgle, scorchling" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24048" name="jubbalub - [RM] - gurgle, scorchling" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4309,7 +4309,7 @@
 			<entity type="1000" variant="0" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24049" name="jubbalub - [TC] - bone fly, scorchling" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24049" name="jubbalub - [RM] - bone fly, scorchling" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -4440,7 +4440,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24050" name="jubbalub - [TC] - two scorchlings" type="1" subtype="0" shape="7" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24050" name="jubbalub - [RM] - two scorchlings" type="1" subtype="0" shape="7" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="8" y="3">
@@ -4462,7 +4462,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24051" name="jubbalub - [TC] - tnt, watch me explode" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24051" name="jubbalub - [RM] - tnt, watch me explode" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -4652,7 +4652,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24052" name="jubbalub - [TC] - Carrion Princess, scorchlings" type="1" subtype="0" shape="9" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24052" name="jubbalub - [RM] - Carrion Princess, scorchlings" type="1" subtype="0" shape="9" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="6"/>
 		<door exists="True" x="6" y="14"/>
@@ -4788,7 +4788,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24053" name="jubbalub - [TC] - scorchling" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24053" name="jubbalub - [RM] - scorchling" type="1" subtype="0" shape="3" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
 		<spawn x="6" y="2">
@@ -4807,7 +4807,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24054" name="jubbalub - [TC] - scorchling 2" type="1" subtype="0" shape="2" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24054" name="jubbalub - [RM] - scorchling 2" type="1" subtype="0" shape="2" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="4" y="2">
@@ -4830,7 +4830,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24055" name="jubbalub - [TC] - scorchlings with cobwebs" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24055" name="jubbalub - [RM] - scorchlings with cobwebs" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -5036,7 +5036,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24056" name="jubbalub - [TC] - splasher, scorchling" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24056" name="jubbalub - [RM] - splasher, scorchling" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -5164,7 +5164,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24057" name="jubbalub - [TC] - scorchling pits" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24057" name="jubbalub - [RM] - scorchling pits" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -5364,7 +5364,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24058" name="jubbalub - [TC] - these guys should have a dry bones restore sfx when they revive" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24058" name="jubbalub - [RM] - these guys should have a dry bones restore sfx when they revive" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5525,7 +5525,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24059" name="jubbalub - [TC] - scorchling lanes" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24059" name="jubbalub - [RM] - scorchling lanes" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -5887,7 +5887,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24060" name="jubbalub - [TC] - they are coming..." type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24060" name="jubbalub - [RM] - they are coming..." type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6234,7 +6234,7 @@
 			<entity type="61" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24061" name="jubbalub - [TC] - big bony, scorchling" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24061" name="jubbalub - [RM] - big bony, scorchling" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -6454,7 +6454,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24062" name="jubbalub - [TC] - death's head, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24062" name="jubbalub - [RM] - death's head, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -6562,7 +6562,7 @@
 			<entity type="1931" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24063" name="jubbalub - [TC] - Bombgagger, scorchling" type="1" subtype="0" shape="10" width="26" height="14" difficulty="10" weight="0.5" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24063" name="jubbalub - [RM] - Bombgagger, scorchling" type="1" subtype="0" shape="10" width="26" height="14" difficulty="10" weight="0.5" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -6716,7 +6716,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24064" name="jubbalub - [TC] - bony minecarts, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24064" name="jubbalub - [RM] - bony minecarts, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -6839,7 +6839,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24065" name="jubbalub - [TC] - flesh maiden, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24065" name="jubbalub - [RM] - flesh maiden, scorchling" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6884,7 +6884,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24066" name="We Strvn - [TC] - Bone Sky Fly" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24066" name="We Strvn - [RM] - Bone Sky Fly" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -6929,7 +6929,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24067" name="We Strvn - [TC] - The corner of dust" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24067" name="We Strvn - [RM] - The corner of dust" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7025,7 +7025,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24068" name="We Strvn - [TC] - For more deez" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24068" name="We Strvn - [RM] - For more deez" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7106,7 +7106,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24069" name="We Strvn - [TC] - Jamcy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24069" name="We Strvn - [RM] - Jamcy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7211,7 +7211,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24070" name="We Strvn - [TC] - Unedited Andy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24070" name="We Strvn - [RM] - Unedited Andy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7307,7 +7307,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24071" name="We Strvn - [TC] - Put in queue?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24071" name="We Strvn - [RM] - Put in queue?" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7361,7 +7361,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24072" name="We Strvn - [TC] - Out of snoose" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24072" name="We Strvn - [RM] - Out of snoose" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7486,7 +7486,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24073" name="We Strvn - [TC] - It has been finished" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24073" name="We Strvn - [RM] - It has been finished" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -7542,7 +7542,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24074" name="We Strvn - [TC] - Sub box gagger" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24074" name="We Strvn - [RM] - Sub box gagger" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="0.5" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7581,7 +7581,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24075" name="We Strvn - [TC] - mmmmm.... Pasty" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24075" name="We Strvn - [RM] - mmmmm.... Pasty" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7620,7 +7620,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24076" name="We Strvn - [TC] - Eat my foot" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24076" name="We Strvn - [RM] - Eat my foot" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7659,7 +7659,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24077" name="We Strvn - [TC] - Bombarder" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24077" name="We Strvn - [RM] - Bombarder" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -7865,7 +7865,7 @@
 			<entity type="42" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24078" name="We Strvn - [TC] - Enough pain to go around" type="1" subtype="0" shape="12" width="26" height="14" difficulty="15" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
+	<room variant="24078" name="We Strvn - [RM] - Enough pain to go around" type="1" subtype="0" shape="12" width="26" height="14" difficulty="15" weight="1.0" lastTestTime="2024-01-19T20:57+00:00">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -8085,7 +8085,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24079" name="We Strvn - [TC] - Many variations" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24079" name="We Strvn - [RM] - Many variations" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8151,7 +8151,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24080" name="We Strvn - [TC] - Just by existence" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24080" name="We Strvn - [RM] - Just by existence" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8196,7 +8196,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24081" name="We Strvn - [TC] - Something will happen" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24081" name="We Strvn - [RM] - Something will happen" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -8238,7 +8238,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24082" name="We Strvn - [TC] - Mega Brap" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="0.5">
+	<room variant="24082" name="We Strvn - [RM] - Mega Brap" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="0.5">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8283,7 +8283,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24083" name="We Strvn - [TC] - Unstinkable" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="24083" name="We Strvn - [RM] - Unstinkable" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8322,7 +8322,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24084" name="We Strvn - [TC] - Mushroom Grey" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24084" name="We Strvn - [RM] - Mushroom Grey" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8355,7 +8355,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24085" name="We Strvn - [TC] - Princess Sarasah" type="1" subtype="0" shape="1" width="13" height="7" difficulty="15" weight="1.0">
+	<room variant="24085" name="We Strvn - [RM] - Princess Sarasah" type="1" subtype="0" shape="1" width="13" height="7" difficulty="15" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8406,7 +8406,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24086" name="We Strvn - [TC] - Posion Paste" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24086" name="We Strvn - [RM] - Posion Paste" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8433,7 +8433,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24087" name="We Strvn - [TC] - Zates" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24087" name="We Strvn - [RM] - Zates" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8490,7 +8490,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24088" name="We Strvn - [TC] - Shredded Socks" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24088" name="We Strvn - [RM] - Shredded Socks" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8535,7 +8535,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24089" name="We Strvn - [TC] - Destroying babies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24089" name="We Strvn - [RM] - Destroying babies" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8586,7 +8586,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24090" name="We Strvn - [TC] - The amount of slugs" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24090" name="We Strvn - [RM] - The amount of slugs" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8655,7 +8655,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24091" name="We Strvn - [TC] - All over" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24091" name="We Strvn - [RM] - All over" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8781,7 +8781,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24092" name="We Strvn - [TC] - Shroom Gate" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24092" name="We Strvn - [RM] - Shroom Gate" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8832,7 +8832,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24093" name="We Strvn - [TC] - Freshly unhooked" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="24093" name="We Strvn - [RM] - Freshly unhooked" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8877,7 +8877,7 @@
 			<entity type="61" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24094" name="We Strvn - [TC] - They listened. They wanted." type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24094" name="We Strvn - [RM] - They listened. They wanted." type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -8910,7 +8910,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24095" name="We Strvn - [TC] - The ware scare" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24095" name="We Strvn - [RM] - The ware scare" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9039,7 +9039,7 @@
 			<entity type="6000" variant="8" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24096" name="We Strvn - [TC] - Why no excecution" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24096" name="We Strvn - [RM] - Why no excecution" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9096,7 +9096,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24097" name="We Strvn - [TC] - They just live life" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="24097" name="We Strvn - [RM] - They just live life" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9201,7 +9201,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24098" name="We Strvn - [TC] - Custom battle" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24098" name="We Strvn - [RM] - Custom battle" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9279,7 +9279,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24099" name="We Strvn - [TC] - Unmatched smooth" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="24099" name="We Strvn - [RM] - Unmatched smooth" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -9360,7 +9360,7 @@
 			<entity type="819" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24100" name="We Strvn - [TC] - No ashen shrooms" type="1" subtype="0" shape="1" width="13" height="7" difficulty="15" weight="1.0">
+	<room variant="24100" name="We Strvn - [RM] - No ashen shrooms" type="1" subtype="0" shape="1" width="13" height="7" difficulty="15" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -9417,7 +9417,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24101" name="We Strvn - [TC] - Hurry and shart" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="24101" name="We Strvn - [RM] - Hurry and shart" type="1" subtype="0" shape="2" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="6" y="2">
@@ -9439,7 +9439,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24102" name="We Strvn - [TC] - Tight breath" type="1" subtype="0" shape="3" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24102" name="We Strvn - [RM] - Tight breath" type="1" subtype="0" shape="3" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
 		<spawn x="4" y="0">
@@ -9473,7 +9473,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24103" name="We Strvn - [TC] - We got mumbers!" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+	<room variant="24103" name="We Strvn - [RM] - We got mumbers!" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -9622,7 +9622,7 @@
 			<entity type="889" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24104" name="We Strvn - [TC] - Retribution buffs" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+	<room variant="24104" name="We Strvn - [RM] - Retribution buffs" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -9699,7 +9699,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24105" name="We Strvn - [TC] - May be useful eventually..." type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+	<room variant="24105" name="We Strvn - [RM] - May be useful eventually..." type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -9821,7 +9821,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24106" name="We Strvn - [TC] - De-Gas" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+	<room variant="24106" name="We Strvn - [RM] - De-Gas" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -9910,7 +9910,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24107" name="We Strvn - [TC] - Fire Injection" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+	<room variant="24107" name="We Strvn - [RM] - Fire Injection" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -10029,7 +10029,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24108" name="We Strvn - [TC] - Perfect the way he Is" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="0.5">
+	<room variant="24108" name="We Strvn - [RM] - Perfect the way he Is" type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="0.5">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -10127,7 +10127,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24109" name="We Strvn - [TC] - Worms..." type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+	<room variant="24109" name="We Strvn - [RM] - Worms..." type="1" subtype="0" shape="4" width="13" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -10225,7 +10225,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24110" name="We Strvn - [TC] - A Mike Ael" type="1" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+	<room variant="24110" name="We Strvn - [RM] - A Mike Ael" type="1" subtype="0" shape="4" width="13" height="14" difficulty="15" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -10341,7 +10341,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24111" name="We Strvn - [TC] - Dirty bowels" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
+	<room variant="24111" name="We Strvn - [RM] - Dirty bowels" type="1" subtype="0" shape="5" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="14"/>
 		<spawn x="4" y="0">
@@ -10429,7 +10429,7 @@
 			<entity type="1500" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24112" name="We Strvn - [TC] - Hamster Wheel" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
+	<room variant="24112" name="We Strvn - [RM] - Hamster Wheel" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10683,7 +10683,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24113" name="We Strvn - [TC] - Unsafe foop" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
+	<room variant="24113" name="We Strvn - [RM] - Unsafe foop" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10835,7 +10835,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24114" name="We Strvn - [TC] - Needless risk" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
+	<room variant="24114" name="We Strvn - [RM] - Needless risk" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -10975,7 +10975,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24115" name="We Strvn - [TC] - Twelve fifty" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
+	<room variant="24115" name="We Strvn - [RM] - Twelve fifty" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -11211,7 +11211,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24116" name="We Strvn - [TC] - Slab Sadge" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
+	<room variant="24116" name="We Strvn - [RM] - Slab Sadge" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -11405,7 +11405,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24117" name="We Strvn - [TC] - A danger lane" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
+	<room variant="24117" name="We Strvn - [RM] - A danger lane" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -11557,7 +11557,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24118" name="We Strvn - [TC] - Radio flowers" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
+	<room variant="24118" name="We Strvn - [RM] - Radio flowers" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -11661,7 +11661,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24119" name="We Strvn - [TC] - Hardy Hard Hat" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
+	<room variant="24119" name="We Strvn - [RM] - Hardy Hard Hat" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="False" x="6" y="7"/>
@@ -11849,7 +11849,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24120" name="We Strvn - [TC] - Shroom Harvest" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0">
+	<room variant="24120" name="We Strvn - [RM] - Shroom Harvest" type="1" subtype="0" shape="6" width="26" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -11911,7 +11911,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24121" name="We Strvn - [TC] - Learned the lean" type="1" subtype="0" shape="7" width="26" height="7" difficulty="10" weight="1.0">
+	<room variant="24121" name="We Strvn - [RM] - Learned the lean" type="1" subtype="0" shape="7" width="26" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="26" y="3"/>
 		<spawn x="8" y="1">
@@ -12062,7 +12062,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24122" name="We Strvn - [TC] - Slons" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="0.10000000149011612">
+	<room variant="24122" name="We Strvn - [RM] - Slons" type="1" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="0.10000000149011612">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -12150,7 +12150,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24123" name="We Strvn - [TC] - Hallowed ground clease" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0">
+	<room variant="24123" name="We Strvn - [RM] - Hallowed ground clease" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -12334,7 +12334,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24124" name="We Strvn - [TC] - No Milly" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0">
+	<room variant="24124" name="We Strvn - [RM] - No Milly" type="1" subtype="0" shape="8" width="26" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -12602,7 +12602,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24125" name="We Strvn - [TC] - Bit more bearable" type="1" subtype="0" shape="10" width="26" height="14" difficulty="10" weight="1.0">
+	<room variant="24125" name="We Strvn - [RM] - Bit more bearable" type="1" subtype="0" shape="10" width="26" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -12717,7 +12717,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24126" name="We Strvn - [TC] - Every map is" type="1" subtype="0" shape="11" width="26" height="14" difficulty="5" weight="1.0">
+	<room variant="24126" name="We Strvn - [RM] - Every map is" type="1" subtype="0" shape="11" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12823,7 +12823,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24127" name="We Strvn - [TC] - Washed Andy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="24127" name="We Strvn - [RM] - Washed Andy" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12850,7 +12850,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24128" name="We Strvn - [TC] - Front door trash" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="24128" name="We Strvn - [RM] - Front door trash" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12889,7 +12889,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24129" name="We Strvn - [TC] - All made in renovator" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24129" name="We Strvn - [RM] - All made in renovator" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -12949,7 +12949,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24130" name="We Strvn - [TC] - Who knows when queue will finish" type="1" subtype="0" shape="1" width="13" height="7" difficulty="15" weight="1.0">
+	<room variant="24130" name="We Strvn - [RM] - Who knows when queue will finish" type="1" subtype="0" shape="1" width="13" height="7" difficulty="15" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13039,7 +13039,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24131" name="We Strvn - [TC] - Steely Dan" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="24131" name="We Strvn - [RM] - Steely Dan" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13093,7 +13093,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24132" name="We Strvn - [TC] - Cat do cooking" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24132" name="We Strvn - [RM] - Cat do cooking" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13135,7 +13135,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24133" name="We Strvn - [TC] - Indie Game posters" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24133" name="We Strvn - [RM] - Indie Game posters" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13195,7 +13195,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24134" name="We Strvn - [TC] - I tried Rend" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24134" name="We Strvn - [RM] - I tried Rend" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13234,7 +13234,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24135" name="We Strvn - [TC] - Why not macro" type="1" subtype="0" shape="11" width="26" height="14" difficulty="5" weight="1.0">
+	<room variant="24135" name="We Strvn - [RM] - Why not macro" type="1" subtype="0" shape="11" width="26" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13340,7 +13340,7 @@
 			<entity type="1002" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24136" name="We Strvn - [TC] - Not when you used to be the best" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
+	<room variant="24136" name="We Strvn - [RM] - Not when you used to be the best" type="1" subtype="0" shape="4" width="13" height="14" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -13408,7 +13408,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24137" name="We Strvn - [TC] - A bit risky" type="1" subtype="0" shape="1" width="13" height="7" difficulty="15" weight="1.0">
+	<room variant="24137" name="We Strvn - [RM] - A bit risky" type="1" subtype="0" shape="1" width="13" height="7" difficulty="15" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13435,7 +13435,7 @@
 			<entity type="25" variant="3" subtype="100" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24138" name="We Strvn - [TC] - Bunch of downs in a row" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="24138" name="We Strvn - [RM] - Bunch of downs in a row" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13468,7 +13468,7 @@
 			<entity type="887" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24139" name="We Strvn - [TC] - Summoning circle" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24139" name="We Strvn - [RM] - Summoning circle" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13555,7 +13555,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24140" name="We Strvn - [TC] - High score?" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
+	<room variant="24140" name="We Strvn - [RM] - High score?" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13623,7 +13623,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24141" name="We Strvn - [TC] - Dork teeth" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24141" name="We Strvn - [RM] - Dork teeth" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="False" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13674,7 +13674,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24142" name="We Strvn - [TC] - Sist zit" type="1" subtype="0" shape="12" width="26" height="14" difficulty="10" weight="1.0">
+	<room variant="24142" name="We Strvn - [RM] - Sist zit" type="1" subtype="0" shape="12" width="26" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -13816,7 +13816,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24143" name="We Strvn - [TC] - Ashen cave in" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
+	<room variant="24143" name="We Strvn - [RM] - Ashen cave in" type="1" subtype="0" shape="6" width="26" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -13938,7 +13938,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24144" name="We Strvn - [TC] - Heat wheel" type="1" subtype="1" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="24144" name="We Strvn - [RM] - Heat wheel" type="1" subtype="1" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -14037,7 +14037,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24145" name="We Strvn - [TC] - Bean Burn Aftermath" type="1" subtype="1" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="24145" name="We Strvn - [RM] - Bean Burn Aftermath" type="1" subtype="1" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -14103,7 +14103,7 @@
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24146" name="We Strvn - [TC] - This room isn't high weight I swear" type="1" subtype="1" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="24146" name="We Strvn - [RM] - This room isn't high weight I swear" type="1" subtype="1" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -14154,7 +14154,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24147" name="We Strvn - [TC] - Rides on fire" type="1" subtype="10" shape="4" width="13" height="14" difficulty="0" weight="1.0">
+	<room variant="24147" name="We Strvn - [RM] - Rides on fire" type="1" subtype="10" shape="4" width="13" height="14" difficulty="0" weight="1.0">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="False" x="6" y="-1"/>
@@ -14435,7 +14435,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24000" name="We Strvn - [TC] - Gideon Wave Easy 1" type="11" subtype="12" shape="4" width="13" height="14" difficulty="1" weight="1.0">
+	<room variant="24000" name="We Strvn - [RM] - Gideon Wave Easy 1" type="11" subtype="12" shape="4" width="13" height="14" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -14461,7 +14461,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24001" name="We Strvn - [TC] - Gideon Wave Easy 2" type="11" subtype="12" shape="4" width="13" height="14" difficulty="1" weight="1.0">
+	<room variant="24001" name="We Strvn - [RM] - Gideon Wave Easy 2" type="11" subtype="12" shape="4" width="13" height="14" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -14487,7 +14487,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24002" name="We Strvn - [TC] - Gideon Wave Medium 1" type="11" subtype="12" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+	<room variant="24002" name="We Strvn - [RM] - Gideon Wave Medium 1" type="11" subtype="12" shape="4" width="13" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -14510,7 +14510,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24003" name="We Strvn - [TC] - Gideon Wave Medium 2" type="11" subtype="12" shape="4" width="13" height="14" difficulty="10" weight="1.0">
+	<room variant="24003" name="We Strvn - [RM] - Gideon Wave Medium 2" type="11" subtype="12" shape="4" width="13" height="14" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -14533,7 +14533,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24004" name="We Strvn - [TC] - Gideon Wave Hard 1" type="11" subtype="12" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+	<room variant="24004" name="We Strvn - [RM] - Gideon Wave Hard 1" type="11" subtype="12" shape="4" width="13" height="14" difficulty="15" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -14559,7 +14559,7 @@
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24005" name="We Strvn - [TC] - Gideon Wave Hard 2" type="11" subtype="12" shape="4" width="13" height="14" difficulty="15" weight="1.0">
+	<room variant="24005" name="We Strvn - [RM] - Gideon Wave Hard 2" type="11" subtype="12" shape="4" width="13" height="14" difficulty="15" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="-1" y="10"/>
 		<door exists="True" x="6" y="-1"/>
@@ -14585,7 +14585,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24006" name="We Strvn - [TC] - Challenge Wave 1" type="11" subtype="10" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24006" name="We Strvn - [RM] - Challenge Wave 1" type="11" subtype="10" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -14603,7 +14603,7 @@
 			<entity type="800" variant="1" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24007" name="We Strvn - [TC] - Challenge Wave 2" type="11" subtype="10" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="24007" name="We Strvn - [RM] - Challenge Wave 2" type="11" subtype="10" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>

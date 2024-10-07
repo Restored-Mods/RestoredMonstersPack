@@ -15,7 +15,6 @@ RestoredMonsterPack.Nonmale = {
 	{ID = mod:SpecialEnt("Mortling"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Fracture"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Echo Bat"), Affliction = "Woman"},
-	{ID = mod:SpecialEnt("Foreigner"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Screamer"), Affliction = "Trans"},
 	--{ID = {Isaac.GetEntityTypeByName("Cell"), Isaac.GetEntityVariantByName("Cell")}, Affliction = "Woman"}, --Cell BC WESTRVN SAID SO ):
 	{ID = mod:SpecialEnt("Fused Cell"), Affliction = "Woman"},

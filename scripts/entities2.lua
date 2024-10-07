@@ -51,9 +51,9 @@ return function(mode)
         return entities
     elseif mode == 2 then
         return {["Echo Projectile"]=entities[1],["Lantern Projectile"]=entities[2],["Staple Projectile"]=entities[3],["Dumpling"]=entities[4],["Skinling"]=entities[5],["Scab"]=entities[6],["Scorchling"]=entities[7],["Mortling"]=entities[8],["Tainted Dumpling"]=entities[9],
-        ["Gilded Dumpling"]=entities[10],["​Fracture"]=entities[11],["Stillborn"]=entities[12],["Echo Bat"]=entities[13],["Necromancer"]=entities[14],["Swapper"]=entities[15],["Swapper (Gehenna)"]=entities[16],["Barfy"]=entities[17],["Coil"]=entities[18],["Screamer"]=entities[19],
+        ["Gilded Dumpling"]=entities[10],["​Fracture"]=entities[11],["Stillborn"]=entities[12],["Echo Bat"]=entities[13],["Necromancer"]=entities[14],["Swapper"]=entities[15],["Swapper (Gehenna)"]=entities[16],["Barfy"]=entities[17],["Screamer"]=entities[19],
         ["Cell"]=entities[20],["Fused Cells"]=entities[21],["Tissue"]=entities[22],["Grave Robber"]=entities[23],["Splashy Long Legs"]=entities[24],["Sticky Long Legs"]=entities[25],["Red TNT"]=entities[26],["Screamer Ring"]=entities[27],["Nightwatch Spotlight"]=entities[28],["Screamer Aura"]=entities[29],["Fire Grimace"]=entities[30],
-        ["Bloodworm"]=entities[31],["Vessel (TC)"]=entities[32],["​Canary"]=entities[33],["​​Foreigner"]=entities[34],["​​​Exorcist"]=entities[35],["​​​​Corpse Eater"]=entities[36],["​Carrion Rider"]=entities[37],["​​Blind Bat"]=entities[38],["​​​Split Rage Creep"]=entities[39],["​Rag Creep"]=entities[40],
+        ["Bloodworm"]=entities[31],["Vessel (TC)"]=entities[32],["​​​​Corpse Eater"]=entities[36],["​Carrion Rider"]=entities[37],["​​Blind Bat"]=entities[38],["​​​Split Rage Creep"]=entities[39],["​Rag Creep"]=entities[40],
         ["​​Nightwatch"]=entities[41],["​Vessel (Antibirth)"]=entities[42],["​Strifer"]=entities[43],["Chubby Bunny"]=entities[44],["Sporeling"]=entities[45]}
     elseif mode == 3 then
         return {[9]={[104]={[0]=entities[1],},[106]={[0]=entities[2],},[108]={[0]=entities[3],},},[800]={[0]={[0]=entities[4],},[1]={[0]=entities[5],},[2]={[0]=entities[6],},[3]={[0]=entities[7],},[4]={[0]=entities[8],},[5]={[0]=entities[9],},[6]={[0]=entities[10],},[7]={[0]=entities[45]},},

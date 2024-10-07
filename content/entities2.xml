@@ -70,46 +70,40 @@
         <devolve id="38.0.0" weight="1" />
     </entity>
     <!-- Echo Bat -->
-	<entity anm2path="monsters\restored\echobat\echo_bat.anm2" name="Echo Bat" id="200" variant="2407" baseHP="20" stageHP="0" reroll="true" boss="0" champion="1" portrait="9" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12"  shadowSize="18" gridCollision="walls" >
+	<entity anm2path="monsters\restored\echobat\echo_bat.anm2" name="Echo Bat" id="200" variant="2407" baseHP="20" stageHP="0" reroll="true" boss="0" champion="1" portrait="13" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12"  shadowSize="18" gridCollision="walls" >
         <bestiary anim="Idle" transform="0,-16,1"/>
 		<gibs amount="6" blood="1" bone="0" eye="0" gut="1" large="0" />
         <devolve id="234.0.0" weight="1" />
     </entity>
     <!-- Chubby Bunny -->
-    <entity anm2path="monsters\grotto\chubbybunny\chubby_bunny.anm2" name="Chubby Bunny" id="200" variant="2407" subtype="1" baseHP="20" stageHP="0" reroll="true" boss="0" champion="1" portrait="9" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="18" gridCollision="walls" >
+    <entity anm2path="monsters\grotto\chubbybunny\chubby_bunny.anm2" name="Chubby Bunny" id="200" variant="2407" subtype="1" baseHP="20" stageHP="0" reroll="true" boss="0" champion="1" portrait="13" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="18" gridCollision="walls" >
         <bestiary anim="Idle" transform="0,-16,1"/>
 		<gibs amount="6" blood="1" bone="0" eye="0" gut="1" large="0" />
         <devolve id="200.2407.0" weight="1" />
     </entity>
     <!-- Necromancer -->
-	<entity anm2path="monsters\restored\necromancer\necromancer.anm2" name="Necromancer" id="200" variant="2410" baseHP="25" stageHP="0" boss="0" champion="1" hasFloorAlts="true" tags="homing_soul" portrait="10" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1"   numGridCollisionPoints="12" shadowSize="14">
+	<entity anm2path="monsters\restored\necromancer\necromancer.anm2" name="Necromancer" id="200" variant="2410" baseHP="25" stageHP="0" boss="0" champion="1" hasFloorAlts="true" tags="homing_soul" portrait="9" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1"   numGridCollisionPoints="12" shadowSize="14">
         <bestiary transform="0,0,1" anim="WalkVert" overlay="Head" />
 		<gibs amount="6" blood="0" bone="1" eye="0" gut="1" large="0" worm="1"/>
         <devolve id="832.1.0" weight="1" />
     </entity>
     <!-- Swapper -->
-	<entity anm2path="monsters\restored\swapper\swapper.anm2" name="Swapper" id="38" variant="835" baseHP="25" stageHP="0" boss="0" champion="1" reroll="true" portrait="11" collisionDamage="0" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="16" gridCollision="walls" >
+	<entity anm2path="monsters\restored\swapper\swapper.anm2" name="Swapper" id="38" variant="835" baseHP="25" stageHP="0" boss="0" champion="1" reroll="true" portrait="10" collisionDamage="0" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="16" gridCollision="walls" >
         <bestiary anim="Move" transform="0,3,1"/>
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" sound_baby="1"/>
         <devolve id="38.0.0" weight="1" />
     </entity>
     <!-- Gehenna Swapper (Unused) -->
-	<entity anm2path="monsters\restored\swapper\swapper_gehenna.anm2" name="Swapper (Gehenna)" id="38" variant="835" subtype="1" baseHP="25" stageHP="0" boss="0" champion="1" reroll="true" portrait="12" collisionDamage="0" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="16" gridCollision="walls">
+	<entity anm2path="monsters\restored\swapper\swapper_gehenna.anm2" name="Swapper (Gehenna)" id="38" variant="835" subtype="1" baseHP="25" stageHP="0" boss="0" champion="1" reroll="true" portrait="10" collisionDamage="0" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="8" shadowSize="16" gridCollision="walls">
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0" sound_baby="1"/>
         <devolve id="38.0.0" weight="1" />
     </entity>
     <!-- Barfy -->
-	<entity anm2path="monsters\restored\barfy\barfy.anm2" name="Barfy" id="208" variant="850" baseHP="70" stageHP="0" boss="0" champion="1" reroll="true" portrait="12" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="16">
+	<entity anm2path="monsters\restored\barfy\barfy.anm2" name="Barfy" id="208" variant="850" baseHP="70" stageHP="0" boss="0" champion="1" reroll="true" portrait="11" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="16">
         <bestiary anim="WalkVert" transform="0,0,1"/>
         <gibs amount="16" blood="1" bone="1" eye="1" gut="1" large="0"/>
         <devolve id="208.1.0" weight="1" />
 	</entity>
-    <!-- Coil -->
-    <entity anm2path="monsters\restored\coil\coil.anm2" name="Coil" id="200" variant="2406" baseHP="20" stageHP="0" boss="0" champion="0" shutdoors="false" tags="noreroll" portrait="13" collisionDamage="1" collisionMass="100" collisionRadius="10" friction="0"   numGridCollisionPoints="12" shadowSize="13" gridCollision="none">
-		<bestiary transform="0,0,1" anim="Idle" />
-        <gibs amount="4" blood="1" bone="0" eye="0" gut="0" large="0" />
-        <devolve id="42.1.0" weight="1" />
-    </entity>
     <!-- Screamer -->
 	<entity anm2path="monsters\restored\screamer\screamer.anm2" name="Screamer" id="200" variant="2408" baseHP="100" stageHP="0" boss="0" champion="0" portrait="14" collisionDamage="2" collisionMass="950" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="18">
     	<bestiary transform="0,0,1" anim="WalkDown" />
@@ -154,7 +148,7 @@
         <devolve id="200.2504.0" weight="1" />
     </entity>
 	<!-- Red TNT -->
-	<entity anm2path="grid/grid_redtnt.anm2" name="Red TNT" id="292" variant="3400" baseHP="4" stageHP="0" boss="0" champion="0" tags="noreroll" shutdoors="false" portrait="22" collisionDamage="0" collisionMass="20" collisionRadius="20" friction="1" numGridCollisionPoints="12" shadowSize="0">
+	<entity anm2path="grid/grid_redtnt.anm2" name="Red TNT" id="292" variant="3400" baseHP="4" stageHP="0" boss="0" champion="0" tags="noreroll" shutdoors="false" portrait="21" collisionDamage="0" collisionMass="20" collisionRadius="20" friction="1" numGridCollisionPoints="12" shadowSize="0">
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" worm="0"/>
     </entity>
 
@@ -186,44 +180,26 @@
         <devolve id="858.200.0" weight="1" />     
 	</entity>
 <!-- Antibirth enemy Variants for Bestiary -->
-    <!-- Canary -->
-    <entity anm2path="monsters\restored\canary\canary.anm2" name="​Canary" id="843" variant="200" baseHP="16" stageHP="2" boss="0" champion="1" portrait="27" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14">
-        <bestiary anim="AttackDown" transform="0,0,1"/>
-        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0"/>
-        <devolve id="10.1.0" weight="1" />  
-    </entity>
-    <!-- ​Foreigner -->
-    <entity anm2path="monsters\restored\canary\foreigner.anm2" name="​Foreigner" id="843" variant="201" baseHP="18" stageHP="2" boss="0" champion="1" portrait="28" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14">
-        <bestiary anim="WalkDown" transform="0,0,1"/>
-        <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0"/>
-        <devolve id="843.200.0" weight="1" />  
-    </entity>
-    <!-- ​Exorcist -->
-    <entity anm2path="832.000_exorcist.anm2" name="​Exorcist" id="832" variant="200" baseHP="25" stageHP="0" boss="0" champion="1" tags="homing_soul" portrait="29" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="14">
-        <bestiary anim="Revive" transform="0,0,1"/>
-        <gibs amount="6" blood="0" bone="1" eye="0" gut="1" large="0" worm="1"/>
-    	<devolve id="227.0.0" weight="1" />
-	</entity>
     <!-- Corpse Eater -->
-    <entity anm2path="monsters\restored\corpseeater\corpse_eater.anm2" name="​Corpse Eater" id="239" variant="200" baseHP="48" stageHP="2.5" boss="0" champion="0" portrait="30" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="21">
+    <entity anm2path="monsters\restored\corpseeater\corpse_eater.anm2" name="​Corpse Eater" id="239" variant="200" baseHP="48" stageHP="2.5" boss="0" champion="0" portrait="28" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="21">
         <bestiary anim="Bestiary" transform="0,0,1"/>
         <gibs amount="10" blood="1" bone="0" eye="0" gut="1" large="0"/>
     	<devolve id="23.0.0" weight="1" />
     </entity>
     <!-- Carrion Rider -->
-    <entity anm2path="monsters\restored\corpseeater\carrion_rider.anm2" name="​Carrion Rider" id="239" variant="201" baseHP="48" stageHP="2.5" boss="0" champion="0" portrait="31" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="21">
+    <entity anm2path="monsters\restored\corpseeater\carrion_rider.anm2" name="​Carrion Rider" id="239" variant="201" baseHP="48" stageHP="2.5" boss="0" champion="0" portrait="29" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="21">
         <bestiary anim="Bestiary" transform="0,0,1"/>
         <gibs amount="10" blood="1" bone="0" eye="0" gut="1" large="0"/>
     	<devolve id="23.3.0" weight="1" />
     </entity>
     <!-- Blind Bat -->
-    <entity anm2path="803.000_blindbat.anm2" name="​Blind Bat" id="803" variant="200" baseHP="10" stageHP="0" boss="0" champion="0" portrait="32" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="32" shadowSize="18" gridCollision="walls">
+    <entity anm2path="803.000_blindbat.anm2" name="​Blind Bat" id="803" variant="200" baseHP="10" stageHP="0" boss="0" champion="0" portrait="12" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="32" shadowSize="18" gridCollision="walls">
         <bestiary anim="Wake" transform="0,0,1"/>
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/> 
     	<devolve id="222.0.0" weight="1" />
     </entity>
     <!-- Split Rage Creep -->
-    <entity anm2path="241.001_split rage creep.anm2" name="​Split Rage Creep" id="241" variant="200" baseHP="16" stageHP="0" boss="0" champion="1" tags="spider brimstone_soul" portrait="33" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0">
+    <entity anm2path="241.001_split rage creep.anm2" name="​Split Rage Creep" id="241" variant="200" baseHP="16" stageHP="0" boss="0" champion="1" tags="spider brimstone_soul" portrait="32" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0">
         <bestiary anim="Walk" transform="0,0,1"/>
         <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0"/>
     	<devolve id="242.0.0" weight="1" />
@@ -232,26 +208,26 @@
         <preload-snd id="5"/>
     </entity>
     <!-- Rag Creep -->
-    <entity anm2path="240.002_rag creep.anm2" name="​Rag Creep" id="240" variant="200" baseHP="17" stageHP="4" boss="0" champion="0" tags="spider homing_soul" portrait="34" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0">
+    <entity anm2path="240.002_rag creep.anm2" name="​Rag Creep" id="240" variant="200" baseHP="17" stageHP="4" boss="0" champion="0" tags="spider homing_soul" portrait="33" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="0">
         <bestiary anim="Walk" transform="0,0,1"/>
         <gibs amount="4" blood="1" bone="0" eye="0" gut="1" large="0"/>
         <devolve id="240.0.0" weight="1" />
         <preload-snd id="317"/>
     </entity>
     <!-- Nightwatch -->
-    <entity anm2path="842.000_nightwatch.anm2" name="​Nightwatch" id="842" variant="1" baseHP="25" stageHP="5" boss="0" champion="0" shutdoors="false"  tags="ghost" portrait="35" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="20" gridCollision="floor">
+    <entity anm2path="842.000_nightwatch.anm2" name="​Nightwatch" id="842" variant="1" baseHP="25" stageHP="5" boss="0" champion="0" shutdoors="false"  tags="ghost" portrait="31" collisionDamage="1" collisionMass="100" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="20" gridCollision="floor">
         <bestiary anim="WalkDown" transform="0,0,1"/>
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
         <devolve id="260.10.0" weight="1" />
     </entity>
     <!-- Vessel -->
-    <entity anm2path="858.000_vessel.anm2" name="​Vessel (Antibirth)" id="858" variant="200" baseHP="60" stageHP="0" boss="0" champion="1" portrait="36" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="15">
+    <entity anm2path="858.000_vessel.anm2" name="​Vessel (Antibirth)" id="858" variant="200" baseHP="60" stageHP="0" boss="0" champion="1" portrait="27" collisionDamage="1" collisionMass="10" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="15">
         <bestiary anim="WalkVert" transform="0,0,1"/>
         <gibs amount="21" blood="1" bone="0" colorblood="1" eye="0" gut="1" large="1" worm="1"/>
         <devolve id="208.1.0" weight="1" />
     </entity>
     <!-- Strifer -->
-    <entity anm2path="monsters\restored\strifer\strifer.anm2" name="​Strifer" id="839" variant="200" baseHP="25" stageHP="0" boss="0" champion="1" portrait="37" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="15">
+    <entity anm2path="monsters\restored\strifer\strifer.anm2" name="​Strifer" id="839" variant="200" baseHP="25" stageHP="0" boss="0" champion="1" portrait="30" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="15">
         <bestiary anim="WalkVert" overlay="HeadDown" transform="0,0,1"/>
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0"/> 
         <devolve id="284.0.0" weight="1" />

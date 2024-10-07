@@ -24,8 +24,6 @@
     </stage>
     <stage Name="Gehenna">
         <Gfx>
-            <Entity ID="843" Variant="200" SubType="0" Image="resources/Canary Gehenna.png"/>
-            <Entity ID="843" Variant="201" SubType="0" Image="resources/Foreigner Gehenna.png"/>
             <Entity ID="239" Variant="200" SubType="0" Image="resources/Corpse Eater Gehenna.png"/>
             <Entity ID="239" Variant="201" SubType="0" Image="resources/Carrion Rider Gehenna.png"/>
             <Entity ID="839" Variant="0" SubType="0" Image="resources/Strifer (Left) Gehenna.png"/>

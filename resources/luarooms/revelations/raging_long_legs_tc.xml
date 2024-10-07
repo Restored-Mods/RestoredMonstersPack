@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <rooms>
-	<room variant="29050" name="We Strvn - [TC] - The angry and the gormless" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
+	<room variant="29050" name="We Strvn - [RM] - The angry and the gormless" type="1" subtype="0" shape="1" width="13" height="7" difficulty="10" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -18,7 +18,7 @@
 			<entity type="33" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="29051" name="We Strvn - [TC] - As fragile as a Burning Bush" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
+	<room variant="29051" name="We Strvn - [RM] - As fragile as a Burning Bush" type="1" subtype="0" shape="1" width="13" height="7" difficulty="5" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>

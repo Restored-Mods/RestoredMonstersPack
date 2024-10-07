@@ -25,8 +25,6 @@
 <entity Image="resources/Swapper.png" Name="Swapper" ID="38" Subtype="0" Variant="835" BaseHP="25" Tags="Champion" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Barfy -->
 <entity Image="resources/Barfy.png" Name="Barfy" ID="208" Subtype="0" Variant="850" BaseHP="70" Tags="Champion" Group="Monsters" Kind="Restored Monsters Pack"/>
-<!-- Coil -->
-<entity Image="resources/Coil.png" Name="Coil" Subtype="0" Variant="2406" ID="200" BaseHP="20" Group="Grimace" Kind="Restored Monsters Pack"/>
 <!-- Screamer -->
 <entity Image="resources/Screamer.png" Name="Screamer" ID="200" Subtype="0" Variant="2408" BaseHP="100" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Cell -->
@@ -59,12 +57,6 @@
 <entity Image="resources/Blood Worm.png" Name="Blood Worm" ID="244"  Subtype="0" Variant="2500" BaseHP="100" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- TC Vessel -->
 <entity Image="resources/Vessel (TC).png" Name="Vessel (TC)" ID="858" Subtype="0" Variant="1" baseHP="60" Tags="Champion" Group="Monsters" Kind="Restored Monsters Pack"/>
-<!-- Canary -->
-<entity Image="resources/Canary.png" Name="Canary (TC)" ID="843" Subtype="0" Variant="200" Metadata="1" BaseHP="16" Tags="Champion" Group="Monsters" Kind="Restored Monsters Pack"/>
-<!-- Foreigner -->
-<entity Image="resources/Foreigner.png" Name="Foreigner (TC)" ID="843" Subtype="0" Variant="201" Metadata="1" BaseHP="18" Tags="Champion"   Group="Monsters" Kind="Restored Monsters Pack"/>
-<!-- Exorcist -->
-<entity Image="resources/Exorcist.png" Name="Exorcist (TC)" ID="832" Subtype="0" Variant="200" BaseHP="25" Tags="Champion" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Corse Eater -->
 <entity Image="resources/Corpse Eater.png" Name="Corpse Eater (TC)" ID="239" Subtype="0" Variant="200" Metadata="1" BaseHP="48" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Carrion Rider -->
@@ -242,8 +234,6 @@
 	<group Name="Mines Enemies">
 		<entity Name="Blind Bat (TC)"/>
 		<entity Name="Echo Bat"/>
-    	<entity Name="Canary (TC)"/>
-		<entity Name="Foreigner (TC)"/>
 		<entity Name="Dumpling"/>
 	</group>
 
@@ -280,13 +270,7 @@
 		<entity Name="Swapper"/>
 		<entity Name="Screamer"/>
 		<entity Name="Fanatic"/>
-		<entity Name="Exorcist (TC)"/>
 		<entity Name="Rag Creep (TC)"/>
-	</group>
-
-	<group Name="Gehenna Enemies">
-    	<entity Name="Canary (TC)"/>
-		<entity Name="Foreigner (TC)"/>
 	</group>
 
 	<group Name="Gehenna Obstacles">
@@ -317,9 +301,6 @@
 		<entity Name="Fracture (TC)"/>
 	</group>
 
-	<group Name="Corpse Obstacles">
-		<entity Name="Coil"/>
-	</group>
 
 	<group Name="Corpse Enemies">
 		<entity Name="Corpse Eater (TC)"/>

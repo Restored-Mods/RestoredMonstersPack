@@ -29,9 +29,6 @@ local data = {
     {c.StickyLongLegs,          c.SplashyLongLegs},
     {c.VesselTC,          vc.BigBony},
     {vc.GuttedFatty,          c.VesselTC},
-    {c.Foreigner,          c.Canary},
-    {c.Canary,          vc.Cyclopia},
-    {c.Canary,          vc.Blurb},
     -- {c.CarrionRider,        c.CorpseEater}, Too wacky
     {c.CorpseEater,        vc.Grub},
     {c.SplitRageCreep,          vc.RageCreep},

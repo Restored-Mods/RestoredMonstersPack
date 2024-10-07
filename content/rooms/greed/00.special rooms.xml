@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <rooms>
-	<room variant="24000" name="[TC] - We Strvn - Dumpy Decent" type="23" subtype="17" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="24000" name="[RM] - We Strvn - Dumpy Decent" type="23" subtype="17" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -51,7 +51,7 @@
 			<entity type="5" variant="0" subtype="3" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24001" name="[TC] - We Strvn - Dude it's just like Flowey" type="23" subtype="17" shape="1" width="13" height="7" difficulty="1" weight="0.5">
+	<room variant="24001" name="[RM] - We Strvn - Dude it's just like Flowey" type="23" subtype="17" shape="1" width="13" height="7" difficulty="1" weight="0.5">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -90,7 +90,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24002" name="[TC] - We Strvn - Split second decision" type="23" subtype="17" shape="1" width="13" height="7" difficulty="1" weight="0.5">
+	<room variant="24002" name="[RM] - We Strvn - Split second decision" type="23" subtype="17" shape="1" width="13" height="7" difficulty="1" weight="0.5">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -225,7 +225,7 @@
 			<entity type="200" variant="2503" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24003" name="[TC] - We Strvn - Death Down Below" type="23" subtype="17" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="24003" name="[RM] - We Strvn - Death Down Below" type="23" subtype="17" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -252,7 +252,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24000" name="[TC] - We Strvn - Crazy Sale!" type="2" subtype="0" shape="6" width="26" height="7" difficulty="1" weight="1.0">
+	<room variant="24000" name="[RM] - We Strvn - Crazy Sale!" type="2" subtype="0" shape="6" width="26" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -395,7 +395,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24001" name="[TC] - We Strvn - Ant with a bindle" type="2" subtype="0" shape="6" width="26" height="7" difficulty="1" weight="0.5">
+	<room variant="24001" name="[RM] - We Strvn - Ant with a bindle" type="2" subtype="0" shape="6" width="26" height="7" difficulty="1" weight="0.5">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -487,7 +487,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24000" name="[TC] - We Strvn - Crazy powerful item! (Please don't restart)" type="4" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="24000" name="[RM] - We Strvn - Crazy powerful item! (Please don't restart)" type="4" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -544,7 +544,7 @@
 			<entity type="292" variant="3400" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24000" name="[TC] - We Strvn - Cursed Bombs" type="10" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="24000" name="[RM] - We Strvn - Cursed Bombs" type="10" subtype="0" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -577,7 +577,7 @@
 			<entity type="1000" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24000" name="[TC] - We Strvn - Some extra coins if you don't mind blowing your legs off" type="8" subtype="3" shape="1" width="13" height="7" difficulty="1" weight="1.0">
+	<room variant="24000" name="[RM] - We Strvn - Some extra coins if you don't mind blowing your legs off" type="8" subtype="3" shape="1" width="13" height="7" difficulty="1" weight="1.0">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -640,7 +640,7 @@
 			<entity type="292" variant="3400" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24001" name="[TC] - We Strvn - Graverobber's Sludge Stash" type="8" subtype="20" shape="1" width="13" height="7" difficulty="1" weight="0.25">
+	<room variant="24001" name="[RM] - We Strvn - Graverobber's Sludge Stash" type="8" subtype="20" shape="1" width="13" height="7" difficulty="1" weight="0.25">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
@@ -673,7 +673,7 @@
 			<entity type="5" variant="20" subtype="1" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24002" name="[TC] - We Strvn - Golden Greed Boy" type="8" subtype="17" shape="1" width="13" height="7" difficulty="1" weight="0.5">
+	<room variant="24002" name="[RM] - We Strvn - Golden Greed Boy" type="8" subtype="17" shape="1" width="13" height="7" difficulty="1" weight="0.5">
 		<door exists="True" x="-1" y="3"/>
 		<door exists="True" x="6" y="-1"/>
 		<door exists="True" x="6" y="7"/>
