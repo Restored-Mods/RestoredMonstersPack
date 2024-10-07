@@ -283,6 +283,14 @@ if FFGRACE then
 	end, EntityType.ENTITY_CUTMONSTERS)
 end
 
+
+function mod:chubbyBunnyInit(entity)
+  if entity.Variant == CutMonsterVariants.ECHO_BAT and entity.SubType == CutMonsterVariants.CHUBBY_BUNNY then
+    entity.SplatColor = FFGRACE.ColorSporeSplat
+  end
+end
+
+mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.chubbyBunnyInit, EntityType.ENTITY_CUTMONSTERS)
 function mod:chubbyBunnyUpdate(entity)
 	if entity.Variant == CutMonsterVariants.ECHO_BAT and entity.SubType == CutMonsterVariants.CHUBBY_BUNNY then
 		local sprite = entity:GetSprite()
@@ -290,7 +298,7 @@ function mod:chubbyBunnyUpdate(entity)
 		local target = entity:GetPlayerTarget()
 		local rng = entity:GetDropRNG()
   
-    if data.SporeTransformed and not data.Trans then
+    if data.SporeTransformed and (not data.Trans) then
       sprite:Play("Transform",true)
         data.Trans = true
     end
@@ -299,9 +307,9 @@ function mod:chubbyBunnyUpdate(entity)
       if sprite:IsFinished("Transform") then
         sprite:Play("Idle", true)
       end
-      return
     end
   
+    if (not sprite:IsPlaying("Death")) and (not sprite:IsPlaying("Transform")) then
 		-- Movement
 		data.vector = ((target.Position - entity.Position):Normalized() * Settings.ChaseSpeed):Rotated(data.angleOffset)
 		if entity:HasEntityFlags(EntityFlag.FLAG_FEAR) or entity:HasEntityFlags(EntityFlag.FLAG_SHRINK) then
@@ -365,10 +373,32 @@ function mod:chubbyBunnyUpdate(entity)
 			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed / 1.2, 0, params)
 			entity:PlaySound(SoundEffect.SOUND_WHEEZY_COUGH, 1.5, 0, false, 1.2)
 		end
+  else
+    entity.Velocity = Vector.Zero
+    if sprite:IsEventTriggered("Explode") then
+      FFGRACE:MakeSporeExplosion(entity.Position, entity.SpawnerEntity, 1)
+      entity:Kill()
+    end
 	end
+  end
 end
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.chubbyBunnyUpdate, EntityType.ENTITY_CUTMONSTERS)
 
+function mod:chubbyBunnyDeath(target, damageAmount, damageFlags, damageSource, damageCountdownFrames)
+	if target.Variant == CutMonsterVariants.ECHO_BAT and target.SubType == CutMonsterVariants.CHUBBY_BUNNY then
+    if target.HitPoints <= damageAmount then
+      if target:GetSprite():IsPlaying("Transform") then
+        FFGRACE:MakeSporeExplosion(target.Position, target.SpawnerEntity, 1)
+        target:Kill()
+      elseif (not target:GetSprite():IsPlaying("Death")) then
+        target:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+        target:GetSprite():Play("Death",true)
+      end
+      return false
+    end
+	end
+end
+mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.chubbyBunnyDeath, EntityType.ENTITY_CUTMONSTERS)
 
 local function projectileKill(projectile)
 	if projectile.SpawnerEntity and projectile.SpawnerType == EntityType.ENTITY_CUTMONSTERS and projectile.SpawnerVariant == CutMonsterVariants.ECHO_BAT

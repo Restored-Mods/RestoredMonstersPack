@@ -36,18 +36,6 @@ RestoredMonsterPack.LGBTQIA = {
 	-- {ID = mod:SpecialEnt("Beard Bat"), Affliction = "Trans"},
 }
 
-function mod:MixTables(input, table)
-    if input and table then
-        for k, v in pairs(table) do
-            if type(input[k]) == "table" and type(v) == "table" then
-                mod:MixTables(input[k], v)
-            else
-                input[k] = v
-            end
-        end
-    end
-end
-
 function mod.MixFiendFolioStuff()
 	mod:MixTables(FiendFolio.Nonmale, RestoredMonsterPack.Nonmale)
 	mod:MixTables(FiendFolio.LGBTQIA, RestoredMonsterPack.LGBTQIA)
