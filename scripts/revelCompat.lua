@@ -24,29 +24,29 @@ local function MixTables(ta, tb, recurse) --from Revelations
 end
 
 mod.Rooms = {
-  {Name = "Glacier", Rooms = require("resources.luarooms.revelations.glacier_tc")},
-  {Name = "GlacierSpecial", Rooms = require("resources.luarooms.revelations.glacier_special_tc")},
-  {Name = "GlacierChallenge", Rooms = require("resources.luarooms.revelations.glacier_challenge_tc")},
+  {Name = "Glacier", Rooms = require("resources.luarooms.revelations.glacier_rm")},
+  {Name = "GlacierSpecial", Rooms = require("resources.luarooms.revelations.glacier_special_rm")},
+  {Name = "GlacierChallenge", Rooms = require("resources.luarooms.revelations.glacier_challenge_rm")},
 }
 
 mod.BossRooms = {
-  {Name = "Stalagmight", Rooms = require("resources.luarooms.revelations.glacier_boss_tc")},
-  {Name = "Prong", Rooms = require("resources.luarooms.revelations.glacier_boss_tc")},
-  {Name = "Freezer Burn", Rooms = require("resources.luarooms.revelations.glacier_boss_tc")},
-  {Name = "Wendy", Rooms = require("resources.luarooms.revelations.glacier_boss_tc")},
-  {Name = "Williwaw", Rooms = require("resources.luarooms.revelations.glacier_boss_tc")},
+  {Name = "Stalagmight", Rooms = require("resources.luarooms.revelations.glacier_boss_rm")},
+  {Name = "Prong", Rooms = require("resources.luarooms.revelations.glacier_boss_rm")},
+  {Name = "Freezer Burn", Rooms = require("resources.luarooms.revelations.glacier_boss_rm")},
+  {Name = "Wendy", Rooms = require("resources.luarooms.revelations.glacier_boss_rm")},
+  {Name = "Williwaw", Rooms = require("resources.luarooms.revelations.glacier_boss_rm")},
   
-  {Name = "Chuck", Rooms = require("resources.luarooms.revelations.glacier_chuck_tc")},
+  {Name = "Chuck", Rooms = require("resources.luarooms.revelations.glacier_chuck_rm")},
   
-  {Name = "Punker", Rooms = require("resources.luarooms.revelations.punker_tc")},
-  {Name = "Raging Long Legs", Rooms = require("resources.luarooms.revelations.raging_long_legs_tc")}, 
+  {Name = "Punker", Rooms = require("resources.luarooms.revelations.punker_rm")},
+  {Name = "Raging Long Legs", Rooms = require("resources.luarooms.revelations.raging_long_legs_rm")}, 
 }
 
 function mod.RoomInit()
 	if REVEL then 
     -- Add non-boss rooms
   for _,roomlist in ipairs(mod.Rooms) do
-  REVEL.RoomLists[roomlist.Name]:AddRooms({Name = "[TC] " .. roomlist.Name, Rooms = roomlist.Rooms})
+  REVEL.RoomLists[roomlist.Name]:AddRooms({Name = "[RM] " .. roomlist.Name, Rooms = roomlist.Rooms})
     -- Add boss rooms
   end
   for _,bossrooms in ipairs(mod.BossRooms) do

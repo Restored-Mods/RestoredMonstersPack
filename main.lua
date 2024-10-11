@@ -158,11 +158,11 @@ mod.CompatibilityReplace = {} --this gets filled in
 
 include("scripts.revelCompat")
 include("scripts.compatibility.retribution.baptismal_preloader")
-include("scripts.compatibility.retribution.tc_downgrades")
-include("scripts.compatibility.retribution.tc_upgrades")
+include("scripts.compatibility.retribution.rm_downgrades")
+include("scripts.compatibility.retribution.rm_upgrades")
 include("scripts.compatibility.fallfromgrace")
 if StageAPI then
-	include("scripts.compatibility.fiend folio.tc_genders")
+	include("scripts.compatibility.fiend folio.rm_genders")
 	StageAPI.AddEntities2Function(require("scripts.entities2"))
 end
 

@@ -1,4 +1,4 @@
-local c = include("scripts.compatibility.retribution.tc_entities")
+local c = include("scripts.compatibility.retribution.rm_entities")
 local vc = include("scripts.compatibility.retribution.vanilla_entities")
 
 
@@ -10,9 +10,9 @@ local data = {
     {c.Scab,		c.Skinling},
     {c.Mortling,		c.Scab},
     {c.TaintedDumpling,		c.Dumpling},
-    {c.FractureTC,          vc.Level2Spider},
-    {vc.Ragling,          c.FractureTC},
-    {vc.Blister,          c.FractureTC},
+    {c.FractureRM,          vc.Level2Spider},
+    {vc.Ragling,          c.FractureRM},
+    {vc.Blister,          c.FractureRM},
     {c.EchoBat,          vc.OneTooth},
     {c.EchoBat,          vc.FatBat},
     {c.Necromancer,          vc.Fanatic},
@@ -27,8 +27,8 @@ local data = {
     {c.Tissue,          c.FusedCells},
     {c.SplashyLongLegs,          vc.CrazyLongLegs},
     {c.StickyLongLegs,          c.SplashyLongLegs},
-    {c.VesselTC,          vc.BigBony},
-    {vc.GuttedFatty,          c.VesselTC},
+    {c.VesselRM,          vc.BigBony},
+    {vc.GuttedFatty,          c.VesselRM},
     -- {c.CarrionRider,        c.CorpseEater}, Too wacky
     {c.CorpseEater,        vc.Grub},
     {c.SplitRageCreep,          vc.RageCreep},

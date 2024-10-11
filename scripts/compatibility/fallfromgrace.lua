@@ -5,24 +5,24 @@ if FFGRACE then
 
     --boiler
     FFGRACE.StageSkins.Boiler[EntityType.ENTITY_DUMPLING.." "..0] = {
-                {{0}, basepath.."boiler/800.000_dumpling"},
+                {{0}, basepath.."boiler/dumpling_boiler.png"},
             }
 
-    table.insert(FFGRACE.Rooms.Boiler, include("resources.luarooms.ffg.boiler_tc"))
-    table.insert(FFGRACE.Rooms.BoilerChallenge, include("resources.luarooms.ffg.boiler_tc_challenge"))
-    table.insert(FFGRACE.Rooms.BoilerWhiteFire, include("resources.luarooms.ffg.boiler_tc_fire"))
+    table.insert(FFGRACE.Rooms.Boiler, include("resources.luarooms.ffg.boiler_rm"))
+    table.insert(FFGRACE.Rooms.BoilerChallenge, include("resources.luarooms.ffg.boiler_rm_challenge"))
+    table.insert(FFGRACE.Rooms.BoilerWhiteFire, include("resources.luarooms.ffg.boiler_rm_fire"))
     if FiendFolio then
-      table.insert(FFGRACE.Rooms.Boiler, include("resources.luarooms.ffg.boiler_tc_ff"))
+      table.insert(FFGRACE.Rooms.Boiler, include("resources.luarooms.ffg.boiler_rm_ff"))
     end
 
-    StageAPI.GetBossData("FFGRACE Creem").Rooms:AddRooms(require("resources.luarooms.ffg.bosses.boiler_tc_creem"))
+    StageAPI.GetBossData("FFGRACE Creem").Rooms:AddRooms(require("resources.luarooms.ffg.bosses.boiler_rm_creem"))
 
 
     --grotto
-    table.insert(FFGRACE.Rooms.Grotto, include("resources.luarooms.ffg.grotto_tc"))
-    table.insert(FFGRACE.Rooms.GrottoChallenge, include("resources.luarooms.ffg.grotto_tc_challenge"))
-    table.insert(FFGRACE.Rooms.GrottoRailButton, include("resources.luarooms.ffg.grotto_tc_button"))
-    table.insert(FFGRACE.Rooms.GrottoMineshaftEntrance, include("resources.luarooms.ffg.grotto_tc_mineshaft_entrance"))
+    table.insert(FFGRACE.Rooms.Grotto, include("resources.luarooms.ffg.grotto_rm"))
+    table.insert(FFGRACE.Rooms.GrottoChallenge, include("resources.luarooms.ffg.grotto_rm_challenge"))
+    table.insert(FFGRACE.Rooms.GrottoRailButton, include("resources.luarooms.ffg.grotto_rm_button"))
+    table.insert(FFGRACE.Rooms.GrottoMineshaftEntrance, include("resources.luarooms.ffg.grotto_rm_mineshaft_entrance"))
 
 
 
@@ -55,7 +55,7 @@ if FFGRACE then
 
       [EntityType.ENTITY_DUMPLING.." "..CutMonsterVariants.SCORCHLING] = "Fire",
 
-      -- [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.ECHO_BAT.." "..CutMonsterVariants.CHUBBY_BUNNY] = "Spore",
+      --[EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.ECHO_BAT.." "..CutMonsterVariants.CHUBBY_BUNNY] = "Spore",
       -- [EntityType.BLIND_BAT.." "..CutMonsterVariants.BEARD_BAT] = "Spore",
       [EntityType.ENTITY_DUMPLING.." "..EntityVariant.SPORELING] = "Spore",
 

@@ -31,7 +31,7 @@ return function(mode)
     {Name="Screamer Aura",Anm2="screamer_aura.anm2",NumGridCollisionPoints=0,Type=1000,Variant=867,},
     {Name="Fire Grimace",Anm2="Fire_Grimace.anm2",HP=10,CollisionMass=100,CollisionRadius=13,ShadowSize=22,NumGridCollisionPoints=0,Type=203,Variant=2500,Tags="noreroll",HasFloorAlts="true",ShutDoors="false",Portrait=22,},
     {Name="Bloodworm",Anm2="bloodworm.anm2",HP=100,CollisionDamage=1,CollisionMass=100,CollisionRadius=15,NumGridCollisionPoints=12,Type=244,Variant=2500,HasFloorAlts="true",Portrait=23,Reroll="false",},
-    {Name="Vessel (TC)",Anm2="pale_vessel.anm2",HP=70,Champion=true,CollisionDamage=1,CollisionMass=10,CollisionRadius=13,ShadowSize=16,NumGridCollisionPoints=12,Type=858,Variant=1,Portrait=24,Reroll="true",},
+    {Name="Vessel (RM)",Anm2="pale_vessel.anm2",HP=70,Champion=true,CollisionDamage=1,CollisionMass=10,CollisionRadius=13,ShadowSize=16,NumGridCollisionPoints=12,Type=858,Variant=1,Portrait=24,Reroll="true",},
     {Name="​Canary",Anm2="843.000_canary.anm2",HP=16,StageHP=2,Champion=true,CollisionDamage=1,CollisionMass=10,CollisionRadius=13,ShadowSize=14,NumGridCollisionPoints=12,Type=843,Variant=200,Portrait=27,},
     {Name="​​Foreigner",Anm2="843.001_foreigner.anm2",HP=18,StageHP=2,Champion=true,CollisionDamage=1,CollisionMass=10,CollisionRadius=13,ShadowSize=14,NumGridCollisionPoints=12,Type=843,Variant=201,Portrait=28,},
     {Name="​​​Exorcist",Anm2="832.000_exorcist.anm2",HP=25,Champion=true,CollisionDamage=1,CollisionMass=10,CollisionRadius=13,ShadowSize=14,NumGridCollisionPoints=12,Type=832,Variant=200,Tags="homing_soul",Portrait=29,},
@@ -53,7 +53,7 @@ return function(mode)
         return {["Echo Projectile"]=entities[1],["Lantern Projectile"]=entities[2],["Staple Projectile"]=entities[3],["Dumpling"]=entities[4],["Skinling"]=entities[5],["Scab"]=entities[6],["Scorchling"]=entities[7],["Mortling"]=entities[8],["Tainted Dumpling"]=entities[9],
         ["Gilded Dumpling"]=entities[10],["​Fracture"]=entities[11],["Stillborn"]=entities[12],["Echo Bat"]=entities[13],["Necromancer"]=entities[14],["Swapper"]=entities[15],["Swapper (Gehenna)"]=entities[16],["Barfy"]=entities[17],["Screamer"]=entities[19],
         ["Cell"]=entities[20],["Fused Cells"]=entities[21],["Tissue"]=entities[22],["Grave Robber"]=entities[23],["Splashy Long Legs"]=entities[24],["Sticky Long Legs"]=entities[25],["Red TNT"]=entities[26],["Screamer Ring"]=entities[27],["Nightwatch Spotlight"]=entities[28],["Screamer Aura"]=entities[29],["Fire Grimace"]=entities[30],
-        ["Bloodworm"]=entities[31],["Vessel (TC)"]=entities[32],["​​​​Corpse Eater"]=entities[36],["​Carrion Rider"]=entities[37],["​​Blind Bat"]=entities[38],["​​​Split Rage Creep"]=entities[39],["​Rag Creep"]=entities[40],
+        ["Bloodworm"]=entities[31],["Vessel (RM)"]=entities[32],["​​​​Corpse Eater"]=entities[36],["​Carrion Rider"]=entities[37],["​​Blind Bat"]=entities[38],["​​​Split Rage Creep"]=entities[39],["​Rag Creep"]=entities[40],
         ["​​Nightwatch"]=entities[41],["​Vessel (Antibirth)"]=entities[42],["​Strifer"]=entities[43],["Chubby Bunny"]=entities[44],["Sporeling"]=entities[45]}
     elseif mode == 3 then
         return {[9]={[104]={[0]=entities[1],},[106]={[0]=entities[2],},[108]={[0]=entities[3],},},[800]={[0]={[0]=entities[4],},[1]={[0]=entities[5],},[2]={[0]=entities[6],},[3]={[0]=entities[7],},[4]={[0]=entities[8],},[5]={[0]=entities[9],},[6]={[0]=entities[10],},[7]={[0]=entities[45]},},

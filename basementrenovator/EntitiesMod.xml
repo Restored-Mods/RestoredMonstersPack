@@ -14,9 +14,9 @@
 <!-- Gilded Dumpling -->
 <entity Image="resources/Gilded Dumpling.png" Name="Gilded Dumpling" ID="800" Subtype="0" Variant="6" BaseHP="60" Tags="Champion" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Fracture -->
-<entity Image="resources/Fracture.png" Name="Fracture (TC)" ID="29" Subtype="801" Variant="1" Metadata="1" BaseHP="15" Tags="Champion" Group="Monsters" Kind="Restored Monsters Pack"/>
+<entity Image="resources/Fracture.png" Name="Fracture (RM)" ID="29" Subtype="801" Variant="1" Metadata="1" BaseHP="15" Tags="Champion" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Stillborn -->
-<entity Image="resources/Stillborn.png" Name="Stillborn (TC)" ID="200" Subtype="0" Variant="2409" BaseHP="10" Group="Monsters" Kind="Restored Monsters Pack"/>
+<entity Image="resources/Stillborn.png" Name="Stillborn (RM)" ID="200" Subtype="0" Variant="2409" BaseHP="10" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Echo Bat -->
 <entity Image="resources/Echo Bat.png" Name="Echo Bat" ID="200" Subtype="0" Variant="2407" BaseHP="20" Tags="Champion" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Necromancer -->
@@ -55,14 +55,14 @@
 <entity Image="resources/Fire Grimace (Down).png" Name="Fire Grimace (Down)" ID="203" Subtype="3" Variant="2500" BaseHP="10" MirrorY="203.2500.1" Group="Grimace" Kind="Restored Monsters Pack"/>
 <!-- Blood Worm -->
 <entity Image="resources/Blood Worm.png" Name="Blood Worm" ID="244"  Subtype="0" Variant="2500" BaseHP="100" Group="Monsters" Kind="Restored Monsters Pack"/>
-<!-- TC Vessel -->
-<entity Image="resources/Vessel (TC).png" Name="Vessel (TC)" ID="858" Subtype="0" Variant="1" baseHP="60" Tags="Champion" Group="Monsters" Kind="Restored Monsters Pack"/>
+<!-- RM Vessel -->
+<entity Image="resources/Vessel (RM).png" Name="Vessel (RM)" ID="858" Subtype="0" Variant="1" baseHP="60" Tags="Champion" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Corse Eater -->
-<entity Image="resources/Corpse Eater.png" Name="Corpse Eater (TC)" ID="239" Subtype="0" Variant="200" Metadata="1" BaseHP="48" Group="Monsters" Kind="Restored Monsters Pack"/>
+<entity Image="resources/Corpse Eater.png" Name="Corpse Eater (RM)" ID="239" Subtype="0" Variant="200" Metadata="1" BaseHP="48" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Carrion Rider -->
-<entity Image="resources/Carrion Rider.png" Name="Carrion Rider (TC)" ID="239" Variant="201" Subtype="0" Metadata="1" BaseHP="48"   Group="Monsters" Kind="Restored Monsters Pack"/>
+<entity Image="resources/Carrion Rider.png" Name="Carrion Rider (RM)" ID="239" Variant="201" Subtype="0" Metadata="1" BaseHP="48"   Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Blind Bat -->
-<entity Image="resources/Blind Bat.png" Name="Blind Bat (TC)" ID="803" Variant="200" Subtype="3" BaseHP="10" Group="Monsters" Kind="Restored Monsters Pack">
+<entity Image="resources/Blind Bat.png" Name="Blind Bat (RM)" ID="803" Variant="200" Subtype="3" BaseHP="10" Group="Monsters" Kind="Restored Monsters Pack">
 		<bitfield Key="Subtype">
 			<spinner Length="5" Minimum="1" Maximum="5" Name="Secondary Bats">
                 <tooltip>The amount of bats that are initially hidden and appear after the first bat is alerted</tooltip>
@@ -70,9 +70,9 @@
 	</bitfield>
 </entity>
 <!-- Split Rage Creep -->
-<entity Image="resources/Split Rage Creep.png" Name="Split Rage Creep (TC)" ID="241" Variant="200" Subtype="0" BaseHP="16" Tags="Champion" PlaceVisual="WallSnap" Group="Monsters" Kind="Restored Monsters Pack"/>
+<entity Image="resources/Split Rage Creep.png" Name="Split Rage Creep (RM)" ID="241" Variant="200" Subtype="0" BaseHP="16" Tags="Champion" PlaceVisual="WallSnap" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Rag Creep -->
-<entity Image="resources/Rag Creep.png"  Name="Rag Creep (TC)" ID="240" Variant="200" Subtype="0" BaseHP="17" PlaceVisual="WallSnap" Group="Monsters" Kind="Restored Monsters Pack"/>
+<entity Image="resources/Rag Creep.png"  Name="Rag Creep (RM)" ID="240" Variant="200" Subtype="0" BaseHP="17" PlaceVisual="WallSnap" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Vessel -->
 <entity Image="resources/Vessel (Antibirth).png" Name="Vessel (Antibirth)" ID="858" Variant="200" Subtype="0" baseHP="60" Tags="Champion" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Strifer -->
@@ -192,7 +192,7 @@
 	</group>
 
 	<group Name="Cellar Enemies">
-		<entity Name="Fracture (TC)"/>
+		<entity Name="Fracture (RM)"/>
 	</group>
 
 	<group Name="Burning Basement Enemies">
@@ -201,17 +201,16 @@
 
 	<group Name="Chapter 1 (Alt Path) Enemies">
 		<entity Name="Dumpling"/>
-		<entity Name="Fracture (TC)"/>
 	</group>
 
 	<group Name="Chapter 2 (Main Path) Enemies">
 		<entity Name="Dumpling"/>
 		<entity Name="Skinling"/>
-		<entity Name="Blind Bat (TC)"/>
+		<entity Name="Blind Bat (RM)"/>
 	</group>
 
 	<group Name="Catacombs Enemies">
-		<entity Name="Fracture (TC)"/>
+		<entity Name="Fracture (RM)"/>
     	<entity Name="Grave Robber"/>
 	</group>
 
@@ -232,7 +231,7 @@
 	</group>
 
 	<group Name="Mines Enemies">
-		<entity Name="Blind Bat (TC)"/>
+		<entity Name="Blind Bat (RM)"/>
 		<entity Name="Echo Bat"/>
 		<entity Name="Dumpling"/>
 	</group>
@@ -244,7 +243,7 @@
 	</group>
 
 	<group Name="Necropolis Enemies">
-		<entity Name="Fracture (TC)"/>
+		<entity Name="Fracture (RM)"/>
     	<entity Name="Grave Robber"/>
 	</group>
 
@@ -253,8 +252,8 @@
 	</group>
 
 	<group Name="Chapter 3 (Alt Path) Enemies">
-		<entity Name="Corpse Eater (TC)"/>
-		<entity Name="Carrion Rider (TC)"/>
+		<entity Name="Corpse Eater (RM)"/>
+		<entity Name="Carrion Rider (RM)"/>
 		<entity Name="Scab"/>
 		<entity Name="Necromancer"/>
 		<entity Name="Strifer (Left)"/>
@@ -270,7 +269,7 @@
 		<entity Name="Swapper"/>
 		<entity Name="Screamer"/>
 		<entity Name="Fanatic"/>
-		<entity Name="Rag Creep (TC)"/>
+		<entity Name="Rag Creep (RM)"/>
 	</group>
 
 	<group Name="Gehenna Obstacles">
@@ -281,7 +280,7 @@
 	</group>
 
 	<group Name="Chapter 4 (Main Path) Enemies">
-		<entity Name="Stillborn (TC)"/>
+		<entity Name="Stillborn (RM)"/>
 		<entity Name="Scab"/>
 	</group>
 
@@ -294,21 +293,21 @@
 		<entity Name="Fused Cells"/>
 		<entity Name="Tissue"/>
 		<entity Name="Dumpling"/>
-		<entity Name="Fracture (TC)"/>
+		<entity Name="Fracture (RM)"/>
 	</group>
 
 	<group Name="Scarred Womb Enemies">
-		<entity Name="Fracture (TC)"/>
+		<entity Name="Fracture (RM)"/>
 	</group>
 
 
 	<group Name="Corpse Enemies">
-		<entity Name="Corpse Eater (TC)"/>
-		<entity Name="Carrion Rider (TC)"/>
+		<entity Name="Corpse Eater (RM)"/>
+		<entity Name="Carrion Rider (RM)"/>
 		<entity Name="Mortling"/>
-		<entity Name="Stillborn (TC)"/>
+		<entity Name="Stillborn (RM)"/>
 		<entity Name="Barfy"/>
-		<entity Name="Vessel (TC)"/>
+		<entity Name="Vessel (RM)"/>
 		<entity Name="Vessel (Antibirth)"/>
 		<entity Name="Lump"/>
 	</group>
@@ -319,7 +318,7 @@
 
 	<group Name="Sheol Enemies">
     	<entity Name="Blood Worm"/>
-		<entity Name="Split Rage Creep (TC)"/>
+		<entity Name="Split Rage Creep (RM)"/>
 	</group>
 
 	<group Name="Dark Room Enemies">
@@ -343,7 +342,7 @@
 	<!-- <group Name="" Label="Ice Hazards">
 	<group Name="Restored Monsters Ice Hazards" />
 
-	<group Name="Boiler TC" >
+	<group Name="Boiler RM" >
 		<entity Name="Dumpling" />
 	</group> -->
 
