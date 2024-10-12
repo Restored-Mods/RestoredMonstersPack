@@ -5,7 +5,7 @@ if FFGRACE then
 
     --boiler
     FFGRACE.StageSkins.Boiler[EntityType.ENTITY_DUMPLING.." "..0] = {
-                {{0}, basepath.."boiler/dumpling_boiler.png"},
+                {{0}, basepath.."boiler/dumpling_boiler"},
             }
 
     table.insert(FFGRACE.Rooms.Boiler, include("resources.luarooms.ffg.boiler_rm"))
