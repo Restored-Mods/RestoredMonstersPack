@@ -37,7 +37,7 @@ return function(mode)
     {Name="​​​Exorcist",Anm2="832.000_exorcist.anm2",HP=25,Champion=true,CollisionDamage=1,CollisionMass=10,CollisionRadius=13,ShadowSize=14,NumGridCollisionPoints=12,Type=832,Variant=200,Tags="homing_soul",Portrait=29,},
     {Name="​​​​Corpse Eater",Anm2="239.100_corpse eater.anm2",HP=48,StageHP="2.5",CollisionDamage=1,CollisionMass=14,CollisionRadius=13,ShadowSize=21,NumGridCollisionPoints=12,Type=239,Variant=200,Portrait=30,},
     {Name="​Carrion Rider",Anm2="239.101_carrion rider.anm2",HP=48,StageHP="2.5",CollisionDamage=1,CollisionMass=14,CollisionRadius=13,ShadowSize=21,NumGridCollisionPoints=12,Type=239,Variant=201,Portrait=31,},
-    {Name="​​Blind Bat",Anm2="803.000_blindbat.anm2",HP=18,CollisionDamage=1,CollisionMass=14,CollisionRadius=13,ShadowSize=18,NumGridCollisionPoints=32,Type=803,Variant=200,GridCollision="walls",Portrait=32,},
+    {Name="​​Blind Bat",Anm2="803.000_blindbat.anm2",HP=10,CollisionDamage=1,CollisionMass=14,CollisionRadius=13,ShadowSize=18,NumGridCollisionPoints=32,Type=803,Variant=200,GridCollision="walls",Portrait=32,},
     {Name="​​​Split Rage Creep",Anm2="241.001_split rage creep.anm2",HP=16,Champion=true,CollisionDamage=1,CollisionMass=14,CollisionRadius=13,NumGridCollisionPoints=12,Type=241,Variant=200,Tags="spider brimstone_soul",Portrait=33,},
     {Name="​Rag Creep",Anm2="240.002_rag creep.anm2",HP=17,StageHP=4,CollisionDamage=1,CollisionMass=14,CollisionRadius=13,NumGridCollisionPoints=12,Type=240,Variant=200,Tags="spider homing_soul",Portrait=34,},
     {Name="​​Nightwatch",Anm2="842.000_nightwatch.anm2",HP=25,StageHP=5,CollisionDamage=1,CollisionMass=100,CollisionRadius=13,ShadowSize=20,NumGridCollisionPoints=12,Type=842,Variant=200,Tags="ghost",GridCollision="floor",ShutDoors="false",Portrait=35,},
@@ -45,6 +45,7 @@ return function(mode)
     {Name="​Strifer",Anm2="839.000_strifer.anm2",HP=25,Champion=true,CollisionDamage=1,CollisionMass=5,CollisionRadius=13,ShadowSize=15,NumGridCollisionPoints=12,Type=839,Variant=200,Portrait=37,},
     {Name="Chubby Bunny",Anm2="chubby_bunny.anm2",HP=20,Champion=true,CollisionDamage=1,CollisionMass=14,CollisionRadius=13,ShadowSize=18,NumGridCollisionPoints=12,Type=200,Variant=2407,Subtype=1,GridCollision="walls",Portrait=38,Reroll="true",},
     {Name="Sporeling",Anm2="800.007_sporeling.anm2",HP=7,StageHP=2,Champion=true,CollisionDamage=1,CollisionMass=3,CollisionRadius=13,Friction="0.95",ShadowSize=12,NumGridCollisionPoints=12,Type=800,Variant=7,GridCollision="walls",HasFloorAlts="false",Portrait=39,Reroll="true",},
+    {Name="Beard Bat",Anm2="beard_bat.anm2",HP=10,CollisionDamage=1,CollisionMass=14,CollisionRadius=13,ShadowSize=18,NumGridCollisionPoints=32,Type=803,Variant=2,GridCollision="walls",Portrait=32,},
     }
 
     if not mode or mode == 1 then
@@ -54,12 +55,12 @@ return function(mode)
         ["Gilded Dumpling"]=entities[10],["​Fracture"]=entities[11],["Stillborn"]=entities[12],["Echo Bat"]=entities[13],["Necromancer"]=entities[14],["Swapper"]=entities[15],["Swapper (Gehenna)"]=entities[16],["Barfy"]=entities[17],["Screamer"]=entities[19],
         ["Cell"]=entities[20],["Fused Cells"]=entities[21],["Tissue"]=entities[22],["Grave Robber"]=entities[23],["Splashy Long Legs"]=entities[24],["Sticky Long Legs"]=entities[25],["Red TNT"]=entities[26],["Screamer Ring"]=entities[27],["Nightwatch Spotlight"]=entities[28],["Screamer Aura"]=entities[29],["Fire Grimace"]=entities[30],
         ["Bloodworm"]=entities[31],["Vessel (RM)"]=entities[32],["​​​​Corpse Eater"]=entities[36],["​Carrion Rider"]=entities[37],["​​Blind Bat"]=entities[38],["​​​Split Rage Creep"]=entities[39],["​Rag Creep"]=entities[40],
-        ["​​Nightwatch"]=entities[41],["​Vessel (Antibirth)"]=entities[42],["​Strifer"]=entities[43],["Chubby Bunny"]=entities[44],["Sporeling"]=entities[45]}
+        ["​​Nightwatch"]=entities[41],["​Vessel (Antibirth)"]=entities[42],["​Strifer"]=entities[43],["Chubby Bunny"]=entities[44],["Sporeling"]=entities[45],["Beard Bat"]=entities[46]}
     elseif mode == 3 then
         return {[9]={[104]={[0]=entities[1],},[106]={[0]=entities[2],},[108]={[0]=entities[3],},},[800]={[0]={[0]=entities[4],},[1]={[0]=entities[5],},[2]={[0]=entities[6],},[3]={[0]=entities[7],},[4]={[0]=entities[8],},[5]={[0]=entities[9],},[6]={[0]=entities[10],},[7]={[0]=entities[45]},},
         [29]={[1]={[801]=entities[11],},},[200]={[2409]={[0]=entities[12],},[2407]={[0]=entities[13],[1]=entities[44]},[2410]={[0]=entities[14],},[2406]={[0]=entities[18],},[2408]={[0]=entities[19],},[2500]={[0]=entities[20],},[2501]={[0]=entities[21],},[2502]={[0]=entities[22],},[2503]={[0]=entities[23],},
         [2504]={[0]=entities[24],[1]=entities[25],},},[38]={[835]={[0]=entities[15],[1]=entities[16],},},[208]={[850]={[0]=entities[17],},},[292]={[3400]={[0]=entities[26],},},[1000]={[164]={[867]=entities[27],},[842]={[0]=entities[28],},[867]={[0]=entities[29],},},[203]={[2500]={[0]=entities[30],},},
-        [244]={[2500]={[0]=entities[31],},},[858]={[1]={[0]=entities[32],},[200]={[0]=entities[42],},},[843]={[200]={[0]=entities[33],},[201]={[0]=entities[34],},},[832]={[200]={[0]=entities[35],},},[239]={[200]={[0]=entities[36],},[201]={[0]=entities[37],},},[803]={[200]={[0]=entities[38],},},
+        [244]={[2500]={[0]=entities[31],},},[858]={[1]={[0]=entities[32],},[200]={[0]=entities[42],},},[843]={[200]={[0]=entities[33],},[201]={[0]=entities[34],},},[832]={[200]={[0]=entities[35],},},[239]={[200]={[0]=entities[36],},[201]={[0]=entities[37],},},[803]={[200]={[0]=entities[38],},[2]={[0]=entities[46],},
         [241]={[200]={[0]=entities[39],},},[240]={[200]={[0]=entities[40],},},[842]={[200]={[0]=entities[41],},},[839]={[200]={[0]=entities[43],},},}
     end    
 end

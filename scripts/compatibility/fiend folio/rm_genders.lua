@@ -23,7 +23,7 @@ RestoredMonsterPack.Nonmale = {
 	{ID = mod:SpecialEnt("Strifer"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Vessel (Antibirth)"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Chubby Bunny"), Affliction = "Woman"},
-	-- {ID = mod:SpecialEnt("Beard Bat"), Affliction = "Non-Binary"},
+	{ID = mod:SpecialEnt("Beard Bat"), Affliction = "Non-Binary"},
 }
 
 RestoredMonsterPack.LGBTQIA = {
@@ -33,7 +33,7 @@ RestoredMonsterPack.LGBTQIA = {
 	{ID = mod:SpecialEnt("Gilded Dumpling"), Affliction = "Gay"}, --bc pandora said they're gay as actual fuck
 	{ID = mod:SpecialEnt("Sporeling"), Affliction = "Ace"},
 	{ID = mod:SpecialEnt("Chubby Bunny"), Affliction = "Trans"},
-	-- {ID = mod:SpecialEnt("Beard Bat"), Affliction = "Trans"},
+	{ID = mod:SpecialEnt("Beard Bat"), Affliction = "Trans"},
 }
 
 function mod.MixFiendFolioStuff()

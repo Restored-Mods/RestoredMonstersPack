@@ -94,7 +94,8 @@ EntityVariant = {
 	CORPSE_EATER = Isaac.GetEntityVariantByName("​Corpse Eater"),
 	CARRION_RIDER = Isaac.GetEntityVariantByName("​Carrion Rider"),
 	STRIFER = Isaac.GetEntityVariantByName("​Strifer"), -- dummy strifer
-	FIRE_GRIMACE = Isaac.GetEntityVariantByName("Fire Grimace") -- for EntityType.ENTITY_BRIMSTONE_HEAD
+	FIRE_GRIMACE = Isaac.GetEntityVariantByName("Fire Grimace"), -- for EntityType.ENTITY_BRIMSTONE_HEAD
+	BEARD_BAT = Isaac.GetEntityVariantByName("Beard Bat"), -- for EntityType.ENTITY_BLIND_BAT
 }
 
 -- Projectile variants
@@ -483,9 +484,9 @@ function mod:replaceID(Type, Variant, SubType, GridIndex, Seed)
 		return {Type, EntityVariant.STRIFER, Variant}
 	end
 
-	-- if not FFGRACE and Type == EntityType.ENTITY_BLIND_BAT and Variant == EntityVariants.BEARD_BAT then
-	-- 	return {Type, 0, SubType}
-	-- end
+	if not FFGRACE and Type == EntityType.ENTITY_BLIND_BAT and Variant == EntityVariant.BEARD_BAT then
+		return {Type, 0, SubType}
+	end
 end
 mod:AddCallback(ModCallbacks.MC_PRE_ROOM_ENTITY_SPAWN, mod.replaceID)
 

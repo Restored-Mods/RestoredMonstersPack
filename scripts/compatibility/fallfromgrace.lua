@@ -33,7 +33,7 @@ if FFGRACE then
       {EntityType.ENTITY_BOOMFLY, 3, -1}, --dragon fly
 
       {EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.ECHO_BAT, 0},
-      {EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.BLIND_BAT, -1},
+      {EntityType.ENTITY_BLIND_BAT, 200, -1},
 
       {FFGRACE.ENT.POPCAP_CLUSTER.id, FFGRACE.ENT.POPCAP_CLUSTER.variant, -1},
       {FFGRACE.ENT.MUD_FLY.id, FFGRACE.ENT.MUD_FLY.variant, -1},
@@ -56,7 +56,7 @@ if FFGRACE then
       [EntityType.ENTITY_DUMPLING.." "..CutMonsterVariants.SCORCHLING] = "Fire",
 
       --[EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.ECHO_BAT.." "..CutMonsterVariants.CHUBBY_BUNNY] = "Spore",
-      -- [EntityType.BLIND_BAT.." "..CutMonsterVariants.BEARD_BAT] = "Spore",
+      [EntityType.ENTITY_BLIND_BAT.." "..EntityVariant.BEARD_BAT] = "Spore",
       [EntityType.ENTITY_DUMPLING.." "..EntityVariant.SPORELING] = "Spore",
 
       [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.RED_TNT] = "Blacklisted",
@@ -65,6 +65,6 @@ if FFGRACE then
     mod.CompatibilityReplace = {
       [EntityType.ENTITY_DUMPLING.." "..EntityVariant.SPORELING] = {EntityType.ENTITY_DUMPLING, EntityVariant.SKINLING, -1},
       [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.ECHO_BAT.." "..CutMonsterVariants.CHUBBY_BUNNY] = {EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.ECHO_BAT, -1},
-      -- [EntityType.BLIND_BAT.." "..CutMonsterVariants.BEARD_BAT] = {EntityType.BLIND_BAT, -1, -1},
+      [EntityType.ENTITY_BLIND_BAT.." "..EntityVariant.BEARD_BAT] = {EntityType.ENTITY_BLIND_BAT, 200, -1},
     }
   end
