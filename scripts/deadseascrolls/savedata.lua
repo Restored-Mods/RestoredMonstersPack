@@ -1,6 +1,6 @@
 SaveManager = include("scripts.deadseascrolls.save_manager")
 SaveManager.Init(RestoredMonsterPack)
-SaveManager.Load(true)
+SaveManager.Load()
 
 RestoredMonsterPack.DSSavedata = SaveManager.GetDeadSeaScrollsSave()
 
