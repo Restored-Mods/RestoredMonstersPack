@@ -10,7 +10,7 @@ local Settings = {
 	ShotSpeed = 9.25 -- The speed of the echo rings
 }
 
-mod.blindBatScreamInc = mod.blindBatScreamInc or 3 --dont ask
+RestoredMonsterPack.DSSavedata.blindBatScreamInc = RestoredMonsterPack.DSSavedata.blindBatScreamInc or 3 --dont ask
 
 local function Lerp(first, second, percent)
 	return (first + (second - first) * percent)
@@ -224,7 +224,7 @@ function mod:confusionShader(shaderName)
 
 		local targetPos = room:WorldToScreenPosition(shaderPosition)
 
-		distortion = Lerp(distortion, lerpTarget * (mod.blindBatScreamInc/3 + 1), .1)
+		distortion = Lerp(distortion, lerpTarget * (RestoredMonsterPack.DSSavedata.blindBatScreamInc/3 + 1), .1)
 		if confusedCount > 0 then
 			lerpTarget = .4
 		else

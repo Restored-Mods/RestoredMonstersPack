@@ -24,7 +24,7 @@ local checkvar = Isaac.GetEntityVariantByName("​Vessel (Antibirth)")
 function mod:vesselCheckForLegOrWhateverTheFuckDSSSays()
     for i, entity in ipairs(Isaac.GetRoomEntities()) do
         if entity.Type == 858 then
-            if mod.vesselType == 2 then
+            if RestoredMonsterPack.DSSavedata.vesselType == 2 then
                 checkvar = 200
             else
                 checkvar = 1
