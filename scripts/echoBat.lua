@@ -415,14 +415,15 @@ end
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.chubbyBunnyDeath, EntityType.ENTITY_CUTMONSTERS)
 
 function mod:chubbyBunnyProjectileUpdate(projectile)
-	if FFGRACE then
+	if FFGRACE and projectile.SpawnerEntity and projectile.SpawnerType == EntityType.ENTITY_CUTMONSTERS and projectile.SpawnerVariant ==
+	CutMonsterVariants.ECHO_BAT then
 		FFGRACE:MakeSporeTrail(projectile, .75)
 	end
 end
 mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, mod.chubbyBunnyProjectileUpdate)
 
 function mod:chubbyBunnyProjectileCollision(projectile)
-	if projectile.SpawnerEntity and projectile.SpawnerType == EntityType.ENTITY_CUTMONSTERS and projectile.SpawnerVariant ==
+	if  FFGRACE and projectile.SpawnerEntity and projectile.SpawnerType == EntityType.ENTITY_CUTMONSTERS and projectile.SpawnerVariant ==
 	CutMonsterVariants.ECHO_BAT then
 		projectile:Remove()
 		FFGRACE:MakeSporeExplosion(projectile.Position, projectile.SpawnerEntity, .75)
