@@ -23,7 +23,7 @@ RestoredMonsterPack.Nonmale = {
 	{ID = mod:SpecialEnt("Strifer"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Vessel (Antibirth)"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Chubby Bunny"), Affliction = "Woman"},
-	{ID = mod:SpecialEnt("Beard Bat"), Affliction = "Non-Binary"},
+	{ID = mod:SpecialEnt("Beard Bat"), Affliction = "Non-Binary"}, --they arent women because girls dont fart
 }
 
 RestoredMonsterPack.LGBTQIA = {

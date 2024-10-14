@@ -283,6 +283,14 @@ if FFGRACE then
 	end, EntityType.ENTITY_CUTMONSTERS)
 end
 
+local function projectileKill(entity)
+	for _, proj in pairs(Isaac.FindByType(EntityType.ENTITY_PROJECTILE, ProjectileVariant.PROJECTILE_TEAR)) do
+		if proj.SpawnerEntity and GetPtrHash(proj.SpawnerEntity) == GetPtrHash(entity) then
+			proj:Remove()
+			FFGRACE:MakeSporeExplosion(proj.Position, proj.SpawnerEntity, .75)
+		end
+	end
+end
 
 function mod:chubbyBunnyInit(entity)
   if entity.Variant == CutMonsterVariants.ECHO_BAT and entity.SubType == CutMonsterVariants.CHUBBY_BUNNY then
@@ -361,26 +369,32 @@ function mod:chubbyBunnyUpdate(entity)
 		params.Variant = ProjectileVariant.PROJECTILE_TEAR
 		params.Color = Color(1,0.6,0,1,0.4,0.2)
 		params.FallingAccelModifier = -0.1
+		params.BulletFlags = ProjectileFlags.BOUNCE
 
 		if sprite:IsEventTriggered("Sound") then
 			entity:PlaySound(SoundEffect.SOUND_SHAKEY_KID_ROAR, 1.5, 0, false, 1.5)
 
 		elseif sprite:IsEventTriggered("Shoot") then
-			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed * 1.25, 0, params)
+			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed * 1, 0, params)
+			entity:PlaySound(SoundEffect.SOUND_WHEEZY_COUGH, 1, 0, false, 1.2)
 		elseif sprite:IsEventTriggered("Shoot2") then
-			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed * 1.1, 0, params)
+			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed * 1.2, 0, params)
+			entity:PlaySound(SoundEffect.SOUND_WHEEZY_COUGH, 1, 0, false, 1.2)
+		elseif sprite:IsEventTriggered("Shoot3") then
+			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed * 1.4, 0, params)
+			entity:PlaySound(SoundEffect.SOUND_WHEEZY_COUGH, 1, 0, false, 1.2)
 		elseif sprite:IsEventTriggered("Cough") then
-			entity:FireProjectiles(entity.Position, (target.Position - entity.Position):Normalized() * Settings.ShotSpeed / 1.2, 0, params)
 			entity:PlaySound(SoundEffect.SOUND_WHEEZY_COUGH, 1.5, 0, false, 1.2)
+			projectileKill(entity)
 		end
-  else
-    entity.Velocity = Vector.Zero
-    if sprite:IsEventTriggered("Explode") then
-      FFGRACE:MakeSporeExplosion(entity.Position, entity.SpawnerEntity, 1)
-      entity:Kill()
-    end
-	end
-  end
+ 	else
+		entity.Velocity = Vector.Zero
+		if sprite:IsEventTriggered("Explode") then
+			FFGRACE:MakeSporeExplosion(entity.Position, entity.SpawnerEntity, 1)
+			entity:Kill()
+			end
+		end
+  	end
 end
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.chubbyBunnyUpdate, EntityType.ENTITY_CUTMONSTERS)
 
@@ -400,30 +414,18 @@ function mod:chubbyBunnyDeath(target, damageAmount, damageFlags, damageSource, d
 end
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.chubbyBunnyDeath, EntityType.ENTITY_CUTMONSTERS)
 
-local function projectileKill(projectile)
-	if projectile.SpawnerEntity and projectile.SpawnerType == EntityType.ENTITY_CUTMONSTERS and projectile.SpawnerVariant == CutMonsterVariants.ECHO_BAT
-	and projectile.SpawnerEntity.SubType == CutMonsterVariants.CHUBBY_BUNNY and FFGRACE then
-
-		projectile:Kill()
-		FFGRACE:MakeSporeExplosion(projectile.Position, projectile.SpawnerEntity, .7)
-
-		for _, proj in pairs(Isaac.FindByType(EntityType.ENTITY_PROJECTILE, ProjectileVariant.PROJECTILE_TEAR)) do
-			if proj.SpawnerEntity and GetPtrHash(proj.SpawnerEntity) == GetPtrHash(projectile.SpawnerEntity) then
-				proj:Kill()
-				FFGRACE:MakeSporeExplosion(proj.Position, proj.SpawnerEntity, .5, true)
-			end
-		end
-	end
-end
-
 function mod:chubbyBunnyProjectileUpdate(projectile)
-	if projectile:CollidesWithGrid() then
-		projectileKill(projectile)
+	if FFGRACE then
+		FFGRACE:MakeSporeTrail(projectile, .75)
 	end
 end
 mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, mod.chubbyBunnyProjectileUpdate)
 
 function mod:chubbyBunnyProjectileCollision(projectile)
-	projectileKill(projectile)
+	if projectile.SpawnerEntity and projectile.SpawnerType == EntityType.ENTITY_CUTMONSTERS and projectile.SpawnerVariant ==
+	CutMonsterVariants.ECHO_BAT then
+		projectile:Remove()
+		FFGRACE:MakeSporeExplosion(projectile.Position, projectile.SpawnerEntity, .75)
+	end
 end
-mod:AddCallback(ModCallbacks.MC_PRE_PROJECTILE_COLLISION, mod.chubbyBunnyProjectileCollision, EntityType.ENTITY_PROJECTILE)
+mod:AddCallback(ModCallbacks.MC_PRE_PROJECTILE_COLLISION, mod.chubbyBunnyProjectileCollision, ProjectileVariant.PROJECTILE_TEAR)

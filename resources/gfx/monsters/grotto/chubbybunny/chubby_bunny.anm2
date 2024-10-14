@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="Reixen" CreatedOn="10/13/2024 3:18:47 PM" Version="31" Fps="30"/>
+	<Info CreatedBy="Reixen" CreatedOn="10/13/2024 6:20:56 PM" Version="32" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="lighting_eye.png" Id="0"/>
@@ -19,6 +19,7 @@
 			<Event Name="Shoot2" Id="2"/>
 			<Event Name="Cough" Id="3"/>
 			<Event Name="Explode" Id="4"/>
+			<Event Name="Shoot3" Id="5"/>
 		</Events>
 	</Content>
 	<Animations DefaultAnimation="Idle">
@@ -196,8 +197,9 @@
 			<Triggers>
 				<Trigger EventId="1" AtFrame="35"/>
 				<Trigger EventId="0" AtFrame="36"/>
-				<Trigger EventId="2" AtFrame="41"/>
-				<Trigger EventId="3" AtFrame="46"/>
+				<Trigger EventId="2" AtFrame="46"/>
+				<Trigger EventId="5" AtFrame="56"/>
+				<Trigger EventId="3" AtFrame="77"/>
 			</Triggers>
 		</Animation>
 		<Animation Name="Transform" FrameNum="26" Loop="false">
