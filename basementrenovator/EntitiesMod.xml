@@ -175,7 +175,15 @@
 <!-- FFG -->
 
 <!-- Chubby Bunny -->
-<entity Image="resources/ffg/Chubby Bunny.png" Name="Chubby Bunny" ID="200" Subtype="1" Variant="2407" BaseHP="20" Tags="Champion" Group="FFG" Kind="Restored Monsters Pack"/>
+<entity Image="resources/ffg/Chubby Bunny.png" Name="Chubby Bunny" ID="200" Subtype="1" Variant="2407" BaseHP="25" Tags="Champion" Group="FFG" Kind="Restored Monsters Pack"/>
+<!-- Beard Bat -->
+<entity Image="resources/ffg/Beard Bat.png" Name="Beard Bat" ID="803" Variant="2" Subtype="3" BaseHP="15" Group="FFG" Kind="Restored Monsters Pack">
+		<bitfield Key="Subtype">
+			<spinner Length="5" Minimum="1" Maximum="5" Name="Secondary Bats">
+                <tooltip>The amount of bats that are initially hidden and appear after the first bat is alerted</tooltip>
+            </spinner>
+	</bitfield>
+</entity>
 <!-- Sporeling -->
 <entity Image="resources/ffg/Sporeling.png" Name="Sporeling" ID="800" Subtype="0" Variant="7" BaseHP="8" StageHP="2" Tags="Champion" Group="FFG" Kind="Restored Monsters Pack"/>
 
