@@ -1,28 +1,28 @@
 local mod = RestoredMonsterPack
-local game = Game()
-local json = require("json")
 
-local DSSModName = "RestoredMonsterPack Mod DSS Menu"
+local DSSModName = "Dead Sea Scrolls (RestoredMonsterPack)"
 
 local DSSCoreVersion = 7
 
 local MenuProvider = {}
 
+local dsssaveManager = SaveManager.GetDeadSeaScrollsSave()
+
 function MenuProvider.SaveSaveData()
-	mod:SaveModData()
+    SaveManager.Save()
 end
 
 function MenuProvider.GetPaletteSetting()
-	return RestoredMonsterPack.savedata.MenuPalette
+	return dsssaveManager.MenuPalette
 end
 
 function MenuProvider.SavePaletteSetting(var)
-	RestoredMonsterPack.savedata.MenuPalette = var
+	dsssaveManager.MenuPalette = var
 end
 
 function MenuProvider.GetHudOffsetSetting()
 	if not REPENTANCE then
-		return RestoredMonsterPack.savedata.HudOffset
+		return dsssaveManager.HudOffset
 	else
 		return Options.HUDOffset * 10
 	end
@@ -30,59 +30,60 @@ end
 
 function MenuProvider.SaveHudOffsetSetting(var)
 	if not REPENTANCE then
-		RestoredMonsterPack.savedata.HudOffset = var
+		dsssaveManager.HudOffset = var
 	end
 end
 
 function MenuProvider.GetGamepadToggleSetting()
-	return RestoredMonsterPack.savedata.GamepadToggle
+	return dsssaveManager.GamepadToggle
 end
 
 function MenuProvider.SaveGamepadToggleSetting(var)
-	RestoredMonsterPack.savedata.GamepadToggle = var
+	dsssaveManager.GamepadToggle = var
 end
 
 function MenuProvider.GetMenuKeybindSetting()
-	return RestoredMonsterPack.savedata.MenuKeybind
+	return dsssaveManager.MenuKeybind
 end
 
 function MenuProvider.SaveMenuKeybindSetting(var)
-	RestoredMonsterPack.savedata.MenuKeybind = var
+	dsssaveManager.MenuKeybind = var
 end
 
 function MenuProvider.GetMenuHintSetting()
-	return RestoredMonsterPack.savedata.MenuHint
+	return dsssaveManager.MenuHint
 end
 
 function MenuProvider.SaveMenuHintSetting(var)
-	RestoredMonsterPack.savedata.MenuHint = var
+	dsssaveManager.MenuHint = var
 end
 
 function MenuProvider.GetMenuBuzzerSetting()
-	return RestoredMonsterPack.savedata.MenuBuzzer
+	return dsssaveManager.MenuBuzzer
 end
 
 function MenuProvider.SaveMenuBuzzerSetting(var)
-	RestoredMonsterPack.savedata.MenuBuzzer = var
+	dsssaveManager.MenuBuzzer = var
 end
 
 function MenuProvider.GetMenusNotified()
-	return RestoredMonsterPack.savedata.MenusNotified
+	return dsssaveManager.MenusNotified
 end
 
 function MenuProvider.SaveMenusNotified(var)
-	RestoredMonsterPack.savedata.MenusNotified = var
+	dsssaveManager.MenusNotified = var
 end
 
 function MenuProvider.GetMenusPoppedUp()
-	return RestoredMonsterPack.savedata.MenusPoppedUp
+	return dsssaveManager.MenusPoppedUp
 end
 
 function MenuProvider.SaveMenusPoppedUp(var)
-	RestoredMonsterPack.savedata.MenusPoppedUp = var
+	dsssaveManager.MenusPoppedUp = var
 end
-local DSSInitializerFunction = include("scripts.deadseascrolls.dssmenucore")
-local dssmod = DSSInitializerFunction(DSSModName, DSSCoreVersion, MenuProvider)
+
+local dssmenucore = include("scripts.deadseascrolls.dssmenucore")
+local dssmod = dssmenucore.init(DSSModName, MenuProvider)
 
 
 local restoreddirectory = {
@@ -149,6 +150,7 @@ local restoreddirectory = {
 
 }
 
+
 local restoreddirectorykey = {
     Item = restoreddirectory.main,
     Main = 'main',
@@ -159,8 +161,14 @@ local restoreddirectorykey = {
     Path = {},
 }
 
-DeadSeaScrollsMenu.AddMenu("Restored Monsters", {Run = dssmod.runMenu, Open = dssmod.openMenu, Close = dssmod.closeMenu, Directory = restoreddirectory, DirectoryKey = restoreddirectorykey})
-
+DeadSeaScrollsMenu.AddMenu("Restored Monsters", {
+    Run = dssmod.runMenu,
+    Open = dssmod.openMenu,
+    Close = dssmod.closeMenu,
+    UseSubMenu = false,
+    Directory = restoreddirectory,
+    DirectoryKey = restoreddirectorykey
+})
 
 
 function mod:IsSettingOn(setting)

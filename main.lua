@@ -109,6 +109,7 @@ EffectVariant.SCREAMER_AURA = 867
     DSS and savedata should (likely) be loaded first
 --]]--------------------------------------------------------
 
+include("scripts.deadseascrolls.save_manager")
 include("scripts.deadseascrolls.savedata")
 include("scripts.deadseascrolls.dssmain")
 include("scripts.deadseascrolls.changelogs")
