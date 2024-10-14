@@ -492,6 +492,11 @@ end
 mod:AddCallback(ModCallbacks.MC_PRE_ROOM_ENTITY_SPAWN, mod.replaceID)
 
 function mod:replaceByDummy(Type, Variant, SubType, _, _, _, Seed)
+	if REPENTOGON and Isaac.GetPersistentGameData():Unlocked(Achievement.THE_GATE_IS_OPEN) == false and mod.UnlockReplace[Type.." "..Variant.." "..SubType] or mod.UnlockReplace[Type.." "..Variant] then
+		local t = mod.UnlockReplace[Type.." "..Variant.." "..SubType] or mod.UnlockReplace[Type.." "..Variant]
+		return {t[1], t[2], t[3], Seed}
+	end
+
 	if mod.DummyReplace[Type] then
 		if mod.DummyReplace[Type][Variant] then
 			return {Type, mod.DummyReplace[Type][Variant], SubType, Seed}
@@ -514,6 +519,11 @@ mod.DummyReplace = {
 	--[EntityType.ENTITY_STRIFER] = {[0] = Isaac.GetEntityVariantByName("​Strifer")},
 	[EntityType.ENTITY_GRUB] = {[EntityVariant.CORPSE_EATER] = Isaac.GetEntityVariantByName("​Corpse Eater"),
 									[EntityVariant.CARRION_RIDER] = Isaac.GetEntityVariantByName("​Carrion Rider")},
+}
+
+mod.UnlockReplace = {
+	[EntityType.ENTITY_HOPPER.." ".. 1 .." "..EntityVariant.FRACTURE] = {EntityType.ENTITY_HOPPER, 1, -1}, --trite
+	[EntityVariant.FRACTURE.." ".. 0 .." ".. 0] = {EntityType.ENTITY_HOPPER, 1, -1}, --trite
 }
 
 local ign = false
