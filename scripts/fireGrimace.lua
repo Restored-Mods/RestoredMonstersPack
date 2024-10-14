@@ -74,7 +74,7 @@ end
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.fireGrimaceUpdate, EntityType.ENTITY_BRIMSTONE_HEAD)
 
 function mod:fireGrimaceProjectileCollision(projectile, target, bool)
-	if projectile.SpawnerType == EntityType.ENTITY_BRIMSTONE_HEAD and projectile.SpawnerVariant == 2500 and target.Type >= 10 then
+	if projectile.SpawnerType == EntityType.ENTITY_BRIMSTONE_HEAD and projectile.SpawnerVariant == EntityVariant.FIRE_GRIMACE and target:ToNPC() then
 		if (target.Type == EntityType.ENTITY_GAPER and target.Variant == 1)
 		or ((target.Type == EntityType.ENTITY_CLOTTY or target.Type == EntityType.ENTITY_HOPPER or target.Type == EntityType.ENTITY_FATTY
 		or target.Type == EntityType.ENTITY_ROCK_SPIDER or target.Type == EntityType.ENTITY_GYRO) and target.Variant == 0) then

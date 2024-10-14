@@ -14,7 +14,7 @@ AMLblacklistEntry(blacklist, Type, Variant, SubType, operation)
 	setting the Type or Variant to -1 will include all variants or subtypes
 
 Checking for blacklist entries:
-inAMLblacklist(blacklist, checkType, checkVariant, checkSubType)
+mod:inAMLblacklist(blacklist, checkType, checkVariant, checkSubType)
 	there are 3 possible blacklists: "Coil", "Necromancer" and "Corpse Eater"
 	returns true if the specified entity is in the blacklist, returns false otherwise
 	setting the Type or Variant to -1 will include all variants or subtypes
@@ -24,7 +24,7 @@ inAMLblacklist(blacklist, checkType, checkVariant, checkSubType)
 	HOW TO USE CORPSE EATER EFFECT FUNCTIONS:
 
 Adding / Removing entry:
-EatenEffectEntry(Type, Variant, SubType, operation, effect)
+mod:EatenEffectEntry(Type, Variant, SubType, operation, effect)
 	there are 5 possible effects: "small" (reduced effects, no projectiles), "bone", "poop", "stone", "dank" (unique projectiles)
 	if an entity doesn't have an effect entry it will default to regular blood projectiles with occasional bone ones
 	the possible operations are "add" and "remove"
@@ -32,7 +32,7 @@ EatenEffectEntry(Type, Variant, SubType, operation, effect)
 	setting the Type or Variant to -1 will include all variants or subtypes
 
 Checking for effect entries:
-GetEatenEffect(checkType, checkVariant, checkSubType)
+mod:GetEatenEffect(checkType, checkVariant, checkSubType)
 	returns the entities effect group as a string if it has an entry, returns false otherwise
 	setting the Type or Variant to -1 will include all variants or subtypes
 --/////////////////////////////////////////]]--
@@ -72,7 +72,8 @@ CutMonsterVariants = {
 	FUSEDCELLS = Isaac.GetEntityVariantByName("Fused Cells"),
 	TISSUE = Isaac.GetEntityVariantByName("Tissue"),
 	GRAVEROBBER = 2503,
-	SPLASHY = Isaac.GetEntityVariantByName("Splashy Long Legs")
+	SPLASHY = Isaac.GetEntityVariantByName("Splashy Long Legs"),
+	STICKY = 1, --subtype
 }
 
 -- Variants of already existing entities
@@ -93,6 +94,8 @@ EntityVariant = {
 	CORPSE_EATER = Isaac.GetEntityVariantByName("​Corpse Eater"),
 	CARRION_RIDER = Isaac.GetEntityVariantByName("​Carrion Rider"),
 	STRIFER = Isaac.GetEntityVariantByName("​Strifer"), -- dummy strifer
+	FIRE_GRIMACE = Isaac.GetEntityVariantByName("Fire Grimace"), -- for EntityType.ENTITY_BRIMSTONE_HEAD
+	BEARD_BAT = Isaac.GetEntityVariantByName("Beard Bat"), -- for EntityType.ENTITY_BLIND_BAT
 }
 
 -- Projectile variants
@@ -103,6 +106,15 @@ ProjectileVariant.PROJECTILE_STAPLE = 108
 -- Effect variants
 EffectVariant.NIGHTWATCH_SPOTLIGHT = 842
 EffectVariant.SCREAMER_AURA = 867
+
+
+--[[--------------------------------------------------------
+    Util functions
+--]]--------------------------------------------------------
+
+function mod:RandomIntBetween(rng, value1, value2)
+	return rng:RandomInt(value2 - value1) + value1
+end
 
 
 --[[--------------------------------------------------------
@@ -124,7 +136,6 @@ include("scripts.graverobber")
 include("scripts.splashyLongLegs")
 include("scripts.fireGrimace")
 include("scripts.bloodworm")
-include("scripts.canary")
 include("scripts.corpseEaters")
 include("scripts.dumplings")
 include("scripts.fracture")
@@ -137,7 +148,6 @@ include("scripts.barfy")
 include("scripts.strifers")
 include("scripts.nightwatch")
 include("scripts.vessel")
-include("scripts.coils")
 include("scripts.screamer")
 include("scripts.redTNT")
 include("scripts.palevessel")
@@ -146,13 +156,15 @@ include("scripts.palevessel")
     misc
 --]]--------------------------------------------------------
 
+mod.CompatibilityReplace = {} --this gets filled in
+
 include("scripts.revelCompat")
 include("scripts.compatibility.retribution.baptismal_preloader")
-include("scripts.compatibility.retribution.tc_downgrades")
-include("scripts.compatibility.retribution.tc_upgrades")
-include("scripts.compatibility.boiler")
+include("scripts.compatibility.retribution.rm_downgrades")
+include("scripts.compatibility.retribution.rm_upgrades")
+include("scripts.compatibility.fallfromgrace")
 if StageAPI then
-	include("scripts.compatibility.fiend folio.tc_genders")
+	include("scripts.compatibility.fiend folio.rm_genders")
 	StageAPI.AddEntities2Function(require("scripts.entities2"))
 end
 
@@ -160,14 +172,6 @@ end
     Blacklists
 --]]--------------------------------------------------------
 
-local coil_blacklist = {
-	{EntityType.ENTITY_LUMP, -1, -1},
-	{EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.COIL, -1},
-	{EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.RED_TNT, -1},
-	{EntityType.ENTITY_GRUB, 100, 1}, -- Corpse eater body
-	{EntityType.ENTITY_EVIS, 10, -1}, -- Evis cord
-	{EntityType.ENTITY_NEEDLE, -1, -1},
-}
 
 local necromancer_blacklist = {
 	{EntityType.ENTITY_BONY, -1, CutMonsterVariants.NECROMANCER}, -- Bonys spawned by Necromancers
@@ -210,9 +214,9 @@ local corpse_eater_blacklist = {
 }
 
 -- Add / remove blacklist entry
-function AMLblacklistEntry(blacklist, Type, Variant, SubType, operation)
+function mod:AMLblacklistentry(blacklist, Type, Variant, SubType, operation)
 	-- Error checking
-	if blacklist ~= "Coil" and blacklist ~= "Necromancer" and blacklist ~= "Corpse Eater" then
+	if blacklist ~= "Necromancer" and blacklist ~= "Corpse Eater" then
 		print("[CMP] Error adding / removing blacklist entry:\n   Incorrect blacklist: " .. blacklist)
 	end
 	if operation ~= "add" and operation ~= "remove" then
@@ -222,9 +226,7 @@ function AMLblacklistEntry(blacklist, Type, Variant, SubType, operation)
 
 	-- Get blacklist
 	local checkList = {}
-	if blacklist == "Coil" then
-		checkList = coil_blacklist
-	elseif blacklist == "Necromancer" then
+	if blacklist == "Necromancer" then
 		checkList = necromancer_blacklist
 	elseif blacklist == "Corpse Eater" then
 		checkList = corpse_eater_blacklist
@@ -257,16 +259,14 @@ function AMLblacklistEntry(blacklist, Type, Variant, SubType, operation)
 end
 
 -- Check if the entity is in the blacklist or not
-function inAMLblacklist(blacklist, checkType, checkVariant, checkSubType)
-	if blacklist ~= "Coil" and blacklist ~= "Necromancer" and blacklist ~= "Corpse Eater" then
+function mod:inAMLblacklist(blacklist, checkType, checkVariant, checkSubType)
+	if blacklist ~= "Necromancer" and blacklist ~= "Corpse Eater" then
 		print("[CMP] Error checking blacklist:\n   Incorrect blacklist: " .. blacklist)
 		return
 	end
 
 	local checkList = {}
-	if blacklist == "Coil" then
-		checkList = coil_blacklist
-	elseif blacklist == "Necromancer" then
+	if blacklist == "Necromancer" then
 		checkList = necromancer_blacklist
 	elseif blacklist == "Corpse Eater" then
 		checkList = corpse_eater_blacklist
@@ -279,8 +279,6 @@ function inAMLblacklist(blacklist, checkType, checkVariant, checkSubType)
 	end
 	return false
 end
-
-
 
 --[[--------------------------------------------------------
     Corpse eater death effects for enemies
@@ -369,7 +367,7 @@ local corpse_eater_effects = {
 }
 
 -- Add / remove Corpse Eater effects
-function EatenEffectEntry(Type, Variant, SubType, operation, effect)
+function mod:EatenEffectEntry(Type, Variant, SubType, operation, effect)
 	-- Error checking
 	if effect ~= "small" and effect ~= "bone" and effect ~= "stone" and effect ~= "poop" and effect ~= "dank" then
 		print("[CMP] Error adding / removing Corpse eater effect entry:\n   Unknown effect: " .. effect)
@@ -420,7 +418,7 @@ function EatenEffectEntry(Type, Variant, SubType, operation, effect)
 end
 
 -- Get Corpse eater effect
-function GetEatenEffect(checkType, checkVariant, checkSubType)
+function mod:GetEatenEffect(checkType, checkVariant, checkSubType)
 	for effect,effectlist in pairs(corpse_eater_effects) do
 		for i,entry in pairs(effectlist) do
 			if checkType == entry[1] and (entry[2] == -1 or checkVariant == entry[2]) and (entry[3] == -1 or checkSubType == entry[3]) then
@@ -431,6 +429,27 @@ function GetEatenEffect(checkType, checkVariant, checkSubType)
 	return false
 end
 
+--if an entity is a listed entry in a table
+function mod:EntityInList(entity, list)
+	for _, entry in pairs(list) do
+		if entity.Type == entry[1] and (entry[2] == -1 or entity.Variant == entry[2]) and (entry[3] == -1 or entity.SubType == entry[3]) then
+			return true
+		end
+	end
+	return false
+end
+
+function mod:MixTables(input, table)
+    if input and table then
+        for k, v in pairs(table) do
+            if type(input[k]) == "table" and type(v) == "table" then
+                mod:MixTables(input[k], v)
+            else
+                input[k] = v
+            end
+        end
+    end
+end
 
 
 --[[--------------------------------------------------------
@@ -455,7 +474,7 @@ function mod:replaceID(Type, Variant, SubType, GridIndex, Seed)
 		return {EntityType.ENTITY_DUMPLING, EntityVariant.GILDED_DUMPLING, SubType}
 
 	--[[ FRACTURE ]]--
-	elseif Type == 801 and Variant == 0 and SubType == 0 then
+	elseif Type == EntityVariant.FRACTURE and Variant == 0 and SubType == 0 then
 		return {EntityType.ENTITY_HOPPER, 1, EntityVariant.FRACTURE}
 
 	--[[ RED TNT ]]--
@@ -464,6 +483,10 @@ function mod:replaceID(Type, Variant, SubType, GridIndex, Seed)
 	end
 	if EntityType.ENTITY_STRIFER == Type then
 		return {Type, EntityVariant.STRIFER, Variant}
+	end
+
+	if not FFGRACE and Type == EntityType.ENTITY_BLIND_BAT and Variant == EntityVariant.BEARD_BAT then
+		return {Type, 0, SubType}
 	end
 end
 mod:AddCallback(ModCallbacks.MC_PRE_ROOM_ENTITY_SPAWN, mod.replaceID)
@@ -474,14 +497,16 @@ function mod:replaceByDummy(Type, Variant, SubType, _, _, _, Seed)
 			return {Type, mod.DummyReplace[Type][Variant], SubType, Seed}
 		end
 	end
+
+	if mod.CompatibilityReplace[Type.." "..Variant.." "..SubType] or mod.CompatibilityReplace[Type.." "..Variant] then
+		local t = mod.CompatibilityReplace[Type.." "..Variant.." "..SubType] or mod.CompatibilityReplace[Type.." "..Variant]
+		return {t[1], t[2], t[3], Seed}
+	end
 end
 mod:AddCallback(ModCallbacks.MC_PRE_ENTITY_SPAWN, mod.replaceByDummy)
 
 mod.DummyReplace = {
 	[EntityType.ENTITY_VESSEL] = {[0] = Isaac.GetEntityVariantByName("​Vessel (Antibirth)")}, --200},
-	[EntityType.ENTITY_CANARY] = {[0] = Isaac.GetEntityVariantByName("​Canary"), --200, 
-									[1] = Isaac.GetEntityVariantByName("​Foreigner")}, --201},
-	[EntityType.ENTITY_EXORCIST] = {[0] = Isaac.GetEntityVariantByName("​Exorcist")}, --200},
 	[EntityType.ENTITY_BLIND_BAT] = {[0] = Isaac.GetEntityVariantByName("​Blind Bat")}, --200},
 	[EntityType.ENTITY_RAGE_CREEP] = {[1] = Isaac.GetEntityVariantByName("​Split Rage Creep")}, --200},
 	[EntityType.ENTITY_WALL_CREEP] = {[2] = Isaac.GetEntityVariantByName("​Rag Creep")}, --200},
@@ -496,7 +521,7 @@ function mod:MostDumbThing(ent)
 	local dumb = mod.DumbhackReplace[ent.Type]
 	if dumb then
 		local ovar,vvar = dumb[1], dumb[2]
-		
+
 		if not ign and ent.Variant == vvar and ent.FrameCount > 1 then
 			ign = true
 			local spr = ent:GetSprite()
@@ -518,22 +543,4 @@ mod:AddPriorityCallback(ModCallbacks.MC_PRE_NPC_UPDATE, 1000, mod.MostDumbThing)
 mod.DumbhackReplace = {
 	[EntityType.ENTITY_RAGE_CREEP] = {1, Isaac.GetEntityVariantByName("​Split Rage Creep")},
 	[EntityType.ENTITY_WALL_CREEP] = {2, Isaac.GetEntityVariantByName("​Rag Creep")},
-}
-
-mod.Nonmale = {
-	{ID = {Isaac.GetEntityTypeByName("Splashy Long Legs"), Isaac.GetEntityVariantByName("Splashy Long Legs")}, Affliction = "Woman"}, --Splashy Long Legs
-	{ID = {Isaac.GetEntityTypeByName("Sticky Long Legs"), Isaac.GetEntityVariantByName("Sticky Long Legs"), 1}, Affliction = "Woman"}, --Sticky Long Legs
-	{ID = {Isaac.GetEntityTypeByName("Scab"), Isaac.GetEntityVariantByName("Scab")}, Affliction = "Woman"}, --Scab
-	{ID = {Isaac.GetEntityTypeByName("Mortling"), Isaac.GetEntityVariantByName("Mortling")}, Affliction = "Woman"}, --Mortling
-	{ID = {Isaac.GetEntityTypeByName("​Fracture"), Isaac.GetEntityVariantByName("​Fracture"), 801}, Affliction = "Woman"}, --Fracture
-	{ID = {Isaac.GetEntityTypeByName("Echo Bat"), Isaac.GetEntityVariantByName("Echo Bat")}, Affliction = "Woman"}, --Echo Bat
-	{ID = {Isaac.GetEntityTypeByName("​Corpse Eater"), Isaac.GetEntityVariantByName("​Corpse Eater")}, Affliction = "Woman"}, --Corpse Eater
-	{ID = {Isaac.GetEntityTypeByName("​Foreigner"), Isaac.GetEntityVariantByName("​Foreigner")}, Affliction = "Woman"}, --Foreigner
-	{ID = {Isaac.GetEntityTypeByName("Screamer"), Isaac.GetEntityVariantByName("Screamer")}, Affliction = "Woman"}, --Screamer
-	--{ID = {Isaac.GetEntityTypeByName("Cell"), Isaac.GetEntityVariantByName("Cell")}, Affliction = "Woman"}, --Cell BC WESTRVN SAID SO ):
-	{ID = {Isaac.GetEntityTypeByName("Fused Cells"), Isaac.GetEntityVariantByName("Fused Cells")}, Affliction = "Woman"}, --Fused Cell
-	--{ID = {Isaac.GetEntityTypeByName("Tissue"), Isaac.GetEntityVariantByName("Tissue")}, Affliction = "Woman"}, --Tissue ALSO BC WESTRVN SAID SO ):
-	{ID = {Isaac.GetEntityTypeByName("Grave Robber"), Isaac.GetEntityVariantByName("Grave Robber")}, Affliction = "Woman"}, --Grave Robber
-	{ID = {Isaac.GetEntityTypeByName("​Strifer"), Isaac.GetEntityVariantByName("Strifer")}, Affliction = "Woman"}, --Strifer
-	{ID = {Isaac.GetEntityTypeByName("Vessel (Anitbirth)"), Isaac.GetEntityVariantByName("Vessel (Antibirth)")}, Affliction = "Woman"}, --Vessel (rework)
 }

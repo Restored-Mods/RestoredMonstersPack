@@ -62,7 +62,6 @@ function mod:CorpseEaterInit(entity)
 		entity.ProjectileCooldown = Settings.BonyCooldown
 		entity:AddEntityFlags(EntityFlag.FLAG_NO_KNOCKBACK | EntityFlag.FLAG_NO_PHYSICS_KNOCKBACK)
 
-
 		-- Set spritesheet
 		data.altSkin = ""
 		if (stage == LevelStage.STAGE3_1 or stage == LevelStage.STAGE3_2) and level:GetStageType() == StageType.STAGETYPE_REPENTANCE_B then
@@ -73,12 +72,13 @@ function mod:CorpseEaterInit(entity)
 
 		if data.altSkin ~= "" then
 			local sprite = entity:GetSprite()
-			sprite:ReplaceSpritesheet(0, "gfx/monsters/repentance/239.100_corpse_eater"		  .. data.altSkin .. ".png")
-			sprite:ReplaceSpritesheet(1, "gfx/monsters/repentance/239.100_corpse_eater_body"  .. data.altSkin .. ".png")
-			sprite:ReplaceSpritesheet(2, "gfx/monsters/repentance/239.100_corpse_eater_rider" .. data.altSkin .. ".png")
-			sprite:ReplaceSpritesheet(3, "gfx/monsters/repentance/239.100_corpse_eater_rider" .. data.altSkin .. ".png")
-			sprite:LoadGraphics()
+			sprite:ReplaceSpritesheet(0, "gfx/monsters/restored/corpseeater/corpse_eater"		  .. data.altSkin .. ".png")
+			sprite:ReplaceSpritesheet(1, "gfx/monsters/restored/corpseeater/corpse_eater_body"  .. data.altSkin .. ".png")
+			sprite:ReplaceSpritesheet(2, "gfx/monsters/restored/corpseeater/corpse_eater_rider" .. data.altSkin .. ".png")
+			sprite:ReplaceSpritesheet(3, "gfx/monsters/restored/corpseeater/corpse_eater_rider" .. data.altSkin .. ".png")
+      sprite:LoadGraphics()
 		end
+
 		entity.Variant = entity.Variant == EntityVariant.VANILLA_CORPSE_EATER and EntityVariant.CORPSE_EATER
 			or entity.Variant == EntityVariant.VANILLA_CARRION_RIDER and EntityVariant.CARRION_RIDER
 			or entity.Variant
@@ -96,7 +96,7 @@ function mod:CorpseEaterUpdate(entity)
 		-- Get new target
 		local function getTarget()
 			for i, enemy in pairs(Isaac.FindInRadius(entity.Position, Settings.DetectionRange, EntityPartition.ENEMY)) do
-				if enemy:IsVulnerableEnemy() and entity.Pathfinder:HasPathToPos(enemy.Position, true) and inAMLblacklist("Corpse Eater", enemy.Type, enemy.Variant, enemy.SubType) == false then
+				if enemy:IsVulnerableEnemy() and entity.Pathfinder:HasPathToPos(enemy.Position, true) and mod:inAMLblacklist("Corpse Eater", enemy.Type, enemy.Variant, enemy.SubType) == false then
 					entity.Target = enemy
 					data.GiveUpTime = Settings.GiveUpTime
 				end
@@ -141,7 +141,7 @@ function mod:CorpseEaterUpdate(entity)
 		-- Spawn the body if it doesn't already have one
 		if not entity.Parent and not entity.Child then
 			if entity.FrameCount <= 1 then
-				Isaac.Spawn(EntityType.ENTITY_GRUB, EntityVariant.VANILLA_CORPSE_EATER, 1, entity.Position - Vector(30, 0), Vector.Zero, nil):GetData().headIndex = entity.Index
+				Isaac.Spawn(EntityType.ENTITY_GRUB, EntityVariant.CORPSE_EATER, 1, entity.Position - Vector(30, 0), Vector.Zero, nil):GetData().headIndex = entity.Index
 
 			elseif entity.FrameCount > 1 then
 				entity:Remove()
@@ -204,7 +204,7 @@ function mod:CorpseEaterUpdate(entity)
 					for i = 0, 5 do
 						sprite:ReplaceSpritesheet(i + 3, "")
 					end
-					sprite:ReplaceSpritesheet(3, "gfx/monsters/repentance/239.100_corpse_eater_rider" .. data.altSkin .. ".png")
+					sprite:ReplaceSpritesheet(3, "gfx/monsters/restored/corpseeater/corpse_eater_rider" .. data.altSkin .. ".png")
 					sprite:LoadGraphics()
 				end
 			end
@@ -246,7 +246,7 @@ function mod:CorpseEaterUpdate(entity)
 				for i = 0, 5 do
 					sprite:ReplaceSpritesheet(i + 3, "")
 				end
-				sprite:ReplaceSpritesheet(angle, "gfx/monsters/repentance/239.100_corpse_eater_rider" .. data.altSkin .. ".png")
+				sprite:ReplaceSpritesheet(angle, "gfx/monsters/restored/corpseeater/corpse_eater_rider" .. data.altSkin .. ".png")
 				sprite:LoadGraphics()
 			end
 		end
@@ -270,7 +270,7 @@ function mod:CorpseEaterCollision(entity, target, cum)
 			data.ChompCooldown = Settings.ChompCooldown
 
 			-- Effects
-			local effect = GetEatenEffect(target.Type, target.Variant, target.SubType)
+			local effect = mod:GetEatenEffect(target.Type, target.Variant, target.SubType)
 			if effect == false or effect == "dank" then -- No specified effect / dank
 				Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.POOF02, 4, target.Position, Vector.Zero, nil):GetSprite().Color = target.SplatColor
 				entity:PlaySound(SoundEffect.SOUND_MEATY_DEATHS, 0.75, 0, false, 1)
@@ -305,7 +305,7 @@ function mod:CorpseEaterCollision(entity, target, cum)
 					entity:PlaySound(SoundEffect.SOUND_SMB_LARGE_CHEWS_4, 1.5, 0, false, 1)
 
 					-- Set skin to bloody one
-					entity:GetSprite():ReplaceSpritesheet(0, "gfx/monsters/repentance/239.100_corpse_eater_2" .. data.altSkin .. ".png")
+					entity:GetSprite():ReplaceSpritesheet(0, "gfx/monsters/restored/corpseeater/corpse_eater_2" .. data.altSkin .. ".png")
 					entity:GetSprite():LoadGraphics()
 
 					-- Projectiles

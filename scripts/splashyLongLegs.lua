@@ -138,7 +138,7 @@ function mod:splashyLongLegsUpdate(entity)
 					params.FallingAccelModifier = 0.1
 					entity:FireBossProjectiles(9, Vector.Zero, 12, params)
 
-				elseif entity.SubType == 1 then
+				elseif entity.SubType == CutMonsterVariants.STICKY then
 					SFXManager():Play(SoundEffect.SOUND_MEAT_JUMPS)
 
 					-- Creep
@@ -151,7 +151,7 @@ function mod:splashyLongLegsUpdate(entity)
 			if sprite:IsFinished("Attack") then
 				if entity.SubType == 0 then
 					entity.State = NpcState.STATE_MOVE
-				elseif entity.SubType == 1 then
+				elseif entity.SubType == CutMonsterVariants.STICKY then
 					entity.State = NpcState.STATE_ATTACK
 					entity.ProjectileCooldown = Settings.DragTime
 				end

@@ -28,7 +28,7 @@ function mod:fractureInit(entity)
 				end
 
 				for i = 0, sprite:GetLayerCount() do
-					sprite:ReplaceSpritesheet(i, "gfx/monsters/repentance/801.000_fracture" .. altSkin .. ".png")
+					sprite:ReplaceSpritesheet(i, "gfx/monsters/restored/fracture/fracture" .. altSkin .. ".png")
 				end
 				sprite:LoadGraphics()
 			end

@@ -1,7 +1,7 @@
 if not REPENTOGON then return end
 local mod = RestoredMonsterPack
 
--- TC ImGui menu
+-- ImGui menu
 if not ImGui.ElementExists("tcMods") then
     ImGui.CreateMenu("tcMods", "TC Mods")
 end

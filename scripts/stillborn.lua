@@ -42,14 +42,14 @@ function mod:stillbornInit(entity)
 				end
 
 				for i = 0, sprite:GetLayerCount() do
-					sprite:ReplaceSpritesheet(i, "gfx/monsters/repentance/802.000_stillborn" .. altSkin .. ".png")
+					sprite:ReplaceSpritesheet(i, "gfx/monsters/restored/stillborn/stillborn" .. altSkin .. ".png")
 				end
 				sprite:LoadGraphics()
 			elseif stype == StageType.STAGETYPE_AFTERBIRTH then
 				local altSkin = "_scarred_womb"
 
 				for i = 0, sprite:GetLayerCount() do
-					sprite:ReplaceSpritesheet(i, "gfx/monsters/repentance/802.000_stillborn" .. altSkin .. ".png")
+					sprite:ReplaceSpritesheet(i, "gfx/monsters/restored/stillborn/stillborn" .. altSkin .. ".png")
 				end
 				sprite:LoadGraphics()
 			end

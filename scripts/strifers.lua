@@ -105,7 +105,7 @@ function mod:StriferUpdate(entity)
 			end
 
 			for i = 0, sprite:GetLayerCount() - 1 do
-				sprite:ReplaceSpritesheet(i, "gfx/monsters/repentance/839.000_strifer" .. data.altSkin .. ischamp .. ".png")
+				sprite:ReplaceSpritesheet(i, "gfx/monsters/restored/strifer/strifer" .. data.altSkin .. ischamp .. ".png")
 			end
 			sprite:LoadGraphics()
 		end

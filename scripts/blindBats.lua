@@ -1,5 +1,6 @@
 local mod = RestoredMonsterPack
 local game = Game()
+local roomrng = RNG()
 
 local Settings = {
 	NumFollowerBats = 3, -- How many follower bats should spawn alongside the leader bat
@@ -22,6 +23,7 @@ local States = {
 	Spotted = 2,
 	Chasing = 3,
 	Charging = 4,
+	Transforming = 5,
 }
 
 local nextAlertTime = Settings.InitialAlertTime
@@ -61,30 +63,44 @@ local function awakenBats(var)
 	end
 end
 
-local function getAngleOffset(direction)
+local function getAngleOffset(rng, direction)
 	local multiplier = 1
 	if (direction == "down") then
 		multiplier = -1
 	end
 
-	return math.random(Settings.AngleOffset[1], Settings.AngleOffset[2]) * multiplier
+	return mod:RandomIntBetween(rng, Settings.AngleOffset[1], Settings.AngleOffset[2]) * multiplier
 end
 
 
 
 function mod:blindBatInit(bat)
 	local sprite = bat:GetSprite()
+	local rng = bat:GetDropRNG()
 	bat.EntityCollisionClass = EntityCollisionClass.ENTCOLL_NONE
 
 	bat:GetData().BlindBatData = {
-		AttackCountdown = math.random(Settings.AttackTime[1], Settings.AttackTime[2]),
+		AttackCountdown = mod:RandomIntBetween(rng, Settings.AttackTime[1], Settings.AttackTime[2]),
 		State = States.Hiding,
 		ChargeDirection = Vector.Zero,
-		AngleCountdown = math.random(Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2]),
-		AngleOffset = math.random(Settings.AngleOffset[1], Settings.AngleOffset[2]),
+		AngleCountdown = mod:RandomIntBetween(rng, Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2]),
+		AngleOffset = mod:RandomIntBetween(rng, Settings.AngleOffset[1], Settings.AngleOffset[2]),
 		AngleDirection = "up",
-		MoveVector = Vector.Zero
+		MoveVector = Vector.Zero,
+		AttackRange = Settings.AttackRange,
+		ChargeTime = Settings.ChargeTime,
 	}
+
+	if FFGRACE and bat.Variant == EntityVariant.BEARD_BAT then
+		bat:GetData().BlindBatData.ChargeTime = Settings.ChargeTime * 2
+		bat:GetData().BlindBatData.AttackRange = Settings.AttackRange * 2
+
+		if bat:GetData().SporeTransformed then
+			bat:GetData().BlindBatData.State = State.Transforming
+			sprite:Play("Transform",true)
+			bat:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+		end
+	end
 
 	if bat.SubType ~= 10 then --main bat
 		sprite:Play("Idle", true)
@@ -95,12 +111,13 @@ function mod:blindBatInit(bat)
 		end
 
 		for i = 1, Settings.NumFollowerBats do
-			local sbat = Isaac.Spawn(EntityType.ENTITY_BLIND_BAT, bat.Variant, 10, bat.Position + RandomVector():Resized(math.random(1, 50)), bat.Velocity, bat)
+			local sbat = Isaac.Spawn(EntityType.ENTITY_BLIND_BAT, bat.Variant, 10, bat.Position + RandomVector():Resized(mod:RandomIntBetween(rng, 1, 50)), bat.Velocity, bat)
 			sbat:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
 		end
 
 	elseif bat.SubType == 10 then --secondary bats
 		bat:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+		sprite:Play("IdleInvisible", true)
 	end
 end
 mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.blindBatInit, EntityType.ENTITY_BLIND_BAT)
@@ -110,7 +127,18 @@ function mod:blindBatUpdate(bat)
 	local batData = bat:GetData().BlindBatData
 	local batPos = bat.Position
 	local target = bat:GetPlayerTarget()
+	local rng = bat:GetDropRNG()
 
+	if FFGRACE and bat.Variant == EntityVariant.BEARD_BAT then
+		if bat:GetData().SporeTransformed and not batData.Trans then
+			sprite:Play("Transform",true)
+			batData.Trans = true
+			batData.State = States.Transforming
+		end
+		if bat:HasMortalDamage() then
+			bat.State = NpcState.STATE_DEATH
+		end
+	end
 
 	if batData.State == States.Hiding and bat.FrameCount > 1 then
 		if bat.SubType ~= 10 then --main bat
@@ -169,12 +197,16 @@ function mod:blindBatUpdate(bat)
 		batData.AttackCountdown = batData.AttackCountdown - 1
 		batData.AngleCountdown = batData.AngleCountdown - 1
 
-		if batData.AttackCountdown <= 0 and target.Position:Distance(batPos) <= Settings.AttackRange then
-			batData.AttackCountdown = Settings.ChargeTime
+		if batData.AttackCountdown <= 0 and target.Position:Distance(batPos) <= batData.AttackRange and target.Velocity:Length() > .1 then
+			batData.AttackCountdown = batData.ChargeTime
 			batData.ChargeDirection = (target.Position - batPos):Normalized()
 			batData.State = States.Charging
 			sprite:Play("Dash", true)
 			bat:PlaySound(SoundEffect.SOUND_SHAKEY_KID_ROAR, 1, 0, false, 1.2)
+			if bat.Variant == EntityVariant.BEARD_BAT and FFGRACE then
+				FFGRACE:MakeSporeExplosion(bat.Position, bat.SpawnerEntity, .5)
+				bat.Velocity = batData.ChargeDirection * Settings.ChargeSpeed * 2
+			end
 		end
 
 		if batData.AngleCountdown <= 0 then
@@ -183,19 +215,37 @@ function mod:blindBatUpdate(bat)
 			else
 				batData.AngleDirection = "up"
 			end
-			batData.AngleOffset = getAngleOffset(batData.AngleDirection)
-			batData.AngleCountdown = math.random(Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2])
+			batData.AngleOffset = getAngleOffset(rng, batData.AngleDirection)
+			batData.AngleCountdown = mod:RandomIntBetween(rng, Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2])
 		end
 
 
 	elseif batData.State == States.Charging then
-		bat.Velocity = batData.ChargeDirection * Settings.ChargeSpeed
+
+		if bat.Variant == EntityVariant.BEARD_BAT and FFGRACE then
+			FFGRACE:MakeSporeTrail(bat, 0.25)
+
+			batData.ChargeDirection = VecLerp(batData.ChargeDirection, (target.Position - batPos):Normalized(), .15)
+			bat.Velocity = VecLerp(bat.Velocity, batData.ChargeDirection * Settings.ChargeSpeed, .4)
+		else
+			bat.Velocity = batData.ChargeDirection * Settings.ChargeSpeed
+		end
 		batData.AttackCountdown = batData.AttackCountdown - 1;
 
 		if batData.AttackCountdown <= 0 then
-			batData.AttackCountdown = math.random(Settings.AttackTime[1], Settings.AttackTime[2])
+			batData.AttackCountdown = mod:RandomIntBetween(rng, Settings.AttackTime[1], Settings.AttackTime[2])
 			batData.State = States.Chasing
 			sprite:Play("Fly", true)
+		end
+
+
+	elseif batData.State == States.Transforming then
+		if sprite:IsPlaying("Transform") then
+			bat.Velocity = Vector.Zero
+		end
+		if sprite:IsFinished("Transform") then
+			sprite:Play("Fly", true)
+			batData.State = States.Chasing
 		end
 	end
 end
@@ -213,11 +263,12 @@ function mod:onBatUpdate()
 				bat:ToNPC():PlaySound(SoundEffect.SOUND_SHAKEY_KID_ROAR, 1, 0, false, 1.2)
 				bat:GetSprite():Play("FlyDown", true)
 				batData.State = States.Spotted
+				roomrng:SetSeed(bat.InitSeed, 35)
 			end
 		end
 
 		table.remove(batQueue, 1)
-		nextAlertTime = math.random(Settings.AlertTime[1], Settings.AlertTime[2])
+		nextAlertTime = mod:RandomIntBetween(roomrng, Settings.AlertTime[1], Settings.AlertTime[2]) or Settings.AlertTime[1]
 	end
 
 
@@ -242,3 +293,21 @@ function mod:batRemoval(bat)
 	end
 end
 mod:AddCallback(ModCallbacks.MC_POST_ENTITY_REMOVE, mod.batRemoval, EntityType.ENTITY_BLIND_BAT)
+
+function mod:batKill(bat)
+	if bat.Variant == EntityVariant.BEARD_BAT and FFGRACE then
+		FFGRACE:MakeSporeExplosion(bat.Position, bat.SpawnerEntity, .75)
+	end
+end
+mod:AddCallback(ModCallbacks.MC_POST_NPC_DEATH, mod.batKill, EntityType.ENTITY_BLIND_BAT)
+
+
+-- FFG compatibility
+if FFGRACE then
+	mod:AddCallback("POST_SPORE_INFECTION", function(_, npc, explosion)
+		if npc.Variant ~= EntityVariant.BEARD_BAT then
+			npc:ToNPC():PlaySound(SoundEffect.SOUND_VAMP_GULP, 1.25)
+			return {EntityType.ENTITY_BLIND_BAT, EntityVariant.BEARD_BAT, npc.Subtype}
+		end
+	end, EntityType.ENTITY_BLIND_BAT)
+end

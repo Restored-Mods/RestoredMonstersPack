@@ -24,8 +24,6 @@
     </stage>
     <stage Name="Gehenna">
         <Gfx>
-            <Entity ID="843" Variant="200" SubType="0" Image="resources/Canary Gehenna.png"/>
-            <Entity ID="843" Variant="201" SubType="0" Image="resources/Foreigner Gehenna.png"/>
             <Entity ID="239" Variant="200" SubType="0" Image="resources/Corpse Eater Gehenna.png"/>
             <Entity ID="239" Variant="201" SubType="0" Image="resources/Carrion Rider Gehenna.png"/>
             <Entity ID="839" Variant="0" SubType="0" Image="resources/Strifer (Left) Gehenna.png"/>
@@ -61,9 +59,9 @@
             <Entity ID="803" Variant="200" Subtype="3" Image="resources/rev2/Blind Bat Tomb.png"/>
         </Gfx>
     </stage>  -->
-    <stage Name="Boiler">
+    <!-- <stage Name="Boiler">
         <Gfx>
             <Entity ID="800" Variant="0" SubType="0" Image="resources/ffg/Dumpling Boiler.png"/>
         </Gfx>
-    </stage> 
+    </stage>  -->
 </data>

@@ -140,6 +140,27 @@ function mod:dumplingUpdate(npc)
 
 	if npc.State == NpcState.STATE_IDLE then -- if idling
 		sprite:Play("Idle")
+
+		if FFGRACE and npc.Variant == EntityVariant.SPORELING and not feared then --redefine target for sporeling
+			local closestDistance, closestTarget
+			for _, enemy in ipairs(Isaac.GetRoomEntities()) do
+				if mod:EntityInList(enemy, mod.sporeTransformable) then
+
+					local distanceToSporeling = enemy.Position:Distance(npc.Position)
+					if not closestDistance or closestDistance > distanceToSporeling then
+						closestTarget = enemy:ToNPC()
+						closestDistance = distanceToSporeling
+					end
+				end
+			end
+
+			if closestTarget then
+				player_position = closestTarget.Position
+				player_angle = (player_position - npc.Position):GetAngleDegrees()
+			end
+		end
+
+
 		if player_position:Distance(npc.Position) < 100 then -- if player is close
 			npc.State = NpcState.STATE_ATTACK
 			sprite:Play("Fart")
@@ -149,7 +170,7 @@ function mod:dumplingUpdate(npc)
 			add_velocity_and_flip(npc, Vector.FromAngle(player_angle + 180) * Vector(rng:RandomInt(3)+3, rng:RandomInt(3)+3))
 			sprite:Play("Move")
 
-		elseif (npc.Variant == EntityVariant.DUMPLING or npc.Variant == EntityVariant.SKINLING or npc.Variant == EntityVariant.SCORCHLING or npc.Variant == EntityVariant.GILDED_DUMPLING or EntityVariant.SPORELING) and rng:RandomInt(20) == 1 and not feared then -- move toward player slow
+		elseif (npc.Variant == EntityVariant.DUMPLING or npc.Variant == EntityVariant.SKINLING or npc.Variant == EntityVariant.SCORCHLING or npc.Variant == EntityVariant.GILDED_DUMPLING or npc.Variant == EntityVariant.SPORELING) and rng:RandomInt(20) == 1 and not feared then -- move toward player slow
 			npc.State = NpcState.STATE_MOVE
 			add_velocity_and_flip(npc, Vector.FromAngle(player_angle + (rng:RandomInt(160) - 80)) * Vector(rng:RandomInt(3)+3, rng:RandomInt(3)+3))
 			sprite:Play("Move")
@@ -163,6 +184,7 @@ function mod:dumplingUpdate(npc)
 			npc.State = NpcState.STATE_MOVE
 			add_velocity_and_flip(npc, Vector.FromAngle(player_angle + (rng:RandomInt(90) - 45)) * Vector(rng:RandomInt(3)+5, rng:RandomInt(3)+5))
 			sprite:Play("Move")
+
 		end
 
 
