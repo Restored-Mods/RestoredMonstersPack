@@ -45,9 +45,7 @@ if FFGRACE then
 
     }
 
-
-    FFGRACE.SkeeterEntData = {
-      [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.COIL] = "Hard",
+    FFGRACE.SkeeterEntData["RestoredMonsterPack"] = {
       [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.STILLBORN] = "Hard",
       [EntityType.ENTITY_BRIMSTONE_HEAD.." "..EntityVariant.FIRE_GRIMACE] = "Hard",
 
@@ -55,12 +53,17 @@ if FFGRACE then
 
       [EntityType.ENTITY_DUMPLING.." "..CutMonsterVariants.SCORCHLING] = "Fire",
 
-      --[EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.ECHO_BAT.." "..CutMonsterVariants.CHUBBY_BUNNY] = "Spore",
+      -- [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.ECHO_BAT.." "..CutMonsterVariants.CHUBBY_BUNNY] = "Spore",
+      [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.ECHO_BAT] = "Spore",  --doesnt accept subtype yet
       [EntityType.ENTITY_BLIND_BAT.." "..EntityVariant.BEARD_BAT] = "Spore",
       [EntityType.ENTITY_DUMPLING.." "..EntityVariant.SPORELING] = "Spore",
 
       [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.RED_TNT] = "Blacklisted",
     }
+    for key, entry in pairs(FFGRACE.SkeeterEntData["RestoredMonsterPack"]) do
+      FFGRACE.SkeeterEntData[key] = entry
+    end
+
   else
     mod.CompatibilityReplace = {
       [EntityType.ENTITY_DUMPLING.." "..EntityVariant.SPORELING] = {EntityType.ENTITY_DUMPLING, EntityVariant.SKINLING, -1},

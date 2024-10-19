@@ -287,7 +287,7 @@ local function projectileKill(entity)
 	for _, proj in pairs(Isaac.FindByType(EntityType.ENTITY_PROJECTILE, ProjectileVariant.PROJECTILE_TEAR)) do
 		if proj.SpawnerEntity and GetPtrHash(proj.SpawnerEntity) == GetPtrHash(entity) then
 			proj:Remove()
-			FFGRACE:MakeSporeExplosion(proj.Position, proj.SpawnerEntity, .75)
+			FFGRACE:MakeSporeExplosion(proj.Position, proj.SpawnerEntity, .6)
 		end
 	end
 end
@@ -426,7 +426,7 @@ function mod:chubbyBunnyProjectileCollision(projectile)
 	if  FFGRACE and projectile.SpawnerEntity and projectile.SpawnerType == EntityType.ENTITY_CUTMONSTERS and projectile.SpawnerVariant ==
 	CutMonsterVariants.ECHO_BAT and projectile.SpawnerEntity.SubType == CutMonsterVariants.CHUBBY_BUNNY then
 		projectile:Remove()
-		FFGRACE:MakeSporeExplosion(projectile.Position, projectile.SpawnerEntity, .75)
+		FFGRACE:MakeSporeExplosion(projectile.Position, projectile.SpawnerEntity, .6)
 	end
 end
 mod:AddCallback(ModCallbacks.MC_PRE_PROJECTILE_COLLISION, mod.chubbyBunnyProjectileCollision, ProjectileVariant.PROJECTILE_TEAR)

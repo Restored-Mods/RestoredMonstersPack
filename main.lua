@@ -61,7 +61,6 @@ CutMonsterVariants = {
 	GILDED_DUMPLING = 2405, -- for backwards compatibility
 	TAINTED_DUMPLING = 2399, -- for backwards compatibility
 
-	COIL = 2406,
 	ECHO_BAT = 2407,
   	CHUBBY_BUNNY = 1, --subtype
 	SCREAMER = 2408,
