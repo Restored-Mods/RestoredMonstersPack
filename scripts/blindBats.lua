@@ -280,6 +280,7 @@ function mod:onBatUpdate()
 	or sfx:IsPlaying(SoundEffect.SOUND_ROCKET_EXPLOSION) or sfx:IsPlaying(Isaac.GetSoundIdByName("Nightwatch Alert"))
 	or sfx:IsPlaying(Isaac.GetSoundIdByName("Screamer Scream"))) then
 		awakenBats()
+		awakenBats(EntityVariant.BEARD_BAT)
 	end
 end
 mod:AddCallback(ModCallbacks.MC_POST_UPDATE, mod.onBatUpdate)
