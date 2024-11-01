@@ -23,7 +23,13 @@ if FFGRACE then
     table.insert(FFGRACE.Rooms.GrottoChallenge, include("resources.luarooms.ffg.grotto_rm_challenge"))
     table.insert(FFGRACE.Rooms.GrottoRailButton, include("resources.luarooms.ffg.grotto_rm_button"))
     table.insert(FFGRACE.Rooms.GrottoMineshaftEntrance, include("resources.luarooms.ffg.grotto_rm_mineshaft_entrance"))
+    if FiendFolio then
+      table.insert(FFGRACE.Rooms.Grotto, include("resources.luarooms.ffg.grotto_rm_ff"))
+    end
 
+    StageAPI.GetBossData("FFGRACE Stub").Rooms:AddRooms(require("resources.luarooms.ffg.bosses.grotto_rm_stub"))
+    StageAPI.GetBossData("FFGRACE Ms. Guano").Rooms:AddRooms(require("resources.luarooms.ffg.bosses.grotto_rm_msguano"))
+    StageAPI.GetBossData("FFGRACE Plumpod II").Rooms:AddRooms(require("resources.luarooms.ffg.bosses.grotto_rm_plumpod"))
 
 
     --if an enemy is transformable by spores in grotto, used for sporelings
