@@ -238,4 +238,7 @@
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0"/> 
         <devolve id="284.0.0" weight="1" />
     </entity>
+    <entity anm2path="monsters\revel1\ice_hazard.anm2" name="Ice Hazard Dumpling" id="481" variant="800" baseHP="20" stageHP="0" boss="0" champion="0" collisionDamage="0" collisionMass="1" collisionRadius="20" friction="0.98" numGridCollisionPoints="0" shadowSize="0" shutdoors="false" tags="noreroll">
+        <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0" />
+    </entity>
 </entities>

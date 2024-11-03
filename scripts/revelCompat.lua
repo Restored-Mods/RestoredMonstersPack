@@ -107,3 +107,43 @@ mod:AddPriorityCallback(ModCallbacks.MC_POST_GAME_STARTED, CallbackPriority.IMPO
     }, true)
 
 end)
+
+-- Ice Hazards
+function mod:DumplingIceHazards(npc)
+  if npc.Variant == EntityType.ENTITY_DUMPLING then
+    local sprite = npc:GetSprite()
+    local data = npc:GetData()
+    if not data.RevIceHazard then
+        data.RevIceHazard = math.random(1,3)
+    end
+    sprite:SetLayerFrame(1, data.RevIceHazard)
+  end
+end
+mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.DumplingIceHazards, 481)
+
+function mod:RemoveIceHazards(npc)
+  if npc.Variant == EntityType.ENTITY_DUMPLING then
+    local sprite = npc:GetSprite()
+    local data = npc:GetData()
+    if npc.FrameCount < 5 then
+        return
+    end
+    if data.RevIceHazard then
+        local entity = Isaac.Spawn(EntityType.ENTITY_DUMPLING,0, 0, npc.Position, Vector(0,0), npc.SpawnerEntity or npc):ToNPC()
+        entity:ClearEntityFlags(EntityFlag.FLAG_APPEAR)
+        entity:Update()
+        data.FromIceHazard = true
+
+        if REVEL and REVEL.WasRoomClearFromStart() then
+            npc:GetData().IceHazardKeepDoorsClosed = true
+          if not REVEL.GlacierDoorCloseDoneThisRoom then
+            REVEL.room:SetClear(false)
+            REVEL.ShutDoors()
+            REVEL.GlacierDoorCloseDoneThisRoom = true
+          end
+        end
+    end
+  end
+end
+mod:AddCallback(ModCallbacks.MC_POST_ENTITY_REMOVE, mod.RemoveIceHazards, 481)
+
