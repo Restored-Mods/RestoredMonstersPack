@@ -158,6 +158,8 @@ function mod:dumplingUpdate(npc)
 				player_position = closestTarget.Position
 				player_angle = (player_position - npc.Position):GetAngleDegrees()
 			end
+
+			npc.SplatColor = FFGRACE.ColorSporeSplat
 		end
 
 

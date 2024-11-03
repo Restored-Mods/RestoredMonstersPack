@@ -294,7 +294,7 @@
 		<spawn x="1" y="1">
 			<entity type="800" variant="3" subtype="0" weight="1.0"/>
 		</spawn>
-		<spawn x="12" y="1">
+		<spawn x="11" y="1">
 			<entity type="226" variant="2" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="12">

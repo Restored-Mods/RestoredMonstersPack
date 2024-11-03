@@ -94,6 +94,7 @@ function mod:blindBatInit(bat)
 	if FFGRACE and bat.Variant == EntityVariant.BEARD_BAT then
 		bat:GetData().BlindBatData.ChargeTime = Settings.ChargeTime * 2
 		bat:GetData().BlindBatData.AttackRange = Settings.AttackRange * 2
+		bat.SplatColor = FFGRACE.ColorSporeSplat
 
 		if bat:GetData().SporeTransformed then
 			bat:GetData().BlindBatData.State = State.Transforming
