@@ -49,6 +49,7 @@ function mod:StriferUpdate(entity)
 	local target = entity:GetPlayerTarget()
 	local moveto = entity.TargetPosition
 	local speed = Settings.MoveSpeed
+	local path = entity.Pathfinder
 
 
 	-- Set variant if not set yet
@@ -218,7 +219,7 @@ function mod:StriferUpdate(entity)
 	-- Movement
 	-- Fix for them getting stuck sometimes
 	if entity:CollidesWithGrid() and not data.delay then
-		StriferTurnAround(entity)
+			StriferTurnAround(entity)
 	end
 
 	if not data.delay then
@@ -245,6 +246,13 @@ function mod:StriferUpdate(entity)
 	end
 
 	entity.Velocity = (entity.Velocity + (data.vector - entity.Velocity) * 0.25)
+	
+	if TheFuture then
+		
+
+
+	end
+
 end
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.StriferUpdate, EntityType.ENTITY_STRIFER)
 

@@ -162,10 +162,19 @@ include("scripts.compatibility.retribution.baptismal_preloader")
 include("scripts.compatibility.retribution.rm_downgrades")
 include("scripts.compatibility.retribution.rm_upgrades")
 include("scripts.compatibility.fallfromgrace")
+include("scripts.compatibility.thefuture.futurecompact")
 if StageAPI then
 	include("scripts.compatibility.fiend folio.rm_genders")
 	StageAPI.AddEntities2Function(require("scripts.entities2"))
 end
+
+mod:AddCallback(ModCallbacks.MC_POST_UPDATE, function()
+	if not mod.fiendfolioTablesMixed then
+		if FiendFolio then
+			mod.MixFiendFolioStuff()
+		end
+	end
+end)
 
 --[[--------------------------------------------------------
     Blacklists
@@ -553,3 +562,12 @@ mod.DumbhackReplace = {
 	[EntityType.ENTITY_RAGE_CREEP] = {1, Isaac.GetEntityVariantByName("​Split Rage Creep")},
 	[EntityType.ENTITY_WALL_CREEP] = {2, Isaac.GetEntityVariantByName("​Rag Creep")},
 }
+
+---uh thx tt ig???????
+function mod:Shuffle(tbl)
+	for i = #tbl, 2, -1 do
+    local j = mod:RandomInt(1, i)
+    tbl[i], tbl[j] = tbl[j], tbl[i]
+  end
+  return tbl
+end

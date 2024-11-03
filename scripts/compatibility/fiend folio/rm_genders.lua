@@ -42,12 +42,6 @@ function mod.MixFiendFolioStuff()
 	mod.fiendfolioTablesMixed = true
 end
 
-mod:AddCallback(ModCallbacks.MC_POST_UPDATE, function()
-	if not mod.fiendfolioTablesMixed then
-		mod.MixFiendFolioStuff()
-	end
-end)
-
 -- mod:AddCallback(ModCallbacks.MC_POST_NPC_RENDER, function(_, npc)
 -- 	for i = 1, #FiendFolio.LGBTQIA do
 -- 		if FiendFolio.LGBTQIA[i].ID
