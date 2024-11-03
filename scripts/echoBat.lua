@@ -276,7 +276,7 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.endConfusionEarly)
 -- FFG compatibility
 if FFGRACE then
 	mod:AddCallback("POST_SPORE_INFECTION", function(_, npc, explosion)
-		if npc.Variant == CutMonsterVariants.ECHO_BAT and npc.SubType == 0 then
+		if npc.Variant == CutMonsterVariants.ECHO_BAT and npc.SubType ~= CutMonsterVariants.CHUBBY_BUNNY then
 			npc:ToNPC():PlaySound(SoundEffect.SOUND_VAMP_GULP, 1.25)
 			return {EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.ECHO_BAT, CutMonsterVariants.CHUBBY_BUNNY}
 		end
