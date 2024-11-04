@@ -107,10 +107,10 @@ function mod:grobberUpdate(entity)
 						local valid = true
 
 						if mod.CustomChests[tostring(v.Variant)] and mod.CustomChests[tostring(v.Variant)].cond then
-              valid = mod.CustomChests[tostring(v.Variant)].valid(v)
-            elseif mod.CustomChests[tostring(v.Variant) .. "." .. tostring(v.SubType)] 
-            and mod.CustomChests[tostring(v.Variant) .. "." .. tostring(v.SubType)].cond then
-              valid = mod.CustomChests[tostring(v.Variant) .. "." .. tostring(v.SubType)].valid(v)
+							valid = mod.CustomChests[tostring(v.Variant)].valid(v)
+						elseif mod.CustomChests[tostring(v.Variant) .. "." .. tostring(v.SubType)]
+            				and mod.CustomChests[tostring(v.Variant) .. "." .. tostring(v.SubType)].cond then
+             				valid = mod.CustomChests[tostring(v.Variant) .. "." .. tostring(v.SubType)].valid(v)
 						end
 
 						if valid == true then
@@ -389,6 +389,22 @@ local function FFGlassChest(entity)
   end
 end
 
+local function EPIValid(v)
+	return v:GetSprite():IsPlaying("Idle") or v:GetSprite():IsPlaying("Appear")
+end
+
+local function EPIChest(entity)
+	local data = entity:GetData()
+	local sprite = entity:GetSprite()
+	if sprite:IsPlaying("Idle") then
+		data.grobber:GetData().pickup = nil
+		Epiphany.Pickup.DUSTY_CHEST:OpenChest(entity)
+		data.grobber:TakeDamage(15, DamageFlag.DAMAGE_CHEST | DamageFlag.DAMAGE_INVINCIBLE, EntityRef(entity), 0)
+		data.grobber:GetData().waitTime = 15
+	end
+
+end
+
 local function RRValid(v)
   return v.SubType ~= 1
 end
@@ -401,7 +417,7 @@ local DummyPlayer = {
   AddWisps = function (...) end,
   Position = Vector(0,0)}
 
-local function RCOpen(entity, func) 
+local function RCOpen(entity, func)
 local data = entity:GetData()
   if mod.CustomChests[tostring(entity.Variant)].valid(entity) then
     data.grobber:GetData().pickup = nil
@@ -439,6 +455,7 @@ mod.CustomChests = {
   [tostring(PENITENT_CHEST)] = {cond = RareChests, 
     func = function (entity) RCOpen(entity, RareChests.openPenitentChest) end,
     valid = function (v) return v.SubType ~= 8 end},
+	["669"] = {cond = Epiphany, func = EPIChest, valid = EPIValid}, --dusty chest
   }
 
 -- Stolen pickups
