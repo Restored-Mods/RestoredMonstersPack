@@ -168,9 +168,8 @@
 			</group>
 <!-- Nightwatch -->
 
-<!-- rev
-<entity ID="481" Image="resources/Entities/rev1/ice dumpling.png" Name="Ice Hazard (Dumpling)" Subtype="0" Variant="200" />
--->
+<!-- Rev -->
+<entity Image="resources/rev1/Ice Hazard Dumpling.png" Name="Ice Hazard (Dumpling)" ID="481" Subtype="0" Variant="800" BaseHP="20" Group="Revelations" Kind="Restored Monsters Pack"/>
 
 <!-- FFG -->
 
