@@ -114,7 +114,7 @@ function mod:DumplingIceHazards(npc)
     local sprite = npc:GetSprite()
     local data = npc:GetData()
     if not data.RevIceHazard then
-        data.RevIceHazard = math.random(1,3)
+        data.RevIceHazard = math.random(0,2)
     end
     sprite:SetLayerFrame(1, data.RevIceHazard)
   end
