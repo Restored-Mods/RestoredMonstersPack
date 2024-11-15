@@ -203,7 +203,7 @@
     	<devolve id="222.0.0" weight="1" />
     </entity>
     <!-- Beard Bat -->
-    <entity anm2path="monsters\grotto\beardbat\beard_bat.anm2" name="Beard Bat" id="803" variant="2" baseHP="15" stageHP="0" boss="0" champion="0" portrait="35" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="32" shadowSize="18" gridCollision="walls">
+    <entity anm2path="monsters\grotto\beardbat\beard_bat.anm2" name="Beard Bat" id="803" variant="201" baseHP="15" stageHP="0" boss="0" champion="0" portrait="35" collisionDamage="1" collisionMass="14" collisionRadius="13" friction="1" numGridCollisionPoints="32" shadowSize="18" gridCollision="walls">
         <bestiary anim="Wake" transform="0,0,1"/>
         <gibs amount="0" blood="0" bone="0" eye="0" gut="0" large="0"/>
     	<devolve id="222.0.0" weight="1" />

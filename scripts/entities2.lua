@@ -45,7 +45,7 @@ return function(mode)
     {Name="​Strifer",Anm2="839.000_strifer.anm2",HP=25,Champion=true,CollisionDamage=1,CollisionMass=5,CollisionRadius=13,ShadowSize=15,NumGridCollisionPoints=12,Type=839,Variant=200,Portrait=37,},
     {Name="Chubby Bunny",Anm2="chubby_bunny.anm2",HP=20,Champion=true,CollisionDamage=1,CollisionMass=14,CollisionRadius=13,ShadowSize=18,NumGridCollisionPoints=12,Type=200,Variant=2408,GridCollision="walls",Portrait=38,Reroll="true",},
     {Name="Sporeling",Anm2="800.007_sporeling.anm2",HP=7,StageHP=2,Champion=true,CollisionDamage=1,CollisionMass=3,CollisionRadius=13,Friction="0.95",ShadowSize=12,NumGridCollisionPoints=12,Type=800,Variant=7,GridCollision="walls",HasFloorAlts="false",Portrait=39,Reroll="true",},
-    {Name="Beard Bat",Anm2="beard_bat.anm2",HP=10,CollisionDamage=1,CollisionMass=14,CollisionRadius=13,ShadowSize=18,NumGridCollisionPoints=32,Type=803,Variant=2,GridCollision="walls",Portrait=32,},
+    {Name="Beard Bat",Anm2="beard_bat.anm2",HP=10,CollisionDamage=1,CollisionMass=14,CollisionRadius=13,ShadowSize=18,NumGridCollisionPoints=32,Type=803,Variant=201,GridCollision="walls",Portrait=32,},
     }
 
     if not mode or mode == 1 then
@@ -60,7 +60,7 @@ return function(mode)
         return {[9]={[104]={[0]=entities[1],},[106]={[0]=entities[2],},[108]={[0]=entities[3],},},[800]={[0]={[0]=entities[4],},[1]={[0]=entities[5],},[2]={[0]=entities[6],},[3]={[0]=entities[7],},[4]={[0]=entities[8],},[5]={[0]=entities[9],},[6]={[0]=entities[10],},[7]={[0]=entities[45]},},
         [29]={[1]={[801]=entities[11],},},[200]={[2409]={[0]=entities[12],},[2407]={[0]=entities[13],},[2408]={[0]=entities[44],},[2410]={[0]=entities[14],},[2406]={[0]=entities[18],},[2411]={[0]=entities[19],},[2500]={[0]=entities[20],},[2501]={[0]=entities[21],},[2502]={[0]=entities[22],},[2503]={[0]=entities[23],},
         [2504]={[0]=entities[24],},[2505]={[0]=entities[25],}},[38]={[835]={[0]=entities[15],[1]=entities[16],},},[208]={[850]={[0]=entities[17],},},[292]={[3400]={[0]=entities[26],},},[1000]={[164]={[867]=entities[27],},[842]={[0]=entities[28],},[867]={[0]=entities[29],},},[203]={[2500]={[0]=entities[30],},},
-        [244]={[2500]={[0]=entities[31],},},[858]={[1]={[0]=entities[32],},[200]={[0]=entities[42],},},[843]={[200]={[0]=entities[33],},[201]={[0]=entities[34],},},[832]={[200]={[0]=entities[35],},},[239]={[200]={[0]=entities[36],},[201]={[0]=entities[37],},},[803]={[200]={[0]=entities[38],},[2]={[0]=entities[46],},},
+        [244]={[2500]={[0]=entities[31],},},[858]={[1]={[0]=entities[32],},[200]={[0]=entities[42],},},[843]={[200]={[0]=entities[33],},[201]={[0]=entities[34],},},[832]={[200]={[0]=entities[35],},},[239]={[200]={[0]=entities[36],},[201]={[0]=entities[37],},},[803]={[200]={[0]=entities[38],},[201]={[0]=entities[46],},},
         [241]={[200]={[0]=entities[39],},},[240]={[200]={[0]=entities[40],},},[842]={[200]={[0]=entities[41],},},[839]={[200]={[0]=entities[43],},},}
     end    
 end
