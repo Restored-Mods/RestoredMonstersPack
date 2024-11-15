@@ -2994,7 +2994,7 @@
 		<door exists="True" x="6" y="7"/>
 		<door exists="True" x="13" y="3"/>
 		<spawn x="6" y="0">
-			<entity type="200" variant="2504" subtype="1" weight="1.0"/>
+			<entity type="200" variant="2505" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="1" y="1">
 			<entity type="3000" variant="0" subtype="0" weight="1.0"/>

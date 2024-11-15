@@ -26,7 +26,7 @@
 <!-- Barfy -->
 <entity Image="resources/Barfy.png" Name="Barfy" ID="208" Subtype="0" Variant="850" BaseHP="70" Tags="Champion" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Screamer -->
-<entity Image="resources/Screamer.png" Name="Screamer" ID="200" Subtype="0" Variant="2408" BaseHP="100" Group="Monsters" Kind="Restored Monsters Pack"/>
+<entity Image="resources/Screamer.png" Name="Screamer" ID="200" Subtype="0" Variant="2411" BaseHP="100" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Cell -->
 <entity Image="resources/Cell.png" Name="Cell" ID="200" Subtype="0" Variant="2500"  BaseHP="16" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Fused Cells -->
@@ -45,7 +45,7 @@
 <!-- Splashy Long Legs -->
 <entity Image="resources/Splashy Long Legs.png" Name="Splashy Long Legs" ID="200" Subtype="0" Variant="2504" BaseHP="20" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Sticky Long Legs -->
-<entity Image="resources/Sticky Long Legs.png"  Name="Sticky Long Legs" ID="200" Subtype="1"  Variant="2504" BaseHP="20" Group="Monsters" Kind="Restored Monsters Pack"/>
+<entity Image="resources/Sticky Long Legs.png"  Name="Sticky Long Legs" ID="200" Subtype="0"  Variant="2505" BaseHP="20" Group="Monsters" Kind="Restored Monsters Pack"/>
 <!-- Red TNT -->
 <entity Image="resources/Red TNT.png" Name="Red TNT" ID="292" Subtype="0" Variant="3400" BaseHP="5" Champion="0" Group="Grids" Kind="Restored Monsters Pack"/>
 <!-- Fire Grimace -->
@@ -174,9 +174,9 @@
 <!-- FFG -->
 
 <!-- Chubby Bunny -->
-<entity Image="resources/ffg/Chubby Bunny.png" Name="Chubby Bunny" ID="200" Subtype="1" Variant="2407" BaseHP="25" Tags="Champion" Group="FFG" Kind="Restored Monsters Pack"/>
+<entity Image="resources/ffg/Chubby Bunny.png" Name="Chubby Bunny" ID="200" Subtype="0" Variant="2408" BaseHP="25" Tags="Champion" Group="FFG" Kind="Restored Monsters Pack"/>
 <!-- Beard Bat -->
-<entity Image="resources/ffg/Beard Bat.png" Name="Beard Bat" ID="803" Variant="2" Subtype="3" BaseHP="15" Group="FFG" Kind="Restored Monsters Pack">
+<entity Image="resources/ffg/Beard Bat.png" Name="Beard Bat" ID="803" Variant="201" Subtype="3" BaseHP="15" Group="FFG" Kind="Restored Monsters Pack">
 		<bitfield Key="Subtype">
 			<spinner Length="5" Minimum="1" Maximum="5" Name="Secondary Bats">
                 <tooltip>The amount of bats that are initially hidden and appear after the first bat is alerted</tooltip>
