@@ -72,7 +72,7 @@ function mod:screamerUpdate(entity)
 					for i = 0, game:GetNumPlayers() do
 						local player = Isaac.GetPlayer(i)
 
-						if entity.Position:Distance(player.Position) <= Settings.Range and not player:HasCollectible(CollectibleType.COLLECTIBLE_EVIL_CHARM) then
+						if entity.Position:Distance(player.Position) <= Settings.Range and not player:HasCollectible(CollectibleType.COLLECTIBLE_EVIL_CHARM) and not player:GetData().ScreamerFrozen then
 							player:AddSlowing(EntityRef(entity), -1, 0.8, Color(1,1,1, 1))
 							player:SetColor(Color(0.6,0.6,0.6, 1), 1, 1, false, false)
 						end

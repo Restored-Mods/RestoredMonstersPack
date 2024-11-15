@@ -62,17 +62,17 @@ CutMonsterVariants = {
 	TAINTED_DUMPLING = 2399, -- for backwards compatibility
 
 	ECHO_BAT = 2407,
-  	CHUBBY_BUNNY = 1, --subtype
-	SCREAMER = 2408,
+  	CHUBBY_BUNNY = 2408,
 	STILLBORN = 2409,
 	NECROMANCER = 2410,
+	SCREAMER = 2411,
 	RED_TNT = 3400,
 	CELL = Isaac.GetEntityVariantByName("Cell"),
 	FUSEDCELLS = Isaac.GetEntityVariantByName("Fused Cells"),
 	TISSUE = Isaac.GetEntityVariantByName("Tissue"),
 	GRAVEROBBER = 2503,
 	SPLASHY = Isaac.GetEntityVariantByName("Splashy Long Legs"),
-	STICKY = 1, --subtype
+	STICKY = Isaac.GetEntityVariantByName("Sticky Long Legs"),
 }
 
 -- Variants of already existing entities

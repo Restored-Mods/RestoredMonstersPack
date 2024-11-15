@@ -43,7 +43,7 @@ end
 mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.echoBatInit, EntityType.ENTITY_CUTMONSTERS)
 
 function mod:echoBatUpdate(entity)
-	if entity.Variant == CutMonsterVariants.ECHO_BAT and entity.SubType ~= CutMonsterVariants.CHUBBY_BUNNY then
+	if entity.Variant == CutMonsterVariants.ECHO_BAT then
 		local sprite = entity:GetSprite()
 		local data = entity:GetData()
 		local target = entity:GetPlayerTarget()
@@ -273,12 +273,14 @@ function mod:endConfusionEarly(target, damageAmount, damageFlags, damageSource, 
 end
 mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.endConfusionEarly)
 
+
+
 -- FFG compatibility
 if FFGRACE then
 	mod:AddCallback("POST_SPORE_INFECTION", function(_, npc, explosion)
-		if npc.Variant == CutMonsterVariants.ECHO_BAT and npc.SubType ~= CutMonsterVariants.CHUBBY_BUNNY then
+		if npc.Variant == CutMonsterVariants.ECHO_BAT then
 			npc:ToNPC():PlaySound(SoundEffect.SOUND_VAMP_GULP, 1.25)
-			return {EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.ECHO_BAT, CutMonsterVariants.CHUBBY_BUNNY}
+			return {EntityType.ENTITY_CUTMONSTERS, CutMonsterVariants.CHUBBY_BUNNY, 0}
 		end
 	end, EntityType.ENTITY_CUTMONSTERS)
 end
@@ -293,14 +295,23 @@ local function projectileKill(entity)
 end
 
 function mod:chubbyBunnyInit(entity)
-  if entity.Variant == CutMonsterVariants.ECHO_BAT and entity.SubType == CutMonsterVariants.CHUBBY_BUNNY then
+	local data = entity:GetData()
+	local rng = entity:GetDropRNG()
+  if entity.Variant == CutMonsterVariants.CHUBBY_BUNNY then
     entity.SplatColor = FFGRACE.ColorSporeSplat
+
+	data.cooldown = mod:RandomIntBetween(rng, Settings.AttackTime[1], Settings.AttackTime[2])
+	data.chargeDirection = Vector.Zero
+	data.angleCountdown = mod:RandomIntBetween(rng, Settings.DirectionChangeTimes[1], Settings.DirectionChangeTimes[2])
+	data.angleOffset = mod:RandomIntBetween(rng, Settings.AngleOffset[1], Settings.AngleOffset[2])
+	data.angleDirection = "up"
   end
 end
 
 mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.chubbyBunnyInit, EntityType.ENTITY_CUTMONSTERS)
+
 function mod:chubbyBunnyUpdate(entity)
-	if entity.Variant == CutMonsterVariants.ECHO_BAT and entity.SubType == CutMonsterVariants.CHUBBY_BUNNY then
+	if entity.Variant == CutMonsterVariants.CHUBBY_BUNNY then
 		local sprite = entity:GetSprite()
 		local data = entity:GetData()
 		local target = entity:GetPlayerTarget()
@@ -399,7 +410,7 @@ end
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.chubbyBunnyUpdate, EntityType.ENTITY_CUTMONSTERS)
 
 function mod:chubbyBunnyDeath(target, damageAmount, damageFlags, damageSource, damageCountdownFrames)
-	if target.Variant == CutMonsterVariants.ECHO_BAT and target.SubType == CutMonsterVariants.CHUBBY_BUNNY then
+	if target.Variant == CutMonsterVariants.CHUBBY_BUNNY then
     if target.HitPoints <= damageAmount then
       if target:GetSprite():IsPlaying("Transform") then
         FFGRACE:MakeSporeExplosion(target.Position, target.SpawnerEntity, 1)
@@ -416,15 +427,15 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, mod.chubbyBunnyDeath, EntityTyp
 
 function mod:chubbyBunnyProjectileUpdate(projectile)
 	if FFGRACE and projectile.SpawnerEntity and projectile.SpawnerType == EntityType.ENTITY_CUTMONSTERS and projectile.SpawnerVariant ==
-	CutMonsterVariants.ECHO_BAT and projectile.SpawnerEntity.SubType == CutMonsterVariants.CHUBBY_BUNNY then
+	CutMonsterVariants.CHUBBY_BUNNY then
 		FFGRACE:MakeSporeTrail(projectile, .75)
 	end
 end
 mod:AddCallback(ModCallbacks.MC_POST_PROJECTILE_UPDATE, mod.chubbyBunnyProjectileUpdate)
 
 function mod:chubbyBunnyProjectileCollision(projectile)
-	if  FFGRACE and projectile.SpawnerEntity and projectile.SpawnerType == EntityType.ENTITY_CUTMONSTERS and projectile.SpawnerVariant ==
-	CutMonsterVariants.ECHO_BAT and projectile.SpawnerEntity.SubType == CutMonsterVariants.CHUBBY_BUNNY then
+	if FFGRACE and projectile.SpawnerEntity and projectile.SpawnerType == EntityType.ENTITY_CUTMONSTERS and projectile.SpawnerVariant ==
+	CutMonsterVariants.CHUBBY_BUNNY then
 		projectile:Remove()
 		FFGRACE:MakeSporeExplosion(projectile.Position, projectile.SpawnerEntity, .6)
 	end

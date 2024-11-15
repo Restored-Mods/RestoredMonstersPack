@@ -55,12 +55,12 @@ if FFGRACE then
       [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.STILLBORN] = "Hard",
       [EntityType.ENTITY_BRIMSTONE_HEAD.." "..EntityVariant.FIRE_GRIMACE] = "Hard",
 
-      -- [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.SPLASHY.." "..CutMonsterVariants.STICKY] = "Tar", --doesnt accept subtype yet
+      [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.STICKY] = "Tar",
 
       [EntityType.ENTITY_DUMPLING.." "..CutMonsterVariants.SCORCHLING] = "Fire",
 
-      -- [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.ECHO_BAT.." "..CutMonsterVariants.CHUBBY_BUNNY] = "Spore",
-      [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.ECHO_BAT] = "Spore",  --doesnt accept subtype yet
+      [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.CHUBBY_BUNNY] = "Spore",
+      [EntityType.ENTITY_CUTMONSTERS.." "..CutMonsterVariants.ECHO_BAT] = "Spore",
       [EntityType.ENTITY_BLIND_BAT.." "..EntityVariant.BEARD_BAT] = "Spore",
       [EntityType.ENTITY_DUMPLING.." "..EntityVariant.SPORELING] = "Spore",
 
