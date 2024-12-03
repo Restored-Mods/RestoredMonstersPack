@@ -7802,7 +7802,7 @@
 			<entity type="1900" variant="0" subtype="0" weight="1.0"/>
 		</spawn>
 	</room>
-	<room variant="24007" name="We Strvn - [RM] - Conboi ghost room" type="16" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="0.25" lastTestTime="2024-08-05T04:58+00:00">
+	<room variant="24007" name="We Strvn - [RM] - Conboi ghost room" type="16" subtype="0" shape="8" width="26" height="14" difficulty="5" weight="0.25" lastTestTime="2024-12-03T02:42+00:00">
 		<door exists="False" x="-1" y="3"/>
 		<door exists="False" x="-1" y="10"/>
 		<door exists="False" x="6" y="-1"/>
@@ -8165,6 +8165,9 @@
 		<spawn x="13" y="5">
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
 		</spawn>
+		<spawn x="16" y="5">
+			<entity type="0" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
 		<spawn x="19" y="5">
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
 		</spawn>
@@ -8181,6 +8184,9 @@
 			<entity type="842" variant="2" subtype="63" weight="1.0"/>
 		</spawn>
 		<spawn x="13" y="6">
+			<entity type="0" variant="10" subtype="0" weight="1.0"/>
+		</spawn>
+		<spawn x="16" y="6">
 			<entity type="0" variant="10" subtype="0" weight="1.0"/>
 		</spawn>
 		<spawn x="19" y="6">
