@@ -39,6 +39,10 @@ function mod:StriferInit(entity)
 	data.altSkin = ""
 	if (stage == LevelStage.STAGE3_1 or stage == LevelStage.STAGE3_2) and game:GetLevel():GetStageType() == StageType.STAGETYPE_REPENTANCE_B then
 		data.altSkin = "_gehenna"
+  elseif StageAPI and StageAPI.GetCurrentStage() and StageAPI.GetCurrentStage().Name == "The Future" then
+    local sprite = entity:GetSprite()
+    sprite:Load("gfx/monsters/future/foreverfriend/forever_friend.anm2",true)
+    sprite:LoadGraphics()
 	end
 end
 mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.StriferInit, EntityType.ENTITY_STRIFER)
@@ -50,6 +54,7 @@ function mod:StriferUpdate(entity)
 	local moveto = entity.TargetPosition
 	local speed = Settings.MoveSpeed
 	local path = entity.Pathfinder
+  local room = Game():GetRoom()
 
 
 	-- Set variant if not set yet
@@ -148,6 +153,35 @@ function mod:StriferUpdate(entity)
 	elseif data.movetype == "horizontal" then
 		moveto = Vector(target.Position.X, entity.Position.Y)
 	end
+  
+  -- Forever Friend
+  if TheFuture then
+    if data.movetype == "vertical" and TheFuture.ScreenwrapStatus == TheFuture.WrapType.VERT then
+      local sign = 1
+      if entity.Position.Y - target.Position.Y > 0 then
+        sign = -1
+      end
+      if math.abs(entity.Position.Y - target.Position.Y) < 
+      room:GetClampedPosition(Vector(entity.Position.X , entity.Position.Y + (room:GetGridHeight() * 40) * sign),0):Distance( room:GetClampedPosition(Vector(entity.Position.X, target.Position.Y - (room:GetGridHeight() * 40) * sign),0))
+      then
+        moveto = Vector(entity.Position.X, target.Position.Y)
+      else
+        moveto = Vector(entity.Position.X, room:GetCenterPos().Y - sign * room:GetCenterPos().Y)
+      end
+    elseif data.movetype == "horizontal" and TheFuture.ScreenwrapStatus == TheFuture.WrapType.HORI then
+      local sign = 1
+      if entity.Position.X - target.Position.X > 0 then
+        sign = -1
+      end
+      if math.abs(entity.Position.X - target.Position.X) < 
+      room:GetClampedPosition(Vector(entity.Position.X + (room:GetGridWidth() * 40) * sign,entity.Position.Y),0):Distance( room:GetClampedPosition(Vector(target.Position.X - (room:GetGridWidth() * 40) * sign,entity.Position.Y),0))
+      then
+        moveto = Vector(target.Position.X, entity.Position.Y)
+      else
+        moveto = Vector(room:GetCenterPos().X - sign * room:GetCenterPos().X, entity.Position.Y)
+      end
+    end
+  end
 
 
 	-- Check if target is close enough
@@ -181,7 +215,8 @@ function mod:StriferUpdate(entity)
 		entity.ProjectileCooldown = entity.ProjectileCooldown - 1
 
 	else
-		if StriferInRange(Settings.SideRange) and game:GetRoom():CheckLine(entity.Position, target.Position, 3, 0, false, false) then
+		if StriferInRange(Settings.SideRange) and game:GetRoom():CheckLine(entity.Position, target.Position, 3, 0, false, false)
+    and room:IsPositionInRoom(entity.Position, -20) then
 			if not sprite:IsOverlayPlaying("Attack" .. data.facing) then
 				sprite:PlayOverlay("Attack" .. data.facing)
 			end
@@ -201,8 +236,13 @@ function mod:StriferUpdate(entity)
 				elseif data.facing == "Right" then shootx =  Settings.ShotSpeed
 				elseif data.facing == "Down"  then shooty =  Settings.ShotSpeed
 				end
-
-				entity:FireProjectiles(entity.Position, Vector(shootx, shooty), 0, ProjectileParams())
+        local params = ProjectileParams()
+        if TheFuture then
+          params.BulletFlags = ProjectileFlags.CONTINUUM
+          params.FallingSpeedModifier = 0
+        end
+				entity:FireProjectiles(entity.Position, Vector(shootx, shooty), 0, params)
+        
 				data.shot = sprite:GetOverlayFrame()
 			end
 
@@ -249,7 +289,7 @@ function mod:StriferUpdate(entity)
 	
 	if TheFuture then
 		
-
+    
 
 	end
 

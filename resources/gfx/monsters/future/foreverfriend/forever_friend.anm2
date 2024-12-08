@@ -1,5 +1,5 @@
 <AnimatedActor>
-	<Info CreatedBy="trtv" CreatedOn="10/29/2024 11:09:44 PM" Version="8" Fps="30"/>
+	<Info CreatedBy="trtv" CreatedOn="08.12.2024 18:37:57" Version="9" Fps="30"/>
 	<Content>
 		<Spritesheets>
 			<Spritesheet Path="forever_friend.png" Id="0"/>
