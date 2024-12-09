@@ -37,12 +37,9 @@ function mod:StriferInit(entity)
 	entity.ProjectileCooldown = math.random(0, Settings.Cooldown - 20) + 20
 
 	data.altSkin = ""
-	if (stage == LevelStage.STAGE3_1 or stage == LevelStage.STAGE3_2) and game:GetLevel():GetStageType() == StageType.STAGETYPE_REPENTANCE_B then
+	if (stage == LevelStage.STAGE3_1 or stage == LevelStage.STAGE3_2) and game:GetLevel():GetStageType() == StageType.STAGETYPE_REPENTANCE_B
+  and entity.Variant == EntityVariant.STRIFER then
 		data.altSkin = "_gehenna"
-  elseif StageAPI and StageAPI.GetCurrentStage() and StageAPI.GetCurrentStage().Name == "The Future" then
-    local sprite = entity:GetSprite()
-    sprite:Load("gfx/monsters/future/foreverfriend/forever_friend.anm2",true)
-    sprite:LoadGraphics()
 	end
 end
 mod:AddCallback(ModCallbacks.MC_POST_NPC_INIT, mod.StriferInit, EntityType.ENTITY_STRIFER)
@@ -60,7 +57,7 @@ function mod:StriferUpdate(entity)
 	-- Set variant if not set yet
 	if data.facing == nil or data.movetype == nil then
 		local ret
-		if entity.Variant == EntityVariant.STRIFER then
+		if entity.Variant == EntityVariant.STRIFER or entity.Variant == CutMonsterVariants.FOREVER_FRIEND then
 			ret = entity.Variant
 			entity.Variant = entity.SubType
 			entity.SubType = 0
@@ -154,8 +151,8 @@ function mod:StriferUpdate(entity)
 		moveto = Vector(target.Position.X, entity.Position.Y)
 	end
   
-  -- Forever Friend
-  if TheFuture then
+  -- Forever Friend target position
+  if TheFuture and entity.Variant == CutMonsterVariants.FOREVER_FRIEND then
     if data.movetype == "vertical" and TheFuture.ScreenwrapStatus == TheFuture.WrapType.VERT then
       local sign = 1
       if entity.Position.Y - target.Position.Y > 0 then
@@ -237,12 +234,16 @@ function mod:StriferUpdate(entity)
 				elseif data.facing == "Down"  then shooty =  Settings.ShotSpeed
 				end
         local params = ProjectileParams()
-        if TheFuture then
-          params.BulletFlags = ProjectileFlags.CONTINUUM
-          params.FallingSpeedModifier = 0
+        if entity.Variant == CutMonsterVariants.FOREVER_FRIEND then
+
+         local proj = Isaac.Spawn(EntityType.ENTITY_PROJECTILE, ProjectileVariant.PROJECTILE_FCUK, 0, entity.Position, Vector(shootx,shooty),entity):ToProjectile()
+            proj:AddProjectileFlags(ProjectileFlags.CONTINUUM)
+            proj.FallingAccel = -0.067
+            proj:GetData().ForceDefaultColor = true
+        else
+          entity:FireProjectiles(entity.Position, Vector(shootx, shooty), 0, params)
         end
-				entity:FireProjectiles(entity.Position, Vector(shootx, shooty), 0, params)
-        
+				
 				data.shot = sprite:GetOverlayFrame()
 			end
 
@@ -286,12 +287,6 @@ function mod:StriferUpdate(entity)
 	end
 
 	entity.Velocity = (entity.Velocity + (data.vector - entity.Velocity) * 0.25)
-	
-	if TheFuture then
-		
-    
-
-	end
 
 end
 mod:AddCallback(ModCallbacks.MC_NPC_UPDATE, mod.StriferUpdate, EntityType.ENTITY_STRIFER)
