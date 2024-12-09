@@ -73,6 +73,7 @@ CutMonsterVariants = {
 	GRAVEROBBER = 2503,
 	SPLASHY = Isaac.GetEntityVariantByName("Splashy Long Legs"),
 	STICKY = Isaac.GetEntityVariantByName("Sticky Long Legs"),
+  FOREVER_FRIEND = Isaac.GetEntityVariantByName("Forever Friend"),
 }
 
 -- Variants of already existing entities

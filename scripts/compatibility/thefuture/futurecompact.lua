@@ -9,7 +9,7 @@ if TheFuture then
     }
 
     table.insert(TheFuture.Rooms.Future,include("resources.luarooms.thefuture.future_cvs"))
-    table.insert(TheFuture.ScreenwrapWhitelist, {ID = 839, Var=200})
+    table.insert(TheFuture.ScreenwrapWhitelist, {ID = 839, Var=201})
     
     print("Future Rooms Compat Loaded")
 end
