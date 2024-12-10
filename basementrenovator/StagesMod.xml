@@ -26,13 +26,13 @@
         <Gfx>
             <Entity ID="239" Variant="200" SubType="0" Image="resources/Corpse Eater Gehenna.png"/>
             <Entity ID="239" Variant="201" SubType="0" Image="resources/Carrion Rider Gehenna.png"/>
-            <Entity ID="839" Variant="0" SubType="0" Image="resources/Strifer (Left) Gehenna.png"/>
-            <Entity ID="839" Variant="1" SubType="0" Image="resources/Strifer (Up) Gehenna.png"/>
-            <Entity ID="839" Variant="2" SubType="0" Image="resources/Strifer (Right) Gehenna.png"/>
-            <Entity ID="839" Variant="3" SubType="0" Image="resources/Strifer (Down) Gehenna.png"/>
-            <Entity ID="839" Variant="4" SubType="0" Image="resources/Strifer (Left-right) Gehenna.png"/>
-            <Entity ID="839" Variant="5" SubType="0" Image="resources/Strifer (Up-down) Gehenna.png"/>
-            <Entity ID="839" Variant="6" SubType="0" Image="resources/Strifer (All) Gehenna.png"/>
+            <Entity ID="839" Variant="200" SubType="0" Image="resources/Strifer (Left) Gehenna.png"/>
+            <Entity ID="839" Variant="200" SubType="1" Image="resources/Strifer (Up) Gehenna.png"/>
+            <Entity ID="839" Variant="200" SubType="2" Image="resources/Strifer (Right) Gehenna.png"/>
+            <Entity ID="839" Variant="200" SubType="3" Image="resources/Strifer (Down) Gehenna.png"/>
+            <Entity ID="839" Variant="200" SubType="4" Image="resources/Strifer (Left-right) Gehenna.png"/>
+            <Entity ID="839" Variant="200" SubType="5" Image="resources/Strifer (Up-down) Gehenna.png"/>
+            <Entity ID="839" Variant="200" SubType="6" Image="resources/Strifer (All) Gehenna.png"/>
             <Entity ID="200" Variant="2410" SubType="0" Image="resources/Necromancer Gehenna.png"/>
             <Entity ID="38" Variant="2407" SubType="835" Image="resources/Swapper Gehenna.png"/>
 
