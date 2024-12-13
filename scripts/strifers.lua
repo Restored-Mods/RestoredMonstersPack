@@ -38,7 +38,7 @@ function mod:StriferInit(entity)
 
 	data.altSkin = ""
 	if (stage == LevelStage.STAGE3_1 or stage == LevelStage.STAGE3_2) and game:GetLevel():GetStageType() == StageType.STAGETYPE_REPENTANCE_B
-  and entity.Variant == EntityVariant.STRIFER then
+  and entity.Variant == 200 then
 		data.altSkin = "_gehenna"
 	end
 end
@@ -57,49 +57,50 @@ function mod:StriferUpdate(entity)
 	-- Set variant if not set yet
 	if data.facing == nil or data.movetype == nil then
 		local ret
-		if entity.Variant == EntityVariant.STRIFER or entity.Variant == CutMonsterVariants.FOREVER_FRIEND then
+    --[[
+		if entity.Variant == 200 or entity.Variant == CutMonsterVariants.FOREVER_FRIEND then
 			ret = entity.Variant
 			entity.Variant = entity.SubType
 			entity.SubType = 0
 		end
+    ]]--
 		local enterd = game:GetLevel().EnterDoor
 
 		-- Multi directional ones
 		-- Left / Right
-		if entity.Variant == 4 or (entity.Variant == 6 and enterd % 2 == 0) then -- All left and right doors have an even numbered ID
+		if entity.SubType == 4 or (entity.SubType == 6 and enterd % 2 == 0) then -- All left and right doors have an even numbered ID
 			if target.Position.X <= entity.Position.X then
-				entity.Variant = 0
+				entity.SubType = 0
 
 			else -- >=
-				entity.Variant = 2
+				entity.SubType = 2
 			end
 
 		-- Up / Down
-		elseif entity.Variant == 5 or (entity.Variant == 6 and enterd % 2 ~= 0) then
+		elseif entity.SubType == 5 or (entity.SubType == 6 and enterd % 2 ~= 0) then
 			if target.Position.Y <= entity.Position.Y then
-				entity.Variant = 1
+				entity.SubType = 1
 
 			else -- >=
-				entity.Variant = 3
+				entity.SubType = 3
 			end
 		end
 
 
 		-- Set movement directions
-		if entity.Variant == 0 or entity.Variant == 2 then
+		if entity.SubType == 0 or entity.SubType == 2 then
 			data.movetype = "vertical"
-		elseif entity.Variant == 1 or entity.Variant == 3 then
+		elseif entity.SubType == 1 or entity.SubType == 3 then
 			data.movetype = "horizontal"
 		end
 
 		-- Set attack directions
-		if     entity.Variant == 0 then data.facing = "Left"
-		elseif entity.Variant == 1 then data.facing = "Up"
-		elseif entity.Variant == 2 then data.facing = "Right"
-		elseif entity.Variant == 3 then data.facing = "Down"
-		end
-
-
+		if     entity.SubType == 0 then data.facing = "Left"
+		elseif entity.SubType == 1 then data.facing = "Up"
+		elseif entity.SubType == 2 then data.facing = "Right"
+		elseif entity.SubType == 3 then data.facing = "Down"
+  end
+  
 		-- Set spritesheets
 		if data.altSkin ~= "" then
 			local ischamp = ""
@@ -113,9 +114,11 @@ function mod:StriferUpdate(entity)
 			sprite:LoadGraphics()
 		end
 		
+    --[[
 		if ret then
 			entity.Variant = ret
 		end
+    ]]--
 	end
 
 
@@ -204,6 +207,7 @@ function mod:StriferUpdate(entity)
 	end
 
 
+  print(data.facing)
 	-- Attacking
 	if entity.ProjectileCooldown > 0 then
 		if not sprite:IsOverlayPlaying("Head" .. data.facing) then

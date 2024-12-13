@@ -491,7 +491,7 @@ function mod:replaceID(Type, Variant, SubType, GridIndex, Seed)
 		return {EntityType.ENTITY_MOVABLE_TNT, CutMonsterVariants.RED_TNT}
 	end
 	if EntityType.ENTITY_STRIFER == Type then
-		return {Type, EntityVariant.STRIFER, Variant}
+		return {Type, EntityVariant.STRIFER, SubType}
 	end
 
 	if not FFGRACE and Type == EntityType.ENTITY_BLIND_BAT and Variant == EntityVariant.BEARD_BAT then
