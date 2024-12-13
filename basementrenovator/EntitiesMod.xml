@@ -81,8 +81,8 @@
 <entity Image="resources/Strifer (Right).png" Name="Strifer (Right)" ID="839" Variant="200" Subtype="2" Metadata="1" BaseHP="25" Tags="Champion" Group="Strifers" Kind="Restored Monsters Pack"/>
 <entity Image="resources/Strifer (Down).png" Name="Strifer (Down)" ID="839" Variant="200" Subtype="3" Metadata="1" BaseHP="25" Tags="Champion" Group="Strifers" Kind="Restored Monsters Pack"/>
 <entity Image="resources/Strifer (Left-right).png" Name="Strifer (Left-right)" ID="839" Variant="200" Subtype="4" BaseHP="25" Metadata="1" Tags="Champion" Group="Strifers" Kind="Restored Monsters Pack"/>
-<entity Image="resources/Strifer (Up-down).png" Name="Strifer (Up-down)" ID="839" Variant="200" Subtype="4" BaseHP="25" Metadata="1" Tags="Champion" Group="Strifers" Kind="Restored Monsters Pack"/>
-<entity Image="resources/Strifer (All).png" Name="Strifer (All)" ID="839" Variant="200" Subtype="5" BaseHP="25" Metadata="1" Tags="Champion" Group="Strifers" Kind="Restored Monsters Pack"/>
+<entity Image="resources/Strifer (Up-down).png" Name="Strifer (Up-down)" ID="839" Variant="200" Subtype="5" BaseHP="25" Metadata="1" Tags="Champion" Group="Strifers" Kind="Restored Monsters Pack"/>
+<entity Image="resources/Strifer (All).png" Name="Strifer (All)" ID="839" Variant="200" Subtype="6" BaseHP="25" Metadata="1" Tags="Champion" Group="Strifers" Kind="Restored Monsters Pack"/>
 <!--Forever Friend-->
 <entity Image="resources/future/Forever Friend (Left).png" Name="Forever Friend (Left)" ID="839" Variant="201" Subtype="0" Metadata="1" BaseHP="25" Tags="Champion" Group="THE FUTURE" Kind="Restored Monsters Pack"/>
 <entity Image="resources/future/Forever Friend (Up).png" Name="Forever Friend (Up)" ID="839" Variant="201" Subtype="1" Metadata="1" BaseHP="25" Tags="Champion" Group="THE FUTURE" Kind="Restored Monsters Pack"/>
