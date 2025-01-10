@@ -185,13 +185,14 @@ function mod:StriferUpdate(entity)
 
 
 	-- Check if target is close enough
-	local function StriferInRange(side)
+	local function StriferInRange(side, foreverfriend)
 		local data = entity:GetData()
 
 		if data.movetype == "vertical" then
 			if entity.Position.Y <= moveto.Y + side and entity.Position.Y >= moveto.Y - side then
 				if data.facing == "Left" and target.Position.X > (entity.Position.X - Settings.TargetRange) and target.Position.X < entity.Position.X
-				or data.facing == "Right" and target.Position.X < (entity.Position.X + Settings.TargetRange) and target.Position.X > entity.Position.X then
+				or data.facing == "Right" and target.Position.X < (entity.Position.X + Settings.TargetRange) and target.Position.X > entity.Position.X
+        or foreverfriend then
 					return true
 				end
 			end
@@ -199,7 +200,8 @@ function mod:StriferUpdate(entity)
 		elseif data.movetype == "horizontal" then
 			if entity.Position.X <= moveto.X + side and entity.Position.X >= moveto.X - side then
 				if data.facing == "Up" and target.Position.Y > (entity.Position.Y - Settings.TargetRange) and target.Position.Y < entity.Position.Y
-				or data.facing == "Down" and target.Position.Y < (entity.Position.Y + Settings.TargetRange) and target.Position.Y > entity.Position.Y then
+				or data.facing == "Down" and target.Position.Y < (entity.Position.Y + Settings.TargetRange) and target.Position.Y > entity.Position.Y
+        or foreverfriend then
 					return true
 				end
 			end
@@ -207,7 +209,6 @@ function mod:StriferUpdate(entity)
 	end
 
 
-  print(data.facing)
 	-- Attacking
 	if entity.ProjectileCooldown > 0 then
 		if not sprite:IsOverlayPlaying("Head" .. data.facing) then
@@ -216,7 +217,8 @@ function mod:StriferUpdate(entity)
 		entity.ProjectileCooldown = entity.ProjectileCooldown - 1
 
 	else
-		if StriferInRange(Settings.SideRange) and game:GetRoom():CheckLine(entity.Position, target.Position, 3, 0, false, false)
+		if StriferInRange(Settings.SideRange,  entity.Variant == CutMonsterVariants.FOREVER_FRIEND) 
+    and game:GetRoom():CheckLine(entity.Position, target.Position, 3, 0, false, false)
     and room:IsPositionInRoom(entity.Position, -20) then
 			if not sprite:IsOverlayPlaying("Attack" .. data.facing) then
 				sprite:PlayOverlay("Attack" .. data.facing)
@@ -242,7 +244,11 @@ function mod:StriferUpdate(entity)
 
          local proj = Isaac.Spawn(EntityType.ENTITY_PROJECTILE, ProjectileVariant.PROJECTILE_FCUK, 0, entity.Position, Vector(shootx,shooty),entity):ToProjectile()
             proj:AddProjectileFlags(ProjectileFlags.CONTINUUM)
+            if data.movetype == "horizontal" then
+            proj.FallingAccel = -0.043
+            else
             proj.FallingAccel = -0.067
+            end
             proj:GetData().ForceDefaultColor = true
         else
           entity:FireProjectiles(entity.Position, Vector(shootx, shooty), 0, params)
@@ -269,7 +275,8 @@ function mod:StriferUpdate(entity)
 
 	if not data.delay then
 		-- Move towards target if it's close enough
-		if StriferInRange(Settings.TargetRange) == true and entity.Position:Distance(moveto) > 10 and not entity:HasEntityFlags(EntityFlag.FLAG_CONFUSION) then
+		if StriferInRange(Settings.TargetRange,  entity.Variant == CutMonsterVariants.FOREVER_FRIEND) == true 
+    and entity.Position:Distance(moveto) > 10 and not entity:HasEntityFlags(EntityFlag.FLAG_CONFUSION) then
 			if entity:HasEntityFlags(EntityFlag.FLAG_FEAR) or entity:HasEntityFlags(EntityFlag.FLAG_SHRINK) then
 				data.vector = (moveto - entity.Position):Normalized() * -speed
 
