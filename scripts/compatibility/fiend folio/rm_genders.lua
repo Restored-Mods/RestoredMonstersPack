@@ -2,8 +2,17 @@ local mod = RestoredMonsterPack
 
 if FiendFolio then
 
+local subType = {
+	["​Fracture"] = 801,
+	["Chubby Bunny"] = 0,
+}
+
+local function GetSubType(name)
+	return REPENTOGON and Isaac.GetEntitySubTypeByName(name) or subType[name]
+end
+
 function mod:SpecialEnt(name)
-	return {Isaac.GetEntityTypeByName(name), Isaac.GetEntityVariantByName(name), Isaac.GetEntitySubTypeByName(name)} --no repentagon fuck it
+	return {Isaac.GetEntityTypeByName(name), Isaac.GetEntityVariantByName(name), GetSubType(name)}
 end
 
 
@@ -13,14 +22,14 @@ RestoredMonsterPack.Nonmale = {
 	{ID = mod:SpecialEnt("Tainted Dumpling"), Affliction = "Woman"}, --fuck it
 	{ID = mod:SpecialEnt("Scab"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Mortling"), Affliction = "Woman"},
-	{ID = mod:SpecialEnt("Fracture"), Affliction = "Woman"},
+	{ID = mod:SpecialEnt("​Fracture"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Echo Bat"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Screamer"), Affliction = "Trans"},
 	--{ID = {Isaac.GetEntityTypeByName("Cell"), Isaac.GetEntityVariantByName("Cell")}, Affliction = "Woman"}, --Cell BC WESTRVN SAID SO ):
 	{ID = mod:SpecialEnt("Fused Cell"), Affliction = "Woman"},
 	--{ID = {Isaac.GetEntityTypeByName("Tissue"), Isaac.GetEntityVariantByName("Tissue")}, Affliction = "Woman"}, --Tissue ALSO BC WESTRVN SAID SO ):
 	{ID = mod:SpecialEnt("Grave Robber"), Affliction = "Woman"},
-	{ID = mod:SpecialEnt("Strifer"), Affliction = "Woman"},
+	{ID = mod:SpecialEnt("​Strifer"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Vessel (Antibirth)"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Chubby Bunny"), Affliction = "Woman"},
 	{ID = mod:SpecialEnt("Beard Bat"), Affliction = "Non-Binary"}, --they arent women because girls dont fart
