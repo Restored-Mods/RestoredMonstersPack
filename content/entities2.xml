@@ -243,7 +243,7 @@
         <devolve id="284.0.0" weight="1" />
     </entity>
     <!-- Forever Friend -->
-    <entity anm2path="monsters\future\foreverfriend\forever_friend.anm2" name="Forever Friend" id="839" variant="201" baseHP="20" stageHP="0" boss="0" champion="1" portrait="30" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="15">
+    <entity anm2path="monsters\future\foreverfriend\forever_friend.anm2" name="Forever Friend" id="839" variant="201" baseHP="20" stageHP="0" boss="0" champion="1" portrait="37" collisionDamage="1" collisionMass="5" collisionRadius="13" friction="1" numGridCollisionPoints="12" shadowSize="15">
         <bestiary anim="WalkVert" overlay="HeadDown" transform="0,0,1"/>
         <gibs amount="6" blood="1" bone="1" eye="1" gut="1" large="0"/> 
         <devolve id="284.0.0" weight="1" />

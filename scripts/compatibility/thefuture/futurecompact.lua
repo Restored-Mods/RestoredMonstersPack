@@ -10,7 +10,9 @@ if TheFuture then
     
     TheFuture.WarpPipeEdible[839] = {[201] = true}
 
-    table.insert(TheFuture.Rooms.Future,include("resources.luarooms.thefuture.future_cvs"))
+    table.insert(TheFuture.Rooms.Future, include("resources.luarooms.thefuture.future_rm"))
+    table.insert(TheFuture.Rooms.FutureChallenge, include("resources.luarooms.thefuture.future_challenge_rm"))
+    table.insert(TheFuture.Rooms.FutureBeggar, include("resources.luarooms.thefuture.future_stevenbeggars_rm"))
     table.insert(TheFuture.ScreenwrapWhitelist, {ID = 839, Var=201})
 end
 
